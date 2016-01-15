@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="qualified">
+    <xsd:include schemaLocation="lammps-potential.xsd"/>
+    <xsd:element name="LAMMPS-potential" type="LAMMPS-potential-type"> </xsd:element>
+</xsd:schema>

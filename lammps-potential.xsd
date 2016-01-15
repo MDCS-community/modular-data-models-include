@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="qualified">
+
+    <xsd:include schemaLocation="chemical-element.xsd"/>
+    <xsd:include schemaLocation="interatomic-potential-compact-id.xsd"/>
+    <xsd:complexType name="LAMMPS-potential-type">
+        <xsd:sequence>
+            <xsd:element name="potential" type="interatomic-potential-compact-id-type"/>
+            <xsd:element name="units" type="xsd:string"/>
+            <xsd:element name="atom_style" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" name="atom">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element minOccurs="0" name="symbol" type="xsd:string"/>
+                        <xsd:element name="element" type="chemical-element-type" minOccurs="0"/>
+                        <xsd:element name="mass" type="xsd:float" minOccurs="0"/>
+                        <xsd:element minOccurs="0" name="charge" type="xsd:float"/>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="pair_style">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="type" type="xsd:string"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="term"
+                            type="term-type"> </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element maxOccurs="unbounded" name="pair_coeff">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" name="interaction">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element minOccurs="0" name="symbol" type="xsd:string"
+                                        maxOccurs="unbounded"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="term"
+                            type="term-type"> </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="command">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="term"
+                            type="term-type"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="term-type">
+        <xsd:choice>
+            <xsd:element fixed="True" name="symbols" type="xsd:string"/>
+            <xsd:element fixed="True" name="symbolsList" type="xsd:string"/>
+            <xsd:element name="option" type="xsd:string"/>
+            <xsd:element name="file" type="xsd:string"/>
+            <xsd:element name="parameter" type="xsd:float"/>
+        </xsd:choice>
+    </xsd:complexType>
+</xsd:schema>

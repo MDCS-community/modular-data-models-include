@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+    <xsd:include schemaLocation="physical-quantity-L-.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-1-.xsd"/>
+    <xsd:complexType name="crystal-cell-type">
+        <xsd:choice>
+            <xsd:element name="Triclinic">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element name="a" type="physical-quantity-L--type"/>
+                        <xsd:element name="b" type="physical-quantity-L--type"/>
+                        <xsd:element name="c" type="physical-quantity-L--type"/>
+                        <xsd:element name="alpha" type="physical-quantity-1--type"/>
+                        <xsd:element name="beta" type="physical-quantity-1--type"/>
+                        <xsd:element name="gamma" type="physical-quantity-1--type"/>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Monoclinic">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element name="a" type="physical-quantity-L--type"/>
+                        <xsd:element name="b" type="physical-quantity-L--type"/>
+                        <xsd:element name="c" type="physical-quantity-L--type"/>
+                        <xsd:element name="beta" type="physical-quantity-1--type"/>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Orthorhombic">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element name="a" type="physical-quantity-L--type"/>
+                        <xsd:element name="b" type="physical-quantity-L--type"/>
+                        <xsd:element name="c" type="physical-quantity-L--type"/>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Rhombohedral">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element name="a" type="physical-quantity-L--type"/>
+                        <xsd:element name="alpha" type="physical-quantity-1--type"/>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Tetragonal">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element name="a" type="physical-quantity-L--type"/>
+                        <xsd:element name="c" type="physical-quantity-L--type"/>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Hexagonal">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element name="a" type="physical-quantity-L--type"/>
+                        <xsd:element name="c" type="physical-quantity-L--type"/>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Cubic">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element name="a" type="physical-quantity-L--type"/>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:choice>
+    </xsd:complexType>
+</xsd:schema>

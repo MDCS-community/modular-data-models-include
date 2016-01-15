@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="chemical-element.xsd"/>
+    <xsd:complexType name="interatomic-potential-compact-id-type">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="key" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="id" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="implementation">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element minOccurs="0" name="key" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="id" type="xsd:string"/>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="artifact">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element minOccurs="0" name="key" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="id" type="xsd:string"/>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="doi" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="element"
+                type="chemical-element-type"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="fictional-element"
+                type="chemical-element-type"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="other-element" type="xsd:string"
+            />
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

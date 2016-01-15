@@ -1,0 +1,253 @@
+{
+    "calculation-crystal-phase": {
+        "calculation-id": "047fd90d-8bdb-4d49-9cea-3543b7559caf",
+        "potential": {
+            "key": "key0",
+            "id": "id0",
+            "artifact": {
+                "key": "key2",
+                "id": "id2"
+            }
+        },
+        "as-constructed-crystal-structure": {
+            "space-group": {
+                "number": 229,
+                "Hermann-Maguin": "I m -3 m",
+                "Schoenflies": "cI2"
+            },
+            "cell": {
+                "Cubic": {
+                    "a": {
+                        "value": 2.8,
+                        "unit": "Angstrom"
+                    }
+                }
+            },
+            "site": {
+                "Wykoff": {
+                    "letter": "letter0",
+                    "multiplicity": 0
+                },
+                "constituent": {
+                    "component": 1,
+                    "symbol": "Fe"
+                },
+                "atom": [
+                    {
+                        "equivalent-position": {
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "unit": "scaled"
+                        }
+                    },
+                    {
+                        "equivalent-position": {
+                            "value": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "unit": "scaled"
+                        }
+                    }
+                ]
+            }
+        },
+        "relaxed-crystal-structure": {
+            "space-group": {
+                "number": 229,
+                "Hermann-Maguin": "I m -3 m",
+                "Schoenflies": "cI2"
+            },
+            "cell": {
+                "Cubic": {
+                    "a": {
+                        "value": 2.86650002378,
+                        "unit": "Angstrom"
+                    }
+                }
+            },
+            "site": {
+                "Wykoff": {
+                    "letter": "letter0",
+                    "multiplicity": 0
+                },
+                "constituent": {
+                    "component": 1,
+                    "symbol": "Fe"
+                },
+                "atom": [
+                    {
+                        "equivalent-position": {
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "unit": "scaled"
+                        }
+                    },
+                    {
+                        "equivalent-position": {
+                            "value": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "unit": "scaled"
+                        }
+                    }
+                ]
+            }
+        },
+        "cohesive-energy": {
+            "value": -4.2800000693428,
+            "unit": "eV"
+        },
+        "bulk-modulus": {
+            "value": 178.2651741319711,
+            "unit": "GPa"
+        },
+        "elastic-constants": {
+            "C": [
+                {
+                    "stiffness": {
+                        "value": 241.107240392,
+                        "unit": "GPa"
+                    },
+                    "ij": "1 1"
+                },
+                {
+                    "stiffness": {
+                        "value": 146.844141004,
+                        "unit": "GPa"
+                    },
+                    "ij": "1 2"
+                },
+                {
+                    "stiffness": {
+                        "value": 114.04433246,
+                        "unit": "GPa"
+                    },
+                    "ij": "4 4"
+                }
+            ]
+        },
+        "cohesive-energy-relation": {
+            "r": {
+                "value": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "unit": "Angstrom"
+            },
+            "a": {
+                "value": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "unit": "Angstrom"
+            },
+            "cohesive-energy": {
+                "value": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "unit": "eV"
+            }
+        }
+    }
+}

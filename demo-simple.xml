@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<demo-measurement-data
+   xmlns:supplement="supplement">
+   <title>A simple demo using physical quantity types.</title>
+   <grain-size>
+      <value>150.</value>
+      <unit>nm</unit>
+   </grain-size>
+   <diffusion-length supplement:axis="y">
+      <value>2.8E-05</value>
+      <unit>m</unit>
+   </diffusion-length>
+   <apparatus-temperature supplement:axis="x">
+      <value>499.93</value>
+      <unit>kelvin</unit>
+      <supplement:scale>ITS-90</supplement:scale>
+   </apparatus-temperature>
+   <grain-boundary-mobility>
+      <value>4.4E-7</value>
+      <unit>m^4/(J s)</unit>
+      <uncertainty>
+         <type>standard deviation</type>
+         <value>2.11E-7</value>
+      </uncertainty>
+   </grain-boundary-mobility>
+</demo-measurement-data>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="physical-quantity-L-.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-0-.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-LLT-M.xsd"/>
+    <xsd:element name="demo-measurement-data">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="title" type="xsd:string"/>
+                <xsd:element name="grain-size" type="physical-quantity-L--type">
+                    <xsd:annotation>
+                        <xsd:documentation>Average diameter measured by drawing a line with vendor software.</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="diffusion-length"
+                    type="physical-quantity-L--type">
+                    <xsd:annotation>
+                        <xsd:documentation>Fick, A.E. (1855) Phil. Mag., 10, 30.</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="apparatus-temperature"
+                    type="physical-quantity-0--type">
+                    <xsd:annotation>
+                        <xsd:documentation>Temperature of the sample stage as measured by a thermocouple.</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="grain-boundary-mobility"
+                    type="physical-quantity-LLT-M-type">
+                    <xsd:annotation>
+                        <xsd:documentation>D. Turnbull, Trans. Am. Inst. Min. Metall. Eng. 191, 661 (1951).</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

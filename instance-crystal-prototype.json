@@ -1,0 +1,121 @@
+{
+    "crystal-prototype": {
+        "identifier": {
+            "common": "common0",
+            "tag": "tag0",
+            "prototype": "prototype0",
+            "Pearson-symbol": "Pearson-symbol0",
+            "Strukturbericht": "Strukturbericht0"
+        },
+        "crystal-structure": {
+            "space-group": {
+                "number": 0,
+                "Hermann-Maguin": "Hermann-Maguin0",
+                "Schoenflies": "Schoenflies0"
+            },
+            "cell": {
+                "Triclinic": {
+                    "a": {
+                        "value": 0,
+                        "unit": "unit0"
+                    },
+                    "b": {
+                        "value": 0,
+                        "unit": "unit1"
+                    },
+                    "c": {
+                        "value": 0,
+                        "unit": "unit2"
+                    },
+                    "alpha": {
+                        "value": 0,
+                        "unit": "unit3"
+                    },
+                    "beta": {
+                        "value": 0,
+                        "unit": "unit4"
+                    },
+                    "gamma": {
+                        "value": 0,
+                        "unit": "unit5"
+                    }
+                }
+            },
+            "site": {
+                "Wykoff": {
+                    "letter": "letter0",
+                    "multiplicity": 0
+                },
+                "constituent": {
+                    "component": 0,
+                    "symbol": "symbol0",
+                    "element": "Ac",
+                    "atom-property": [
+                        {
+                            "value": 0,
+                            "unit": "unit6",
+                            "name": "name0"
+                        },
+                        {
+                            "value": 0,
+                            "unit": "unit7",
+                            "name": "name1"
+                        },
+                        {
+                            "value": 0,
+                            "unit": "unit8",
+                            "name": "name2"
+                        }
+                    ]
+                },
+                "atom": [
+                    {
+                        "equivalent-position": {
+                            "value": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "unit": "unit9"
+                        },
+                        "atom-property": {
+                            "value": 0,
+                            "unit": "unit10",
+                            "name": "name3"
+                        }
+                    },
+                    {
+                        "equivalent-position": {
+                            "value": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "unit": "unit11"
+                        },
+                        "atom-property": {
+                            "value": 0,
+                            "unit": "unit12",
+                            "name": "name4"
+                        }
+                    },
+                    {
+                        "equivalent-position": {
+                            "value": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "unit": "unit13"
+                        },
+                        "atom-property": {
+                            "value": 0,
+                            "unit": "unit14",
+                            "name": "name5"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

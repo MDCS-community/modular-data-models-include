@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="physical-quantity-M-LTT.xsd"/>
+    <xsd:complexType name="elastic-stiffness-voigt-type">
+        <xsd:sequence>
+            <xsd:element maxOccurs="36" name="C">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element name="stiffness" type="physical-quantity-M-LTT-type"/>
+                        <xsd:element name="ij">
+                            <xsd:simpleType>
+                                <xsd:restriction>
+                                    <xsd:simpleType>
+                                        <xsd:list itemType="xsd:integer"/>
+                                    </xsd:simpleType>
+                                    <xsd:length value="2"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

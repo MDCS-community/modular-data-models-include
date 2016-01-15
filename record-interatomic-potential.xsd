@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="qualified" xmlns:unixref="http://www.crossref.org/xschema/1.1">
+    <xsd:include schemaLocation="interatomic-potential.xsd"/>
+    <xsd:element name="interatomic-potential" type="interatomic-potential-type"> </xsd:element>
+</xsd:schema>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="physical-quantity-L-.xsd"/>
+    <xsd:complexType name="xray-siegbahn-type">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="emission-line">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element minOccurs="0" name="Siegbahn" type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:documentation>Name of the line. E.g.: Kalpha1, Kalpha2, etc.</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="IUPAC" type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:documentation>IUPAC Notation for spectral lines. E.g.: K-L3, K-L2, etc.</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="wavelength"
+                            type="physical-quantity-L--type"
+                        />
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

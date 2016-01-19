@@ -3,10 +3,10 @@
     elementFormDefault="unqualified">
 
     <xsd:complexType name="note-type">
-        <xsd:all>
+        <xsd:sequence>
             <xsd:element minOccurs="0" name="title" type="xsd:string"/>
             <xsd:element minOccurs="0" name="date" type="xsd:date"/>
             <xsd:element minOccurs="0" name="text" type="xsd:string"/>
-        </xsd:all>
+        </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

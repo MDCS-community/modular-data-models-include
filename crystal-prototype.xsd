@@ -5,9 +5,9 @@
     <xsd:include schemaLocation="crystal-identifier.xsd"/>
     <xsd:include schemaLocation="crystal-structure.xsd"/>
     <xsd:complexType name="crystal-protype-type">
-        <xsd:all>
+        <xsd:sequence>
             <xsd:element minOccurs="0" name="identifier" type="crystal-identifier-type"/>
             <xsd:element minOccurs="0" name="crystal-structure" type="crystal-structure-type"/>
-        </xsd:all>
+        </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

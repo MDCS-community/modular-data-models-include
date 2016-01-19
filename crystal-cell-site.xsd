@@ -9,10 +9,10 @@
         <xsd:sequence>
             <xsd:element minOccurs="0" name="Wykoff">
                 <xsd:complexType>
-                    <xsd:all>
+                    <xsd:sequence>
                         <xsd:element name="letter" type="xsd:string"/>
                         <xsd:element name="multiplicity" type="xsd:int"/>
-                    </xsd:all>
+                    </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
             <xsd:element minOccurs="0" name="constituent">
@@ -28,10 +28,10 @@
             </xsd:element>
             <xsd:element minOccurs="0" name="atom" maxOccurs="unbounded">
                 <xsd:complexType>
-                    <xsd:all>
+                    <xsd:sequence>
                         <xsd:element name="equivalent-position" type="physical-quantity-L--type"/>
                         <xsd:element name="atom-property" minOccurs="0" type="atom-property-type"/>
-                    </xsd:all>
+                    </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
         </xsd:sequence>

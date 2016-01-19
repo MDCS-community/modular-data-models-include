@@ -3,10 +3,10 @@
     elementFormDefault="unqualified">
 
     <xsd:complexType name="crystal-space-group">
-        <xsd:all>
+        <xsd:sequence>
             <xsd:element minOccurs="0" name="number" type="xsd:int"/>
             <xsd:element minOccurs="0" name="Hermann-Maguin" type="xsd:string"/>
             <xsd:element minOccurs="0" name="Schoenflies" type="xsd:string"/>
-        </xsd:all>
+        </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

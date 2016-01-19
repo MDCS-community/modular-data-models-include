@@ -3,12 +3,12 @@
     elementFormDefault="unqualified">
 
     <xsd:complexType name="crystal-identifier-type">
-        <xsd:all>
+        <xsd:sequence>
             <xsd:element minOccurs="0" name="common" type="xsd:string"/>
             <xsd:element minOccurs="0" name="tag" type="xsd:string"/>
             <xsd:element minOccurs="0" name="prototype" type="xsd:string"/>
             <xsd:element minOccurs="0" name="Pearson-symbol" type="xsd:string"/>
             <xsd:element minOccurs="0" name="Strukturbericht" type="xsd:string"/>
-        </xsd:all>
+        </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

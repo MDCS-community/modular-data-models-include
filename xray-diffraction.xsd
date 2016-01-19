@@ -10,7 +10,7 @@
     <xsd:include schemaLocation="physical-quantity--.xsd"/>
     <xsd:include schemaLocation="remote-file.xsd"/>
     <xsd:complexType name="xray-diffraction-type">
-        <xsd:all>
+        <xsd:sequence>
             <xsd:element minOccurs="0" name="instrument-ID" type="xsd:string"/>
             <xsd:element minOccurs="0" name="sample-ID" type="xsd:string"/>
             <xsd:element minOccurs="0" name="user-ID" type="xsd:string"/>
@@ -20,20 +20,20 @@
                     <xsd:choice>
                         <xsd:element name="tube">
                             <xsd:complexType>
-                                <xsd:all>
+                                <xsd:sequence>
                                     <xsd:element minOccurs="0" name="anode-material"
                                         type="chemical-element-type"/>
                                     <xsd:element minOccurs="0" name="spectra"
                                         type="xray-siegbahn-type"/>
-                                </xsd:all>
+                                </xsd:sequence>
                             </xsd:complexType>
                         </xsd:element>
                         <xsd:element name="synchrotron">
                             <xsd:complexType>
-                                <xsd:all>
+                                <xsd:sequence>
                                     <xsd:element minOccurs="0" name="wavelength"
                                         type="physical-quantity-L--type"/>
-                                </xsd:all>
+                                </xsd:sequence>
                             </xsd:complexType>
                         </xsd:element>
                     </xsd:choice>
@@ -44,16 +44,16 @@
                     <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>
                 </xsd:annotation>
                 <xsd:complexType>
-                    <xsd:all>
+                    <xsd:sequence>
                         <xsd:element minOccurs="0" name="angle-2-theta"
                             type="physical-quantity-1--type"/>
                         <xsd:element minOccurs="0" name="scattering-vector"
                             type="physical-quantity--L-type"/>
                         <xsd:element name="intensity" type="physical-quantity---type"/>
-                    </xsd:all>
+                    </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
             <xsd:element minOccurs="0" name="supporting-files" type="remote-file-type"/>
-        </xsd:all>
+        </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

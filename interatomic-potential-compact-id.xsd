@@ -20,6 +20,15 @@
                     <xsd:all>
                         <xsd:element minOccurs="0" name="key" type="xsd:string"/>
                         <xsd:element minOccurs="0" name="id" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="web-link">
+                            <xsd:complexType>
+                                <xsd:all>
+                                    <xsd:element name="URL" type="xsd:anyURI"/>
+                                    <xsd:element minOccurs="0" name="label" type="xsd:string"/>
+                                    <xsd:element minOccurs="0" name="link-text" type="xsd:string"/>
+                                </xsd:all>
+                            </xsd:complexType>
+                        </xsd:element>
                     </xsd:all>
                 </xsd:complexType>
             </xsd:element>

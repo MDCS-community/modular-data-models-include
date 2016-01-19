@@ -55,7 +55,7 @@
                                     <xsd:element name="web-link">
                                         <xsd:complexType>
                                             <xsd:all>
-                                                <xsd:element name="URI" type="xsd:anyURI"/>
+                                                <xsd:element name="URL" type="xsd:anyURI"/>
                                                 <xsd:element minOccurs="0" name="label"
                                                   type="xsd:string"/>
                                                 <xsd:element minOccurs="0" name="link-text"

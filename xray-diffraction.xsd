@@ -40,6 +40,9 @@
                 </xsd:complexType>
             </xsd:element>
             <xsd:element minOccurs="0" name="pattern-data">
+                <xsd:annotation>
+                    <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>
+                </xsd:annotation>
                 <xsd:complexType>
                     <xsd:all>
                         <xsd:element minOccurs="0" name="angle-2-theta"
@@ -50,8 +53,7 @@
                     </xsd:all>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element minOccurs="0" name="supporting-files"
-                type="remote-file-type"/>
+            <xsd:element minOccurs="0" name="supporting-files" type="remote-file-type"/>
         </xsd:all>
     </xsd:complexType>
 </xsd:schema>

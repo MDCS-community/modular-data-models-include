@@ -4,7 +4,7 @@
 
     <xsd:include schemaLocation="remote-file.xsd"/>
     <xsd:complexType name="generic-process-type">
-        <xsd:all>
+        <xsd:sequence>
             <xsd:element minOccurs="0" name="name" type="xsd:string"/>
             <xsd:element minOccurs="0" name="description" type="xsd:string"/>
             <xsd:element minOccurs="0" name="notes" type="xsd:string"/>
@@ -13,6 +13,6 @@
             <xsd:element minOccurs="0" name="code-version" type="xsd:string"/>
             <xsd:element minOccurs="0" name="terminal-command" type="xsd:string"/>
             <xsd:element minOccurs="0" name="supporting-files" type="remote-file-type"/>
-        </xsd:all>
+        </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

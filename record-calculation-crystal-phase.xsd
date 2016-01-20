@@ -10,7 +10,7 @@
     <xsd:include schemaLocation="physical-quantity-L-.xsd"/>
     <xsd:element name="calculation-crystal-phase">
         <xsd:complexType>
-            <xsd:all>
+            <xsd:sequence>
                 <xsd:element name="calculation-id" type="xsd:string"/>
                 <xsd:element name="potential" type="interatomic-potential-compact-id-type"/>
                 <xsd:element name="as-constructed-crystal-structure" type="crystal-structure-type"/>
@@ -23,15 +23,15 @@
                     type="elastic-stiffness-voigt-type"/>
                 <xsd:element minOccurs="0" name="cohesive-energy-relation">
                     <xsd:complexType>
-                        <xsd:all>
+                        <xsd:sequence>
                             <xsd:element minOccurs="0" name="r" type="physical-quantity-L--type"/>
                             <xsd:element minOccurs="0" name="a" type="physical-quantity-L--type"/>
                             <xsd:element name="cohesive-energy" type="physical-quantity-MLL-TT-type"
                                 minOccurs="0"/>
-                        </xsd:all>
+                        </xsd:sequence>
                     </xsd:complexType>
                 </xsd:element>
-            </xsd:all>
+            </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
 </xsd:schema>

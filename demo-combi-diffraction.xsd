@@ -5,11 +5,11 @@
     <xsd:include schemaLocation="xray-diffraction.xsd"/>
     <xsd:element name="demo-diffraction-measurement">
         <xsd:complexType>
-            <xsd:all>
+            <xsd:sequence>
                 <xsd:element name="inventory-file-name" type="xsd:string"/>
                 <xsd:element name="inventory-ID" type="xsd:int"/>
                 <xsd:element name="diffractogram" type="xray-diffraction-type"/>
-            </xsd:all>
+            </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
 </xsd:schema>

@@ -22,14 +22,14 @@
                         </xsd:element>
                         <xsd:element minOccurs="0" name="publication" maxOccurs="unbounded">
                             <xsd:complexType>
-                                <xsd:all>
+                                <xsd:sequence>
                                     <xsd:element minOccurs="0" name="doi-xml-record"
                                         type="xsd:anyType"/>
                                     <xsd:element minOccurs="0" name="bibtex" type="xsd:string"/>
                                     <xsd:element minOccurs="0" name="text-bibliography"
                                         type="xsd:string"/>
                                     <xsd:element minOccurs="0" name="abstract" type="xsd:string"/>
-                                </xsd:all>
+                                </xsd:sequence>
                             </xsd:complexType>
                         </xsd:element>
                     </xsd:sequence>
@@ -54,13 +54,13 @@
                                         minOccurs="0"/>
                                     <xsd:element name="web-link">
                                         <xsd:complexType>
-                                            <xsd:all>
-                                                <xsd:element name="URI" type="xsd:anyURI"/>
+                                            <xsd:sequence>
+                                                <xsd:element name="URL" type="xsd:anyURI"/>
                                                 <xsd:element minOccurs="0" name="label"
                                                   type="xsd:string"/>
                                                 <xsd:element minOccurs="0" name="link-text"
                                                   type="xsd:string"/>
-                                            </xsd:all>
+                                            </xsd:sequence>
                                         </xsd:complexType>
                                     </xsd:element>
                                 </xsd:sequence>

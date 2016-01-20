@@ -31,26 +31,26 @@
                         <xsd:choice>
                             <xsd:element name="circle">
                                 <xsd:complexType>
-                                    <xsd:all>
+                                    <xsd:sequence>
                                         <xsd:element name="diameter"
                                             type="physical-quantity-L--type"/>
-                                    </xsd:all>
+                                    </xsd:sequence>
                                 </xsd:complexType>
                             </xsd:element>
                             <xsd:element name="square">
                                 <xsd:complexType>
-                                    <xsd:all>
+                                    <xsd:sequence>
                                         <xsd:element name="width" type="physical-quantity-L--type"/>
-                                    </xsd:all>
+                                    </xsd:sequence>
                                 </xsd:complexType>
                             </xsd:element>
                             <xsd:element name="rectangle">
                                 <xsd:complexType>
-                                    <xsd:all>
+                                    <xsd:sequence>
                                         <xsd:element name="width" type="physical-quantity-L--type"/>
                                         <xsd:element name="height" type="physical-quantity-L--type"
                                         />
-                                    </xsd:all>
+                                    </xsd:sequence>
                                 </xsd:complexType>
                             </xsd:element>
                         </xsd:choice>
@@ -58,7 +58,7 @@
                 </xsd:element>
                 <xsd:element maxOccurs="unbounded" name="record">
                     <xsd:complexType>
-                        <xsd:all>
+                        <xsd:sequence>
                             <xsd:element name="inventory-ID" type="xsd:int"/>
                             <xsd:element name="x" type="physical-quantity-L--type"/>
                             <xsd:element name="y" type="physical-quantity-L--type"/>
@@ -67,7 +67,7 @@
                                     <xsd:documentation>Relative path on the file system or URL. </xsd:documentation>
                                 </xsd:annotation>
                             </xsd:element>
-                        </xsd:all>
+                        </xsd:sequence>
                     </xsd:complexType>
                 </xsd:element>
             </xsd:sequence>

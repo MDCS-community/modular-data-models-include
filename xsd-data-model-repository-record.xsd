@@ -47,7 +47,7 @@
                         <xsd:documentation>Contact information of the submitter</xsd:documentation>
                     </xsd:annotation>
                     <xsd:complexType>
-                        <xsd:all>
+                        <xsd:sequence>
                             <xsd:element minOccurs="0" name="full-name" type="xsd:string"/>
                             <xsd:element minOccurs="0" name="email">
                                 <xsd:simpleType>
@@ -65,7 +65,7 @@
                                     </xsd:restriction>
                                 </xsd:simpleType>
                             </xsd:element>
-                        </xsd:all>
+                        </xsd:sequence>
                     </xsd:complexType>
                 </xsd:element>
                 <xsd:element name="downloadURL" type="xsd:anyURI">

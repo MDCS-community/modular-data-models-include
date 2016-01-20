@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="remote-file.xsd"/>
+    <xsd:complexType name="generic-process-type">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="name" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="notes" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="type" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="script-version" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="code-version" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="terminal-command" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="supporting-files" type="remote-file-type"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

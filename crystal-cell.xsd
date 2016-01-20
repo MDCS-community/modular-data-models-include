@@ -7,64 +7,64 @@
         <xsd:choice>
             <xsd:element name="Triclinic">
                 <xsd:complexType>
-                    <xsd:all>
+                    <xsd:sequence>
                         <xsd:element name="a" type="physical-quantity-L--type"/>
                         <xsd:element name="b" type="physical-quantity-L--type"/>
                         <xsd:element name="c" type="physical-quantity-L--type"/>
                         <xsd:element name="alpha" type="physical-quantity-1--type"/>
                         <xsd:element name="beta" type="physical-quantity-1--type"/>
                         <xsd:element name="gamma" type="physical-quantity-1--type"/>
-                    </xsd:all>
+                    </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
             <xsd:element name="Monoclinic">
                 <xsd:complexType>
-                    <xsd:all>
+                    <xsd:sequence>
                         <xsd:element name="a" type="physical-quantity-L--type"/>
                         <xsd:element name="b" type="physical-quantity-L--type"/>
                         <xsd:element name="c" type="physical-quantity-L--type"/>
                         <xsd:element name="beta" type="physical-quantity-1--type"/>
-                    </xsd:all>
+                    </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
             <xsd:element name="Orthorhombic">
                 <xsd:complexType>
-                    <xsd:all>
+                    <xsd:sequence>
                         <xsd:element name="a" type="physical-quantity-L--type"/>
                         <xsd:element name="b" type="physical-quantity-L--type"/>
                         <xsd:element name="c" type="physical-quantity-L--type"/>
-                    </xsd:all>
+                    </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
             <xsd:element name="Rhombohedral">
                 <xsd:complexType>
-                    <xsd:all>
+                    <xsd:sequence>
                         <xsd:element name="a" type="physical-quantity-L--type"/>
                         <xsd:element name="alpha" type="physical-quantity-1--type"/>
-                    </xsd:all>
+                    </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
             <xsd:element name="Tetragonal">
                 <xsd:complexType>
-                    <xsd:all>
+                    <xsd:sequence>
                         <xsd:element name="a" type="physical-quantity-L--type"/>
                         <xsd:element name="c" type="physical-quantity-L--type"/>
-                    </xsd:all>
+                    </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
             <xsd:element name="Hexagonal">
                 <xsd:complexType>
-                    <xsd:all>
+                    <xsd:sequence>
                         <xsd:element name="a" type="physical-quantity-L--type"/>
                         <xsd:element name="c" type="physical-quantity-L--type"/>
-                    </xsd:all>
+                    </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
             <xsd:element name="Cubic">
                 <xsd:complexType>
-                    <xsd:all>
+                    <xsd:sequence>
                         <xsd:element name="a" type="physical-quantity-L--type"/>
-                    </xsd:all>
+                    </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
         </xsd:choice>

@@ -11,12 +11,12 @@
             <xsd:element name="atom_style" type="xsd:string"/>
             <xsd:element maxOccurs="unbounded" name="atom">
                 <xsd:complexType>
-                    <xsd:all>
+                    <xsd:sequence>
                         <xsd:element minOccurs="0" name="symbol" type="xsd:string"/>
                         <xsd:element name="element" type="chemical-element-type" minOccurs="0"/>
                         <xsd:element name="mass" type="xsd:float" minOccurs="0"/>
                         <xsd:element minOccurs="0" name="charge" type="xsd:float"/>
-                    </xsd:all>
+                    </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
             <xsd:element name="pair_style">

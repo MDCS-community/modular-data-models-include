@@ -6,13 +6,13 @@
         <xsd:sequence>
             <xsd:element maxOccurs="unbounded" minOccurs="0" name="file">
                 <xsd:complexType>
-                    <xsd:all>
+                    <xsd:sequence>
                         <xsd:element minOccurs="0" name="name" type="xsd:string"/>
                         <xsd:element minOccurs="0" name="type" type="xsd:string"/>
                         <xsd:element name="downloadURL" type="xsd:anyURI" minOccurs="0"/>
                         <xsd:element minOccurs="0" name="accessURL" type="xsd:anyURI"/>
                         <xsd:element minOccurs="0" name="local" type="xsd:string"/>
-                    </xsd:all>
+                    </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
         </xsd:sequence>

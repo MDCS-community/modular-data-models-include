@@ -7,7 +7,7 @@
         <xsd:sequence>
             <xsd:element maxOccurs="81" name="C">
                 <xsd:complexType>
-                    <xsd:all>
+                    <xsd:sequence>
                         <xsd:element name="stiffness" type="physical-quantity-M-LTT-type"/>
                         <xsd:element name="ijkl">
                             <xsd:simpleType>
@@ -19,7 +19,7 @@
                                 </xsd:restriction>
                             </xsd:simpleType>
                         </xsd:element>
-                    </xsd:all>
+                    </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
         </xsd:sequence>

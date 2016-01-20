@@ -8,11 +8,11 @@
             <xsd:documentation>Diffraction measurement performed on a single spot on a thin film composition spread library.</xsd:documentation>
         </xsd:annotation>
         <xsd:complexType>
-            <xsd:all>
+            <xsd:sequence>
                 <xsd:element name="inventory-file-name" type="xsd:string"/>
                 <xsd:element name="inventory-ID" type="xsd:int"/>
                 <xsd:element name="diffractogram" type="xray-diffraction-type"/>
-            </xsd:all>
+            </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
 </xsd:schema>

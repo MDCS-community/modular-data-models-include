@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:complexType name="miller-index-plane-type">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="h" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="k" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="i" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="l" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

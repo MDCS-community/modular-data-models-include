@@ -3,6 +3,10 @@
     elementFormDefault="unqualified">
 
     <xsd:complexType name="miller-index-direction-type">
+        <xsd:annotation>
+            <xsd:documentation>Crystallographic direction</xsd:documentation>
+            <xsd:documentation>This reusable type may be used to specify a crystallographic direction or family of equivalent directions in a crystal Bravais lattice. As all enclosed elements are optional, this type may be used for two-dimensional representations (h, k) or three-dimensional representations in either the three-index (h, k, l) or four index (h, k, i, l) notation.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element minOccurs="0" name="h" type="xsd:double"/>
             <xsd:element minOccurs="0" name="k" type="xsd:double"/>

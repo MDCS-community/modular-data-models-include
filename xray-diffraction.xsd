@@ -1,44 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
-
-    <xsd:include schemaLocation="xray-siegbahn.xsd"/>
-    <xsd:include schemaLocation="chemical-element.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-L-.xsd"/>
     <xsd:include schemaLocation="physical-quantity-1-.xsd"/>
     <xsd:include schemaLocation="physical-quantity--L.xsd"/>
     <xsd:include schemaLocation="physical-quantity--.xsd"/>
     <xsd:include schemaLocation="remote-file.xsd"/>
+    <xsd:include schemaLocation="xray-source.xsd"/>
     <xsd:complexType name="xray-diffraction-type">
         <xsd:sequence>
             <xsd:element minOccurs="0" name="instrument-ID" type="xsd:string"/>
             <xsd:element minOccurs="0" name="sample-ID" type="xsd:string"/>
             <xsd:element minOccurs="0" name="user-ID" type="xsd:string"/>
             <xsd:element minOccurs="0" name="metadata" type="xsd:anyType"/>
-            <xsd:element minOccurs="0" name="xray-source">
-                <xsd:complexType>
-                    <xsd:choice>
-                        <xsd:element name="tube">
-                            <xsd:complexType>
-                                <xsd:sequence>
-                                    <xsd:element minOccurs="0" name="anode-material"
-                                        type="chemical-element-type"/>
-                                    <xsd:element minOccurs="0" name="spectra"
-                                        type="xray-siegbahn-type"/>
-                                </xsd:sequence>
-                            </xsd:complexType>
-                        </xsd:element>
-                        <xsd:element name="synchrotron">
-                            <xsd:complexType>
-                                <xsd:sequence>
-                                    <xsd:element minOccurs="0" name="wavelength"
-                                        type="physical-quantity-L--type"/>
-                                </xsd:sequence>
-                            </xsd:complexType>
-                        </xsd:element>
-                    </xsd:choice>
-                </xsd:complexType>
-            </xsd:element>
+            <xsd:element minOccurs="0" name="xray-source" type="xray-source-type"> </xsd:element>
             <xsd:element minOccurs="0" name="pattern-data">
                 <xsd:annotation>
                     <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>

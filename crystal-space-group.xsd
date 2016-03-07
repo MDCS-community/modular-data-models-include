@@ -7,6 +7,14 @@
             <xsd:element minOccurs="0" name="number" type="xsd:int"/>
             <xsd:element minOccurs="0" name="Hermann-Maguin" type="xsd:string"/>
             <xsd:element minOccurs="0" name="Schoenflies" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="Wykoff">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="letter" type="xsd:string"/>
+                        <xsd:element name="multiplicity" type="xsd:int"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

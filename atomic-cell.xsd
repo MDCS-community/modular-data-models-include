@@ -3,9 +3,9 @@
     elementFormDefault="unqualified">
     <xsd:include schemaLocation="physical-quantity-L-.xsd"/>
     <xsd:include schemaLocation="physical-quantity-1-.xsd"/>
-    <xsd:complexType name="crystal-cell-type">
+    <xsd:complexType name="atomic-cell-type">
         <xsd:choice>
-            <xsd:element name="Triclinic">
+            <xsd:element name="triclinic">
                 <xsd:complexType>
                     <xsd:sequence>
                         <xsd:element name="a" type="physical-quantity-L--type"/>
@@ -17,7 +17,7 @@
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element name="Monoclinic">
+            <xsd:element name="monoclinic">
                 <xsd:complexType>
                     <xsd:sequence>
                         <xsd:element name="a" type="physical-quantity-L--type"/>
@@ -27,7 +27,7 @@
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element name="Orthorhombic">
+            <xsd:element name="orthorhombic">
                 <xsd:complexType>
                     <xsd:sequence>
                         <xsd:element name="a" type="physical-quantity-L--type"/>
@@ -36,7 +36,7 @@
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element name="Rhombohedral">
+            <xsd:element name="rhombohedral">
                 <xsd:complexType>
                     <xsd:sequence>
                         <xsd:element name="a" type="physical-quantity-L--type"/>
@@ -44,7 +44,7 @@
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element name="Tetragonal">
+            <xsd:element name="tetragonal">
                 <xsd:complexType>
                     <xsd:sequence>
                         <xsd:element name="a" type="physical-quantity-L--type"/>
@@ -52,7 +52,7 @@
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element name="Hexagonal">
+            <xsd:element name="hexagonal">
                 <xsd:complexType>
                     <xsd:sequence>
                         <xsd:element name="a" type="physical-quantity-L--type"/>
@@ -60,7 +60,7 @@
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element name="Cubic">
+            <xsd:element name="cubic">
                 <xsd:complexType>
                     <xsd:sequence>
                         <xsd:element name="a" type="physical-quantity-L--type"/>

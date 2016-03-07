@@ -3,11 +3,13 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="crystal-identifier.xsd"/>
-    <xsd:include schemaLocation="crystal-structure.xsd"/>
+    <xsd:include schemaLocation="crystal-space-group.xsd"/>
+    <xsd:include schemaLocation="atomic-system.xsd"/>
     <xsd:complexType name="crystal-protype-type">
         <xsd:sequence>
             <xsd:element minOccurs="0" name="identifier" type="crystal-identifier-type"/>
-            <xsd:element minOccurs="0" name="crystal-structure" type="crystal-structure-type"/>
+            <xsd:element minOccurs="0" name="space-group" type="crystal-space-group"/>
+            <xsd:element minOccurs="0" name="atomic-system" type="atomic-system-type"/>
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

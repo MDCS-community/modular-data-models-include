@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="chemical-element.xsd"/>
+    <xsd:include schemaLocation="physical-quantity.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-L-.xsd"/>
+    <xsd:complexType name="atom">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="component" type="xsd:int">
+                <xsd:annotation>
+                    <xsd:documentation>Atom type identifier in atomistic simulation. Example: A binary simulation in LAMMPS will have at least two atom types, such as "1" and "2".</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="symbol" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Atom symbol in simulation if different from chemical element symbol</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="element" type="chemical-element-type"/>
+            <xsd:element name="position" type="physical-quantity-L--type" minOccurs="0"/>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="property">
+                <xsd:complexType>
+                    <xsd:complexContent>
+                        <xsd:extension base="physical-quantity-type">
+                            <xsd:sequence>
+                                <xsd:element name="name" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:extension>
+                    </xsd:complexContent>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

@@ -8,16 +8,36 @@
     <xsd:include schemaLocation="elastic-stiffness-voigt.xsd"/>
     <xsd:include schemaLocation="physical-quantity-L-.xsd"/>
     <xsd:include schemaLocation="atomic-system.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-0-.xsd"/>
+    <xsd:include schemaLocation="note.xsd"/>
+    <xsd:include schemaLocation="remote-file.xsd"/>
     <xsd:element name="calculation-crystal-phase">
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="calculation-id" type="xsd:string"/>
                 <xsd:element name="potential" type="interatomic-potential-compact-id-type"/>
+                <xsd:element minOccurs="0" name="crystal-info">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element minOccurs="0" name="artifact" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="symbols" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="phase-state">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element minOccurs="0" name="temperature"
+                                type="physical-quantity-0--type"/>
+                            <xsd:element minOccurs="0" name="pressure"
+                                type="physical-quantity-M-LTT-type"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
                 <xsd:element name="as-constructed-atomic-system" type="atomic-system-type"/>
                 <xsd:element name="relaxed-atomic-system" type="atomic-system-type" minOccurs="0"/>
                 <xsd:element name="cohesive-energy" type="physical-quantity-MLL-TT-type"
                     minOccurs="0"/>
-                <xsd:element name="bulk-modulus" minOccurs="0" type="physical-quantity-M-LTT-type"/>
                 <xsd:element minOccurs="0" name="elastic-constants"
                     type="elastic-stiffness-voigt-type"/>
                 <xsd:element minOccurs="0" name="cohesive-energy-relation">
@@ -30,6 +50,9 @@
                         </xsd:sequence>
                     </xsd:complexType>
                 </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="error" type="xsd:string"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="note" type="note-type"/>
+                <xsd:element minOccurs="0" name="supporting-files" type="remote-file-type"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>

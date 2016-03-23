@@ -4,8 +4,16 @@
 
     <xsd:complexType name="uncertainty-type">
         <xsd:sequence>
-            <xsd:element name="type" type="xsd:string"/>
-            <xsd:element maxOccurs="unbounded" name="value" type="xsd:double"/>
+            <xsd:element name="type" type="xsd:string" minOccurs="0"/>
+            <xsd:element maxOccurs="unbounded" name="value" type="xsd:double" minOccurs="0"/>
+            <xsd:element minOccurs="0" name="scale">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="absolute"/>
+                        <xsd:enumeration value="relative"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

@@ -52,7 +52,7 @@
                 </xsd:element>
                 <xsd:element maxOccurs="unbounded" minOccurs="0" name="error" type="xsd:string"/>
                 <xsd:element maxOccurs="unbounded" minOccurs="0" name="note" type="note-type"/>
-                <xsd:element minOccurs="0" name="supporting-files" type="remote-file-type"/>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="supporting-file" type="remote-file-type"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>

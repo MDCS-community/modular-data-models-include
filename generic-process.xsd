@@ -12,7 +12,7 @@
             <xsd:element minOccurs="0" name="script-version" type="xsd:string"/>
             <xsd:element minOccurs="0" name="code-version" type="xsd:string"/>
             <xsd:element minOccurs="0" name="terminal-command" type="xsd:string"/>
-            <xsd:element minOccurs="0" name="supporting-files" type="remote-file-type"/>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="supporting-file" type="remote-file-type"/>
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

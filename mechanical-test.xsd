@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="measurement-base.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-T-.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-0-.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-L-.xsd"/>
+    <xsd:include schemaLocation="physical-quantity--.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-ML-TT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-M-LTT.xsd"/>
+    <xsd:complexType name="mechanical-test-type">
+        <xsd:complexContent>
+            <xsd:extension base="measurement-base">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"> </xsd:element>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="data">
+                        <xsd:annotation>
+                            <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element minOccurs="0" name="cycle" type="xsd:int"/>
+                                <xsd:element minOccurs="0" name="time"
+                                    type="physical-quantity-T--type"/>
+                                <xsd:element minOccurs="0" name="displacement"
+                                    type="physical-quantity-L--type"/>
+                                <xsd:element minOccurs="0" name="strain"
+                                    type="physical-quantity---type"/>
+                                <xsd:element minOccurs="0" name="load"
+                                    type="physical-quantity-ML-TT-type"/>
+                                <xsd:element minOccurs="0" name="stress"
+                                    type="physical-quantity-M-LTT-type"/>
+                                <xsd:element minOccurs="0" name="temperature"
+                                    type="physical-quantity-0--type"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

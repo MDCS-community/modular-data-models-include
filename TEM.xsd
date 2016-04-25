@@ -6,7 +6,7 @@
     <xsd:include schemaLocation="miller-index-direction.xsd"/>
     <xsd:include schemaLocation="physical-quantity.xsd"/>
     <xsd:include schemaLocation="remote-file.xsd"/>
-    <xsd:complexType name="xray-diffraction-type">
+    <xsd:complexType name="transmission-electron-microscopy-type">
         <xsd:complexContent>
             <xsd:extension base="measurement-base">
                 <xsd:sequence>

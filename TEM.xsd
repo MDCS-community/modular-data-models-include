@@ -4,8 +4,8 @@
 
     <xsd:include schemaLocation="measurement-base.xsd"/>
     <xsd:include schemaLocation="miller-index-direction.xsd"/>
-    <xsd:include schemaLocation="physical-quantity.xsd"/>
     <xsd:include schemaLocation="remote-file.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-LLM-TTTI.xsd"/>
     <xsd:complexType name="transmission-electron-microscopy-type">
         <xsd:complexContent>
             <xsd:extension base="measurement-base">
@@ -22,7 +22,7 @@
                     <xsd:element minOccurs="0" name="tilt-zone-axis"
                         type="miller-index-direction-type"/>
                     <xsd:element minOccurs="0" name="accelerating-voltage"
-                        type="physical-quantity-type"/>
+                        type="physical-quantity-LLM-TTTI-type"/>
                 </xsd:sequence>
             </xsd:extension>
         </xsd:complexContent>

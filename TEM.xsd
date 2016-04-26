@@ -2,28 +2,29 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
 
+    <xsd:include schemaLocation="measurement-base.xsd"/>
     <xsd:include schemaLocation="miller-index-direction.xsd"/>
-    <xsd:include schemaLocation="physical-quantity.xsd"/>
     <xsd:include schemaLocation="remote-file.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-LLM-TTTI.xsd"/>
     <xsd:complexType name="transmission-electron-microscopy-type">
-        <xsd:sequence>
-            <xsd:element minOccurs="0" name="instrument-ID" type="xsd:string"/>
-            <xsd:element minOccurs="0" name="sample-ID" type="xsd:string"/>
-            <xsd:element minOccurs="0" name="user-ID" type="xsd:string"/>
-            <xsd:element minOccurs="0" name="acquisition-date-time" type="xsd:dateTime"/>
-            <xsd:element minOccurs="0" name="metadata" type="xsd:anyType"/>
-            <xsd:element minOccurs="0" name="imaging-mode">
-                <xsd:simpleType>
-                    <xsd:restriction base="xsd:string">
-                        <xsd:enumeration value="Bright Field Image"/>
-                        <xsd:enumeration value="Dark Field Image"/>
-                        <xsd:enumeration value="Selected Area Diffraction"/>
-                    </xsd:restriction>
-                </xsd:simpleType>
-            </xsd:element>
-            <xsd:element minOccurs="0" name="tilt-zone-axis" type="miller-index-direction-type"/>
-            <xsd:element minOccurs="0" name="accelerating-voltage" type="physical-quantity-type"/>
-            <xsd:element minOccurs="0" name="supporting-files" type="remote-file-type"/>
-        </xsd:sequence>
+        <xsd:complexContent>
+            <xsd:extension base="measurement-base">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="imaging-mode">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:enumeration value="Bright Field Image"/>
+                                <xsd:enumeration value="Dark Field Image"/>
+                                <xsd:enumeration value="Selected Area Diffraction"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="tilt-zone-axis"
+                        type="miller-index-direction-type"/>
+                    <xsd:element minOccurs="0" name="accelerating-voltage"
+                        type="physical-quantity-LLM-TTTI-type"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
     </xsd:complexType>
 </xsd:schema>

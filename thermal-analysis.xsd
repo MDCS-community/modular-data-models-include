@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="measurement-base.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-T-.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-0-.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-MLL-TT0.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-MLL-TT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-M-.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-L-.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-MLL-TTT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-LL-TTT.xsd"/>
+    <xsd:complexType name="thermal-analysis-measurement-type">
+        <xsd:complexContent>
+            <xsd:extension base="measurement-base">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="measurement-method">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:enumeration value="Differential Thermal Analysis"/>
+                                <xsd:enumeration
+                                    value="Differential Scanning Calorimetry (Heat Flux)"/>
+                                <xsd:enumeration
+                                    value="Differential Scanning Calorimetry (Power Compensated)"/>
+                                <xsd:enumeration value="Thermomechanical Analysis"/>
+                                <xsd:enumeration value="Thermogravimetric Analysis"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="calibration-instrument"
+                        type="thermal-analysis-data-type">
+                        <xsd:annotation>
+                            <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="calibration-measurement"
+                        type="thermal-analysis-data-type">
+                        <xsd:annotation>
+                            <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="data" type="thermal-analysis-data-type"
+                        maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="thermal-analysis-data-type">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="cycle" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="time" type="physical-quantity-T--type"/>
+            <xsd:element minOccurs="0" name="temperature" type="physical-quantity-0--type"/>
+            <xsd:element minOccurs="0" name="temperature-difference"
+                type="physical-quantity-0--type"/>
+            <xsd:element minOccurs="0" name="heat-capacity" type="physical-quantity-MLL-TT0-type"/>
+            <xsd:element minOccurs="0" name="enthalpy" type="physical-quantity-MLL-TT-type"/>
+            <xsd:element minOccurs="0" name="mass" type="physical-quantity-M--type"/>
+            <xsd:element minOccurs="0" name="length" type="physical-quantity-L--type"/>
+            <xsd:element minOccurs="0" name="heat-flow" type="physical-quantity-MLL-TTT-type"/>
+            <xsd:element minOccurs="0" name="mass-normalized-heat-flow"
+                type="physical-quantity-LL-TTT-type"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="uncertainty.xsd"/>
+    <xsd:complexType name="uncertainty-GUM-type">
+        <xsd:annotation>
+            <xsd:documentation>This type is designed to be used when reporting uncertainty conforming to the Guidelines for Evaluating and Expressing the Uncertainty of NIST Measurement Results. See NIST Technical Note 1297.</xsd:documentation>
+            <xsd:documentation>Note: When using the GUM uncertainty representation, the value field inherited from the generic type is to be utilized to represent the “combined expanded uncertainty”.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="uncertainty-type">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="standard-uncertainty"
+                        type="xsd:double"/>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="confidence-level"
+                        type="xsd:double"/>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded"
+                        name="effective-degrees-of-freedom" type="xsd:double"/>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="coverage-factor"
+                        type="xsd:double"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

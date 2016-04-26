@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="physical-quantity.xsd"/>
+    <xsd:complexType name="sensor-type">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="name" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="type" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="manufacturer" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="model" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="serial" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="calibration-date" type="xsd:dateTime"/>
+            <xsd:element minOccurs="0" name="range" type="physical-quantity-type"/>
+            <xsd:element minOccurs="0" name="accuracy" type="physical-quantity-type"/>
+            <xsd:element minOccurs="0" name="accuracy-class" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

@@ -5,6 +5,7 @@
     <xsd:complexType name="remote-file-type">
         <xsd:sequence>
             <xsd:element minOccurs="0" name="name" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="description" type="xsd:string"/>
             <xsd:element minOccurs="0" name="type" type="xsd:string"/>
             <xsd:element name="downloadURL" type="xsd:anyURI" minOccurs="0"/>
             <xsd:element minOccurs="0" name="accessURL" type="xsd:anyURI"/>

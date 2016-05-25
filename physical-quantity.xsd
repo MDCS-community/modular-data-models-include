@@ -7,7 +7,8 @@
         <xsd:sequence>
             <xsd:element maxOccurs="unbounded" minOccurs="0" name="value" type="xsd:float"/>
             <xsd:element minOccurs="0" name="unit" type="xsd:string"/>
-            <xsd:element minOccurs="0" name="uncertainty" type="uncertainty-type"/>
+            <xsd:element minOccurs="0" name="uncertainty" type="uncertainty-type"
+                maxOccurs="unbounded"/>
             <xsd:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="skip"
             />
         </xsd:sequence>

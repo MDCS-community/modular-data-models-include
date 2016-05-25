@@ -3,7 +3,7 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="physical-quantity-M-LTT.xsd"/>
-    <xsd:complexType name="elastic-stiffness-voigt-type">
+    <xsd:complexType name="elastic-stiffness-rank-4-type">
         <xsd:sequence>
             <xsd:element maxOccurs="81" name="C">
                 <xsd:complexType>

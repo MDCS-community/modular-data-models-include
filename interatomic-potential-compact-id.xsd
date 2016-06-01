@@ -15,7 +15,7 @@
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element minOccurs="0" name="artifact">
+            <xsd:element minOccurs="0" name="artifact" maxOccurs="unbounded">
                 <xsd:complexType>
                     <xsd:sequence>
                         <xsd:element minOccurs="0" name="key" type="xsd:string"/>

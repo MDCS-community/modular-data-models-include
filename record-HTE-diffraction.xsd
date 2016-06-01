@@ -9,9 +9,17 @@
         </xsd:annotation>
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="inventory-file-name" type="xsd:string"/>
-                <xsd:element name="inventory-ID" type="xsd:int"/>
-                <xsd:element name="diffractogram" type="xray-diffraction-type"/>
+                <xsd:element name="sample-registry-record" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="point-id" type="xsd:string" minOccurs="0"/>
+                <xsd:element minOccurs="0" name="coordinates">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element minOccurs="0" name="x" type="physical-quantity-type"/>
+                            <xsd:element minOccurs="0" name="y" type="physical-quantity-type"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="diffractogram" type="xray-diffraction-type" minOccurs="0"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>

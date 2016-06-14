@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="measurement-base.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-1-.xsd"/>
+    <xsd:include schemaLocation="physical-quantity--L.xsd"/>
+    <xsd:include schemaLocation="physical-quantity--.xsd"/>
+    <xsd:include schemaLocation="remote-file.xsd"/>
+    <xsd:include schemaLocation="xray-source.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-MLL-TT.xsd"/>
+    <xsd:complexType name="xray-fluorescence-type">
+        <xsd:complexContent>
+            <xsd:extension base="measurement-base">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"> </xsd:element>
+                    <xsd:element minOccurs="0" name="xray-source" type="xray-source-type"/>
+                    <xsd:element minOccurs="0" name="data">
+                        <xsd:annotation>
+                            <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element minOccurs="0" name="energy"
+                                    type="physical-quantity-MLL-TT-type"/>
+                                <xsd:element name="counts" type="physical-quantity---type"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

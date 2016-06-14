@@ -3,14 +3,14 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="measurement-base.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-T-.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-0-.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-MLL-TT0.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-MLL-TT.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-M-.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-L-.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-MLL-TTT.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-LL-TTT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_T-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_0-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TT0.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_M-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TTT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_LL-denominator_TTT.xsd"/>
     <xsd:complexType name="thermal-analysis-measurement-type">
         <xsd:complexContent>
             <xsd:extension base="measurement-base">

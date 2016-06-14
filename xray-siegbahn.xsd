@@ -2,8 +2,8 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
 
-    <xsd:include schemaLocation="physical-quantity-L-.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-MLL-TT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TT.xsd"/>
     <xsd:complexType name="xray-siegbahn-type">
         <xsd:sequence>
             <xsd:element maxOccurs="unbounded" minOccurs="0" name="emission-line">

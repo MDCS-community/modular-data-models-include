@@ -3,8 +3,8 @@
     elementFormDefault="unqualified">
     <xsd:include schemaLocation="xray-siegbahn.xsd"/>
     <xsd:include schemaLocation="chemical-element.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-L-.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-MLL-TT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TT.xsd"/>
     <xsd:complexType name="xray-source-type">
         <xsd:choice>
             <xsd:element name="tube">

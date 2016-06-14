@@ -4,7 +4,7 @@
 
     <xsd:include schemaLocation="chemical-element.xsd"/>
     <xsd:include schemaLocation="physical-quantity.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-L-.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
     <xsd:complexType name="atom">
         <xsd:sequence>
             <xsd:element minOccurs="0" name="component" type="xsd:int">

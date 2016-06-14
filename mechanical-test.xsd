@@ -3,12 +3,12 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="measurement-base.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-T-.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-0-.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-L-.xsd"/>
-    <xsd:include schemaLocation="physical-quantity--.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-ML-TT.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-M-LTT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_T-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_0-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_ML-denominator_TT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_M-denominator_LTT.xsd"/>
     <xsd:complexType name="mechanical-test-type">
         <xsd:complexContent>
             <xsd:extension base="measurement-base">

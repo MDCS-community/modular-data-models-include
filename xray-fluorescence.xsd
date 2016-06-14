@@ -8,7 +8,8 @@
     <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
     <xsd:include schemaLocation="remote-file.xsd"/>
     <xsd:include schemaLocation="xray-source.xsd"/>
-    <xsd:complexType name="xray-diffraction-type">
+    <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TT.xsd"/>
+    <xsd:complexType name="xray-fluorescence-type">
         <xsd:complexContent>
             <xsd:extension base="measurement-base">
                 <xsd:sequence>
@@ -20,11 +21,9 @@
                         </xsd:annotation>
                         <xsd:complexType>
                             <xsd:sequence>
-                                <xsd:element minOccurs="0" name="angle-2-theta"
-                                    type="physical-quantity-1--type"/>
-                                <xsd:element minOccurs="0" name="scattering-vector"
-                                    type="physical-quantity--L-type"/>
-                                <xsd:element name="intensity" type="physical-quantity---type"/>
+                                <xsd:element minOccurs="0" name="energy"
+                                    type="physical-quantity-MLL-TT-type"/>
+                                <xsd:element name="counts" type="physical-quantity---type"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>

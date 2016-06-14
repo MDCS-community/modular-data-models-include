@@ -2,7 +2,7 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
 
-    <xsd:include schemaLocation="physical-quantity-M-LTT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_M-denominator_LTT.xsd"/>
     <xsd:complexType name="elastic-stiffness-voigt-type">
         <xsd:sequence>
             <xsd:element maxOccurs="36" name="C">

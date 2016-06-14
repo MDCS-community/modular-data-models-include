@@ -6,7 +6,7 @@
     <xsd:complexType name="uncertainty-GUM-type">
         <xsd:annotation>
             <xsd:documentation>This type is designed to be used when reporting uncertainty conforming to the Guidelines for Evaluating and Expressing the Uncertainty of NIST Measurement Results. See NIST Technical Note 1297.</xsd:documentation>
-            <xsd:documentation>Note: When using the GUM uncertainty representation, the value field inherited from the generic type is to be utilized to represent the “combined expanded uncertainty”.</xsd:documentation>
+            <xsd:documentation>Note: When using the GUM uncertainty representation, the value field inherited from the generic type is to be utilized to represent the combined expanded uncertainty.</xsd:documentation>
         </xsd:annotation>
         <xsd:complexContent>
             <xsd:extension base="uncertainty-type">

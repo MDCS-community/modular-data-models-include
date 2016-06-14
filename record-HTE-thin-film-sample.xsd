@@ -66,13 +66,13 @@
                                     </xsd:sequence>
                                 </xsd:complexType>
                             </xsd:element>
-                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="data"
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="digital-artifact"
                                 type="remote-file-type"/>
                         </xsd:sequence>
                     </xsd:complexType>
                 </xsd:element>
-                <xsd:element maxOccurs="unbounded" minOccurs="0" name="data" type="remote-file-type"
-                />
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="digital-artifact"
+                    type="remote-file-type"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>

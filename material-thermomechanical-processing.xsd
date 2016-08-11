@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="physical-quantity-numerator_T-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_0-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_0-denominator_T.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_1-denominator_.xsd"/>
+    <xsd:complexType name="material-thermomechanical-processing-type">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="step">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+                        <xsd:element minOccurs="0" name="start-date-time" type="xsd:dateTime"/>
+                        <xsd:element minOccurs="0" name="name" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="comment" type="xsd:string"
+                            maxOccurs="unbounded"/>
+                        <xsd:element minOccurs="0" name="environment" type="xsd:string"/>
+                        <xsd:choice minOccurs="0">
+                            <xsd:element name="ageing" type="time-temperature-pair-type">
+                                <xsd:annotation>
+                                    <xsd:documentation>Can be used for single values of time and temperature or for temperature profiles composed of listes of time and temperature values. </xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element name="anneal" type="time-temperature-pair-type">
+                                <xsd:annotation>
+                                    <xsd:documentation>Can be used for single values of time and temperature or for temperature profiles composed of listes of time and temperature values. </xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element name="deform-bending">
+                                <xsd:complexType>
+                                    <xsd:choice>
+                                        <xsd:element name="cantilever" type="bending-type"/>
+                                        <xsd:element name="three-point" type="bending-type"/>
+                                        <xsd:element name="four-point" type="bending-type"/>
+                                    </xsd:choice>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="deform-extrusion">
+                                <xsd:complexType>
+                                    <xsd:choice>
+                                        <xsd:element name="conventional" type="extrusion-type"/>
+                                        <xsd:element name="equal-channel-angular-extrusion"
+                                            type="equal-channel-angular-extrusion-type"/>
+                                        <xsd:element name="wire-drawing" type="extrusion-type"/>
+                                        <xsd:element name="swaging" type="extrusion-type"/>
+                                    </xsd:choice>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="deform-rolling">
+                                <xsd:complexType>
+                                    <xsd:choice>
+                                        <xsd:element name="unidirectional" type="rolling-type"/>
+                                        <xsd:element name="bidirectional" type="rolling-type"/>
+                                    </xsd:choice>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="deform-torsion">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="maximum-strain"
+                                            type="physical-quantity---type" minOccurs="0"/>
+                                        <xsd:element minOccurs="0" name="angle"
+                                            type="physical-quantity-1--type"/>
+                                        <xsd:element minOccurs="0" name="rate"
+                                            type="physical-quantity---type"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="deform-uniaxial">
+                                <xsd:complexType>
+                                    <xsd:choice>
+                                        <xsd:element name="tension" type="uniaxial-type"> </xsd:element>
+                                        <xsd:element name="compression" type="uniaxial-type"/>
+                                    </xsd:choice>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="homogenization" type="time-temperature-pair-type"/>
+                            <xsd:element name="solutionization" type="time-temperature-pair-type"/>
+                            <xsd:element name="quenching">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element minOccurs="0" name="method" type="xsd:string"/>
+                                        <xsd:element minOccurs="0" name="rate"
+                                            type="physical-quantity-0-T-type"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:choice>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="time-temperature-pair-type">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="time" type="physical-quantity-T--type"/>
+            <xsd:element minOccurs="0" name="temperature" type="physical-quantity-0--type"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="uniaxial-type">
+        <xsd:sequence>
+            <xsd:element name="strain" type="physical-quantity---type" minOccurs="0"/>
+            <xsd:element minOccurs="0" name="rate" type="physical-quantity---type"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="bending-type">
+        <xsd:sequence>
+            <xsd:element name="maximum-strain" type="physical-quantity---type" minOccurs="0"/>
+            <xsd:element minOccurs="0" name="radius-of-curvature" type="physical-quantity-L--type"/>
+            <xsd:element minOccurs="0" name="rate" type="physical-quantity---type"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="rolling-type">
+        <xsd:sequence>
+            <xsd:element name="von-mises-strain" type="physical-quantity---type" minOccurs="0"/>
+            <xsd:element name="thickness-reduction" type="physical-quantity---type" minOccurs="0"/>
+            <xsd:element minOccurs="0" name="rate" type="physical-quantity---type"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="extrusion-type">
+        <xsd:sequence>
+            <xsd:element name="von-mises-strain" type="physical-quantity---type" minOccurs="0"/>
+            <xsd:element name="cross-section-area-reduction" type="physical-quantity---type"
+                minOccurs="0"/>
+            <xsd:element minOccurs="0" name="rate" type="physical-quantity---type"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="equal-channel-angular-extrusion-type">
+        <xsd:sequence>
+            <xsd:element name="von-mises-strain" type="physical-quantity---type" minOccurs="0"/>
+            <xsd:element name="cross-section-area-reduction" type="physical-quantity---type"
+                minOccurs="0"/>
+            <xsd:element minOccurs="0" name="rate" type="physical-quantity---type"/>
+            <xsd:element name="route" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

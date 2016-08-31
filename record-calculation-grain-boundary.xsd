@@ -10,12 +10,16 @@
     <xsd:include schemaLocation="physical-quantity-numerator_0-denominator_.xsd"/>
     <xsd:include schemaLocation="generic-process.xsd"/>
     <xsd:include schemaLocation="parameter.xsd"/>
+    <xsd:include schemaLocation="person.xsd"/>
+    <xsd:include schemaLocation="data-dependency.xsd"/>
     <xsd:element name="calculation-grain-boundary">
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element minOccurs="0" name="key" type="xsd:string"/>
                 <xsd:element minOccurs="0" name="id" type="xsd:string"/>
                 <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="contributor" type="person"/>
+                <xsd:element minOccurs="0" name="specialized-metadata" type="xsd:anyType"/>
                 <xsd:element minOccurs="0" name="potential"
                     type="interatomic-potential-compact-id-type"/>
                 <xsd:element maxOccurs="unbounded" minOccurs="0" name="parameter"
@@ -34,6 +38,8 @@
                 <xsd:element maxOccurs="unbounded" minOccurs="0" name="supporting-file"
                     type="remote-file-type"/>
                 <xsd:element maxOccurs="unbounded" minOccurs="0" name="comment" type="xsd:string"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="dependency"
+                    type="data-dependency-type"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>

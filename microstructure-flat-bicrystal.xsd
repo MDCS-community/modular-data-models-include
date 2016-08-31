@@ -8,14 +8,30 @@
     <xsd:include schemaLocation="physical-quantity-numerator_1-denominator_.xsd"/>
     <xsd:include schemaLocation="crystal-prototype.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
+    <xsd:include schemaLocation="parameter.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_LL-denominator_.xsd"/>
     <xsd:complexType name="microstructure-flat-bicrystal-type">
         <xsd:complexContent>
             <xsd:extension base="atomic-structure-type">
                 <xsd:sequence>
-                    <xsd:element minOccurs="0" name="grain-boundary-normal"
-                        type="physical-quantity-L--type"/>
-                    <xsd:element minOccurs="0" name="grain-boundary-position"
-                        type="physical-quantity-L--type"/>
+                    <xsd:element maxOccurs="2" minOccurs="0" name="grain-boundary">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element minOccurs="0" name="normal"
+                                    type="physical-quantity-L--type"/>
+                                <xsd:element minOccurs="0" name="position"
+                                    type="physical-quantity-L--type"/>
+                                <xsd:element minOccurs="0" name="bound"
+                                    type="physical-quantity-L--type" maxOccurs="2"/>
+                                <xsd:element minOccurs="0" name="thickness"
+                                    type="physical-quantity-L--type"/>
+                                <xsd:element minOccurs="0" name="area"
+                                    type="physical-quantity-LL--type"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="parameter"
+                        type="parameter-type"/>
                     <xsd:element maxOccurs="2" minOccurs="0" name="grain">
                         <xsd:complexType>
                             <xsd:sequence>
@@ -24,6 +40,9 @@
                                 <xsd:element minOccurs="0" name="description" type="xsd:string"/>
                                 <xsd:element minOccurs="0" name="crystal-prototype"
                                     type="crystal-protype-type"/>
+                                <xsd:element minOccurs="0" name="number-of-atoms" type="xsd:int"/>
+                                <xsd:element maxOccurs="unbounded" minOccurs="0" name="parameter"
+                                    type="parameter-type"/>
                                 <xsd:element minOccurs="0" name="orientation">
                                     <xsd:complexType>
                                         <xsd:sequence>

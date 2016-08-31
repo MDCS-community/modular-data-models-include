@@ -9,7 +9,7 @@
     <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_ML-denominator_TT.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_M-denominator_LTT.xsd"/>
-    <xsd:complexType name="mechanical-test-type">
+    <xsd:complexType name="tensile-test-type">
         <xsd:complexContent>
             <xsd:extension base="measurement-base">
                 <xsd:sequence>

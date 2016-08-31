@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
-
-    <xsd:include schemaLocation="crystal-identifier.xsd"/>
     <xsd:include schemaLocation="crystal-space-group.xsd"/>
     <xsd:include schemaLocation="atomic-system.xsd"/>
     <xsd:complexType name="crystal-protype-type">
         <xsd:sequence>
-            <xsd:element minOccurs="0" name="identifier" type="crystal-identifier-type"/>
+            <xsd:element minOccurs="0" name="key" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="id" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="name" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="prototype" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="Pearson-symbol" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="Strukturbericht" type="xsd:string"/>
             <xsd:element minOccurs="0" name="space-group" type="crystal-space-group"/>
             <xsd:element minOccurs="0" name="atomic-system" type="atomic-system-type"/>
         </xsd:sequence>

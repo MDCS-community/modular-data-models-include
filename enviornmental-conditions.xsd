@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="physical-quantity-numerator_0-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_M-denominator_LTT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
+    <xsd:complexType name="enviornmental-conditions-type">
+        <xsd:sequence>
+            <xsd:element name="temperature" minOccurs="0" type="physical-quantity-0--type"/>
+            <xsd:element name="pressure" minOccurs="0" type="physical-quantity-M-LTT-type"/>
+            <xsd:element name="relative-humidity" minOccurs="0" type="physical-quantity---type"/>
+            <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="comment" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

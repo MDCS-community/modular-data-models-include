@@ -2,7 +2,7 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
 
-    <xsd:include schemaLocation="measurement-base.xsd"/>
+    <xsd:include schemaLocation="instrument-base.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_T-denominator_.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_0-denominator_.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TT0.xsd"/>

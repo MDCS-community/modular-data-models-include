@@ -4,7 +4,7 @@
     <xsd:include schemaLocation="remote-file.xsd"/>
     <xsd:include schemaLocation="sensor.xsd"/>
     <xsd:include schemaLocation="parameter.xsd"/>
-    <xsd:complexType name="measurement-base">
+    <xsd:complexType name="instrument-base">
         <xsd:sequence>
             <xsd:element minOccurs="0" name="instrument-ID" type="xsd:string"/>
             <xsd:element minOccurs="0" name="sample-ID" type="xsd:string"/>

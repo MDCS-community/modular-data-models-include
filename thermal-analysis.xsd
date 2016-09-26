@@ -13,7 +13,7 @@
     <xsd:include schemaLocation="physical-quantity-numerator_LL-denominator_TTT.xsd"/>
     <xsd:complexType name="thermal-analysis-measurement-type">
         <xsd:complexContent>
-            <xsd:extension base="measurement-base">
+            <xsd:extension base="instrument-base">
                 <xsd:sequence>
                     <xsd:element minOccurs="0" name="measurement-method">
                         <xsd:simpleType>

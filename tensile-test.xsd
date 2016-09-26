@@ -11,7 +11,7 @@
     <xsd:include schemaLocation="physical-quantity-numerator_M-denominator_LTT.xsd"/>
     <xsd:complexType name="tensile-test-type">
         <xsd:complexContent>
-            <xsd:extension base="measurement-base">
+            <xsd:extension base="instrument-base">
                 <xsd:sequence>
                     <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"> </xsd:element>
                     <xsd:element maxOccurs="unbounded" minOccurs="0" name="data">

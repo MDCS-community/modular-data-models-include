@@ -11,7 +11,7 @@
     <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TT.xsd"/>
     <xsd:complexType name="xray-fluorescence-type">
         <xsd:complexContent>
-            <xsd:extension base="measurement-base">
+            <xsd:extension base="instrument-base">
                 <xsd:sequence>
                     <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"> </xsd:element>
                     <xsd:element minOccurs="0" name="xray-source" type="xray-source-type"/>

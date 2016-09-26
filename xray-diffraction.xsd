@@ -10,7 +10,7 @@
     <xsd:include schemaLocation="xray-source.xsd"/>
     <xsd:complexType name="xray-diffraction-type">
         <xsd:complexContent>
-            <xsd:extension base="measurement-base">
+            <xsd:extension base="instrument-base">
                 <xsd:sequence>
                     <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"> </xsd:element>
                     <xsd:element minOccurs="0" name="xray-source" type="xray-source-type"/>

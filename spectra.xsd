@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="instrument-base.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
+    <xsd:complexType name="spectra-type">
+        <xsd:complexContent>
+            <xsd:extension base="instrument-base">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"> </xsd:element>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element minOccurs="0" name="wavelength"
+                                    type="physical-quantity-L--type"/>
+                                <xsd:element minOccurs="0" name="intensity"
+                                    type="physical-quantity---type"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

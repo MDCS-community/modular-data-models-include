@@ -24,7 +24,10 @@
                                     type="physical-quantity-1--type"/>
                                 <xsd:element minOccurs="0" name="scattering-vector"
                                     type="physical-quantity--L-type"/>
-                                <xsd:element name="intensity" type="physical-quantity---type"/>
+                                <xsd:element name="intensity" type="physical-quantity---type"
+                                    minOccurs="0"/>
+                                <xsd:element minOccurs="0" name="counts"
+                                    type="physical-quantity---type"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>

@@ -1,0 +1,62 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+  elementFormDefault="unqualified">
+  <xsd:include schemaLocation="physical-quantity-numerator_ML-denominator_TT.xsd"/>
+  <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
+  <xsd:include schemaLocation="physical-quantity-numerator_T-denominator_.xsd"/>
+  <xsd:include schemaLocation="physical-quantity-numerator_0-denominator_.xsd"/>
+  <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+  <xsd:include schemaLocation="instrument-base.xsd"/>
+  <xsd:complexType name="hardness-type">
+    <xsd:complexContent>
+      <xsd:extension base="instrument-base">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="measurement-method">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="vickers"/>
+                <xsd:enumeration value="brinell"/>
+
+                <!-- All of the different rockwell scales according to ASTM E18-14 -->
+                <xsd:enumeration value="rockwell b"/>
+                <xsd:enumeration value="rockwell a"/>
+                <xsd:enumeration value="rockwell c"/>
+                <xsd:enumeration value="rockwell d"/>
+                <xsd:enumeration value="rockwell e"/>
+                <xsd:enumeration value="rockwell f"/>
+                <xsd:enumeration value="rockwell h"/>
+                <xsd:enumeration value="rockwell k"/>
+                <xsd:enumeration value="rockwell l"/>
+                <xsd:enumeration value="rockwell m"/>
+                <xsd:enumeration value="rockwell p"/>
+                <xsd:enumeration value="rockwell r"/>
+                <xsd:enumeration value="rockwell s"/>
+                <xsd:enumeration value="rockwell v"/>
+
+                <!-- Rockwell superficial hardness scales according to ASTM E18-14 -->
+                <xsd:enumeration value="rockwell n"/>
+                <xsd:enumeration value="rockwell t"/>
+                <xsd:enumeration value="rockwell w"/>
+                <xsd:enumeration value="rockwell x"/>
+                <xsd:enumeration value="rockwell y"/>
+
+                <!-- LW 21Sept16: Have not yet read the test stnadards for these -->
+                <xsd:enumeration value="knoop"/>
+                <xsd:enumeration value="shore"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+
+          <!-- Collection of optional reporting conditions listed in ASTM standards E18-14, E384-11, E10-12 -->
+          <xsd:element minOccurs="0" name="applied-load" type="physical-quantity-ML-TT-type"/>
+          <xsd:element minOccurs="0" name="dewell-time" type="physical-quantity-T--type"/>
+          <xsd:element minOccurs="0" name="indentor-size" type="physical-quantity-L--type"/>
+          <xsd:element minOccurs="0" name="temperature" type="physical-quantity-0--type"/>
+
+          <!-- LW 21Sept16: Not sure why we have a separate "data" field (Zach did this). Is this a common practice? -->
+          <!-- LW 21Sept16: Should the hardness field be mandatory (i.e., minOccurs="1") -->
+          <xsd:element minOccurs="0" name="hardness" type="physical-quantity---type"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

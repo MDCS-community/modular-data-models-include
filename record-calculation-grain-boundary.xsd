@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="interatomic-potential-compact-id.xsd"/>
+    <xsd:include schemaLocation="microstructure-flat-bicrystal.xsd"/>
+    <xsd:include schemaLocation="remote-file.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_M-denominator_TT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_LLT-denominator_M.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_0-denominator_.xsd"/>
+    <xsd:include schemaLocation="generic-process.xsd"/>
+    <xsd:include schemaLocation="parameter.xsd"/>
+    <xsd:include schemaLocation="person.xsd"/>
+    <xsd:include schemaLocation="data-dependency.xsd"/>
+    <xsd:element name="calculation-grain-boundary">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" name="key" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="id" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="contributor" type="person"/>
+                <xsd:element minOccurs="0" name="specialized-metadata" type="xsd:anyType"/>
+                <xsd:element minOccurs="0" name="potential"
+                    type="interatomic-potential-compact-id-type"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="parameter"
+                    type="parameter-type"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="atomistic-method"
+                    type="generic-process-type"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="process"
+                    type="generic-process-type"/>
+                <xsd:element minOccurs="0" name="bicrystal"
+                    type="microstructure-flat-bicrystal-type" maxOccurs="unbounded"/>
+                <xsd:element minOccurs="0" name="temperature" type="physical-quantity-0--type"/>
+                <xsd:element minOccurs="0" name="grain-boundary-energy"
+                    type="physical-quantity-M-TT-type"/>
+                <xsd:element minOccurs="0" name="grain-boundary-mobility"
+                    type="physical-quantity-LLT-M-type"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="supporting-file"
+                    type="remote-file-type"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="comment" type="xsd:string"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="dependency"
+                    type="data-dependency-type"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

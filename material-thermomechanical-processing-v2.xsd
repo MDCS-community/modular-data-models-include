@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="instrument-base.xsd"/>
+    <xsd:include schemaLocation="parameter.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_T-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_0-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_0-denominator_T.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_1-denominator_.xsd"/>
+    <xsd:complexType name="material-thermomechanical-processing-type">
+        <xsd:complexContent>
+            <xsd:extension base="instrument-base">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="step">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element minOccurs="0" name="number" type="xsd:int"/>
+                                <xsd:element minOccurs="0" name="type">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:string">
+                                            <xsd:enumeration value="ageing"/>
+                                            <xsd:enumeration value="annealing"/>
+                                            <xsd:enumeration value="deformation bending cantilever"/>
+                                            <xsd:enumeration value="deformation bending three-point"/>
+                                            <xsd:enumeration value="deformation bending four-point"/>
+                                            <xsd:enumeration
+                                                value="deformation extrusion conventional"/>
+                                            <xsd:enumeration
+                                                value="deformation extrusion equal channel angular"/>
+                                            <xsd:enumeration
+                                                value="deformation extrusion wire drawing"/>
+                                            <xsd:enumeration value="deformation extrusion swaging"/>
+                                            <xsd:enumeration
+                                                value="deformation rolling unidirectional"/>
+                                            <xsd:enumeration
+                                                value="deformation rolling bidirectional"/>
+                                            <xsd:enumeration value="deformation torsion"/>
+                                            <xsd:enumeration
+                                                value="deformation uniaxial compression"/>
+                                            <xsd:enumeration value="deformation uniaxial tension"/>
+                                            <xsd:enumeration value="homogenization"/>
+                                            <xsd:enumeration value="hot isostatic pressing"/>
+                                            <xsd:enumeration value="solutionization"/>
+                                            <xsd:enumeration value="quenching"/>
+                                        </xsd:restriction>
+                                    </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="start-date-time"
+                                    type="xsd:dateTime"/>
+                                <xsd:element name="thermal-parameters" minOccurs="0">
+                                    <xsd:complexType>
+                                        <xsd:sequence>
+                                            <xsd:element minOccurs="0" name="time-temperature-type">
+                                                <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                  <xsd:enumeration value="dwell"/>
+                                                  <xsd:enumeration value="profile"/>
+                                                  </xsd:restriction>
+                                                </xsd:simpleType>
+                                            </xsd:element>
+                                            <xsd:element minOccurs="0" name="time"
+                                                type="physical-quantity-T--type"/>
+                                            <xsd:element minOccurs="0" name="temperature"
+                                                type="physical-quantity-0--type"/>
+                                            <xsd:element minOccurs="0" name="heating-rate"
+                                                type="physical-quantity-0-T-type"/>
+                                            <xsd:element minOccurs="0" name="cooling-rate"
+                                                type="physical-quantity-0-T-type"/>
+                                            <xsd:element minOccurs="0" name="quench-type">
+                                                <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                  <xsd:enumeration value="ice"/>
+                                                  <xsd:enumeration value="liquid nitrogen"/>
+                                                  <xsd:enumeration value="oil"/>
+                                                  <xsd:enumeration value="water"/>
+                                                  </xsd:restriction>
+                                                </xsd:simpleType>
+                                            </xsd:element>
+                                        </xsd:sequence>
+                                    </xsd:complexType>
+                                </xsd:element>
+                                <xsd:element name="mechanical-parameters" minOccurs="0">
+                                    <xsd:complexType>
+                                        <xsd:sequence>
+                                            <xsd:element minOccurs="0" name="rate"
+                                                type="physical-quantity---type"/>
+                                            <xsd:element minOccurs="0" name="maximum-strain"
+                                                type="physical-quantity---type"/>
+                                            <xsd:element minOccurs="0" name="radius-of-curvature"
+                                                type="physical-quantity-L--type"/>
+                                            <xsd:element minOccurs="0" name="von-mises-strain"
+                                                type="physical-quantity---type"/>
+                                            <xsd:element minOccurs="0"
+                                                name="cross-section-area-reduction"
+                                                type="physical-quantity---type"/>
+                                            <xsd:element minOccurs="0"
+                                                name="equal-channel-angular-extrusion-route"
+                                                type="xsd:string"/>
+                                            <xsd:element minOccurs="0" name="thickness-reduction"
+                                                type="physical-quantity---type"/>
+                                            <xsd:element minOccurs="0" name="torsion-angle"
+                                                type="physical-quantity-1--type"/>
+                                            <xsd:element minOccurs="0" name="uniaxial-strain"
+                                                type="physical-quantity---type"/>
+                                        </xsd:sequence>
+                                    </xsd:complexType>
+                                </xsd:element>
+                                <xsd:element name="environment" minOccurs="0" maxOccurs="unbounded">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:string">
+                                            <xsd:enumeration value="vacuum"/>
+                                            <xsd:enumeration value="air"/>
+                                            <xsd:enumeration value="argon"/>
+                                            <xsd:enumeration value="nitrogen"/>
+                                            <xsd:enumeration value="Ar/H2"/>
+                                            <xsd:enumeration value="Ar/He"/>
+                                            <xsd:enumeration value="He/H2"/>
+                                            <xsd:enumeration value="N2/H2"/>
+                                            <xsd:enumeration value="water"/>
+                                            <xsd:enumeration value="salts"/>
+                                            <xsd:enumeration value="CO2"/>
+                                            <xsd:enumeration value="hydrogen"/>
+                                            <xsd:enumeration value="oil"/>
+                                            <xsd:enumeration value="oxygen"/>
+                                            <xsd:enumeration value="lead"/>
+                                            <xsd:enumeration value="kerosene"/>
+                                        </xsd:restriction>
+                                    </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element maxOccurs="unbounded" minOccurs="0" name="parameter"
+                                    type="parameter-type"/>
+                                <xsd:element maxOccurs="unbounded" minOccurs="0" name="comment"
+                                    type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

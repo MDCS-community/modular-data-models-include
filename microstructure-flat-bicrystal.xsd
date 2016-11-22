@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="atomic-structure.xsd"/>
+    <xsd:include schemaLocation="miller-index-direction.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_1-denominator_.xsd"/>
+    <xsd:include schemaLocation="crystal-prototype.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
+    <xsd:include schemaLocation="parameter.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_LL-denominator_.xsd"/>
+    <xsd:complexType name="microstructure-flat-bicrystal-type">
+        <xsd:complexContent>
+            <xsd:extension base="atomic-structure-type">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="2" minOccurs="0" name="grain-boundary">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element minOccurs="0" name="normal"
+                                    type="physical-quantity-L--type"/>
+                                <xsd:element minOccurs="0" name="position"
+                                    type="physical-quantity-L--type"/>
+                                <xsd:element minOccurs="0" name="bound"
+                                    type="physical-quantity-L--type" maxOccurs="2"/>
+                                <xsd:element minOccurs="0" name="thickness"
+                                    type="physical-quantity-L--type"/>
+                                <xsd:element minOccurs="0" name="area"
+                                    type="physical-quantity-LL--type"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="parameter"
+                        type="parameter-type"/>
+                    <xsd:element maxOccurs="2" minOccurs="0" name="grain">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element minOccurs="0" name="key" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="id" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="crystal-prototype"
+                                    type="crystal-protype-type"/>
+                                <xsd:element minOccurs="0" name="number-of-atoms" type="xsd:int"/>
+                                <xsd:element maxOccurs="unbounded" minOccurs="0" name="parameter"
+                                    type="parameter-type"/>
+                                <xsd:element minOccurs="0" name="orientation">
+                                    <xsd:complexType>
+                                        <xsd:sequence>
+                                            <xsd:element minOccurs="0" name="x"
+                                                type="miller-index-direction-type"/>
+                                            <xsd:element minOccurs="0" name="y"
+                                                type="miller-index-direction-type"/>
+                                            <xsd:element minOccurs="0" name="z"
+                                                type="miller-index-direction-type"/>
+                                        </xsd:sequence>
+                                    </xsd:complexType>
+                                </xsd:element>
+                                <xsd:element minOccurs="0" name="center-of-mass-position"
+                                    type="physical-quantity-L--type"/>
+                                <xsd:element minOccurs="0" name="strain"
+                                    type="physical-quantity---type"/>
+                                <xsd:element minOccurs="0" name="translation"
+                                    type="physical-quantity-L--type">
+                                    <xsd:annotation>
+                                        <xsd:documentation>Relative to the origin simulation reference frame</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="misorientation"
+                        type="physical-quantity-1--type"/>
+                    <xsd:element minOccurs="0" name="disorientation"
+                        type="physical-quantity-1--type"/>
+                    <xsd:element minOccurs="0" name="sigma-value" type="xsd:int"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

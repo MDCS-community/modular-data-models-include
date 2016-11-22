@@ -2,7 +2,7 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
 
-    <xsd:include schemaLocation="measurement-base.xsd"/>
+    <xsd:include schemaLocation="instrument-base.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_T-denominator_.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_0-denominator_.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TT0.xsd"/>
@@ -13,7 +13,7 @@
     <xsd:include schemaLocation="physical-quantity-numerator_LL-denominator_TTT.xsd"/>
     <xsd:complexType name="thermal-analysis-measurement-type">
         <xsd:complexContent>
-            <xsd:extension base="measurement-base">
+            <xsd:extension base="instrument-base">
                 <xsd:sequence>
                     <xsd:element minOccurs="0" name="measurement-method">
                         <xsd:simpleType>
@@ -28,42 +28,45 @@
                             </xsd:restriction>
                         </xsd:simpleType>
                     </xsd:element>
-                    <xsd:element minOccurs="0" name="calibration-instrument"
-                        type="thermal-analysis-data-type">
+                    <xsd:element minOccurs="0" name="data" maxOccurs="unbounded">
                         <xsd:annotation>
                             <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>
                         </xsd:annotation>
-                    </xsd:element>
-                    <xsd:element minOccurs="0" name="calibration-measurement"
-                        type="thermal-analysis-data-type">
-                        <xsd:annotation>
-                            <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>
-                        </xsd:annotation>
-                    </xsd:element>
-                    <xsd:element minOccurs="0" name="data" type="thermal-analysis-data-type"
-                        maxOccurs="unbounded">
-                        <xsd:annotation>
-                            <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>
-                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element minOccurs="0" name="type">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:string">
+                                            <xsd:enumeration value="Measurement"/>
+                                            <xsd:enumeration value="Measurement Calibration"/>
+                                            <xsd:enumeration value="Instrument Calibration"/>
+                                        </xsd:restriction>
+                                    </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element minOccurs="0" name="cycle" type="xsd:int"/>
+                                <xsd:element minOccurs="0" name="time"
+                                    type="physical-quantity-T--type"/>
+                                <xsd:element minOccurs="0" name="temperature"
+                                    type="physical-quantity-0--type"/>
+                                <xsd:element minOccurs="0" name="temperature-difference"
+                                    type="physical-quantity-0--type"/>
+                                <xsd:element minOccurs="0" name="heat-capacity"
+                                    type="physical-quantity-MLL-TT0-type"/>
+                                <xsd:element minOccurs="0" name="enthalpy"
+                                    type="physical-quantity-MLL-TT-type"/>
+                                <xsd:element minOccurs="0" name="mass"
+                                    type="physical-quantity-M--type"/>
+                                <xsd:element minOccurs="0" name="length"
+                                    type="physical-quantity-L--type"/>
+                                <xsd:element minOccurs="0" name="heat-flow"
+                                    type="physical-quantity-MLL-TTT-type"/>
+                                <xsd:element minOccurs="0" name="mass-normalized-heat-flow"
+                                    type="physical-quantity-LL-TTT-type"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
                     </xsd:element>
                 </xsd:sequence>
             </xsd:extension>
         </xsd:complexContent>
-    </xsd:complexType>
-    <xsd:complexType name="thermal-analysis-data-type">
-        <xsd:sequence>
-            <xsd:element minOccurs="0" name="cycle" type="xsd:int"/>
-            <xsd:element minOccurs="0" name="time" type="physical-quantity-T--type"/>
-            <xsd:element minOccurs="0" name="temperature" type="physical-quantity-0--type"/>
-            <xsd:element minOccurs="0" name="temperature-difference"
-                type="physical-quantity-0--type"/>
-            <xsd:element minOccurs="0" name="heat-capacity" type="physical-quantity-MLL-TT0-type"/>
-            <xsd:element minOccurs="0" name="enthalpy" type="physical-quantity-MLL-TT-type"/>
-            <xsd:element minOccurs="0" name="mass" type="physical-quantity-M--type"/>
-            <xsd:element minOccurs="0" name="length" type="physical-quantity-L--type"/>
-            <xsd:element minOccurs="0" name="heat-flow" type="physical-quantity-MLL-TTT-type"/>
-            <xsd:element minOccurs="0" name="mass-normalized-heat-flow"
-                type="physical-quantity-LL-TTT-type"/>
-        </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

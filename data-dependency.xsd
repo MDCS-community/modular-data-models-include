@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="parameter.xsd"/>
+    <xsd:complexType name="data-dependency-type">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="key" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="id" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="comment" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="parameter" type="parameter-type"/>
+            <xsd:element minOccurs="0" name="URL" type="xsd:anyURI"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

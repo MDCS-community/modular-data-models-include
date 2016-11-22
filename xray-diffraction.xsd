@@ -2,7 +2,7 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
 
-    <xsd:include schemaLocation="measurement-base.xsd"/>
+    <xsd:include schemaLocation="instrument-base.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_1-denominator_.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_-denominator_L.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
@@ -10,7 +10,7 @@
     <xsd:include schemaLocation="xray-source.xsd"/>
     <xsd:complexType name="xray-diffraction-type">
         <xsd:complexContent>
-            <xsd:extension base="measurement-base">
+            <xsd:extension base="instrument-base">
                 <xsd:sequence>
                     <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"> </xsd:element>
                     <xsd:element minOccurs="0" name="xray-source" type="xray-source-type"/>
@@ -24,7 +24,10 @@
                                     type="physical-quantity-1--type"/>
                                 <xsd:element minOccurs="0" name="scattering-vector"
                                     type="physical-quantity--L-type"/>
-                                <xsd:element name="intensity" type="physical-quantity---type"/>
+                                <xsd:element name="intensity" type="physical-quantity---type"
+                                    minOccurs="0"/>
+                                <xsd:element minOccurs="0" name="counts"
+                                    type="physical-quantity---type"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>

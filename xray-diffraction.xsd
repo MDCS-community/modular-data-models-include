@@ -14,7 +14,7 @@
                 <xsd:sequence>
                     <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"> </xsd:element>
                     <xsd:element minOccurs="0" name="xray-source" type="xray-source-type"/>
-                    <xsd:element minOccurs="0" name="data">
+                    <xsd:element minOccurs="0" name="data" maxOccurs="unbounded">
                         <xsd:annotation>
                             <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>
                         </xsd:annotation>

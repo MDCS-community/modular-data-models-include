@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+    <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:complexType name="schema-type">
+        <xsd:complexContent>
+            <xsd:extension base="attribute-base">
+                <xsd:sequence>
+                    <xsd:element name="schema-type">
+                        <xsd:annotation>
+                            <xsd:appinfo>
+                                <label>Schema Type</label>
+                            </xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:enumeration value="XSD"/>
+                                <xsd:enumeration value="JSON-LD"/>
+                                <xsd:enumeration value="JSON Schema"/>
+                                <xsd:enumeration value="HDF5-based"/>
+                                <xsd:enumeration value="XML-based"/>
+                                <xsd:enumeration value="JSON-based"/>
+                                <xsd:enumeration value="DTD"/>
+                                <xsd:enumeration value="RDF"/>
+                                <xsd:enumeration value="CLiX"/>
+                                <xsd:enumeration value="DDML"/>
+                                <xsd:enumeration value="DSD"/>
+                                <xsd:enumeration value="DTD"/>
+                                <xsd:enumeration value="NRL"/>
+                                <xsd:enumeration value="NVDL"/>
+                                <xsd:enumeration value="CAM"/>
+                                <xsd:enumeration value="RelaxNG"/>
+                                <xsd:enumeration value="SOX"/>
+                                <xsd:enumeration value="XDR"/>
+                                <xsd:enumeration value="XER"/>
+                                <xsd:enumeration value="WXS"/>
+                                <xsd:enumeration value="Schematron"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

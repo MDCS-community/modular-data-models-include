@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="sample.xsd"/>
+    <xsd:include schemaLocation="attribute-AM-material.xsd"/>
+    <xsd:include schemaLocation="attribute-AM-build-process.xsd"/>
+    <xsd:element name="sample" type="AM-sample"/>
+    <xsd:complexType name="AM-sample">
+        <xsd:complexContent>
+            <xsd:extension base="sample"/>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

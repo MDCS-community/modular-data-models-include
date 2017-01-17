@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified" xmlns:ds="http://datacite.org/schema/kernel-4">
+    <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:complexType name="resource-type-datacite">
+        <xsd:complexContent>
+            <xsd:extension base="attribute-base">
+                <xsd:sequence>
+                    <xsd:element name="datacite-type">
+                        <xsd:annotation>
+                            <xsd:appinfo>
+                                <label>Datacite Resource Type</label>
+                            </xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:enumeration value="Audiovisual"/>
+                                <xsd:enumeration value="Collection"/>
+                                <xsd:enumeration value="Dataset"/>
+                                <xsd:enumeration value="Event"/>
+                                <xsd:enumeration value="Image"/>
+                                <xsd:enumeration value="InteractiveResource"/>
+                                <xsd:enumeration value="Model"/>
+                                <xsd:enumeration value="PhysicalObject"/>
+                                <xsd:enumeration value="Service"/>
+                                <xsd:enumeration value="Software"/>
+                                <xsd:enumeration value="Sound"/>
+                                <xsd:enumeration value="Text"/>
+                                <xsd:enumeration value="Workflow"/>
+                                <xsd:enumeration value="Other"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

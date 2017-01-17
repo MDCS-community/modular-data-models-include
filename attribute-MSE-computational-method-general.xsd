@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:complexType name="attribute-computational-method-general">
+        <xsd:complexContent>
+            <xsd:extension base="attribute-base">
+                <xsd:sequence>
+                    <xsd:element name="computational-method-general" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo>
+                                <label>Computational Method</label>
+                            </xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:enumeration value="density functional theory calculation"/>
+                                <xsd:enumeration value="molecular dynamics simulation"/>
+                                <xsd:enumeration value="numerical simulations"/>
+                                <xsd:enumeration value="multiscale simulations"/>
+                                <xsd:enumeration value="finite element analysis"/>
+                                <xsd:enumeration value="computational thermodynamics"/>
+                                <xsd:enumeration value="statistical mechanics"/>
+                                <xsd:enumeration value="dislocation dynamics"/>
+                                <xsd:enumeration value="phase field calculation"/>
+                                <xsd:enumeration value="crystal plasticity calculation"/>
+                                <xsd:enumeration value="monte-carlo simulation"/>
+                                <xsd:enumeration value="boundary tracking/level set"/>
+                                <xsd:enumeration value="non-specific"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

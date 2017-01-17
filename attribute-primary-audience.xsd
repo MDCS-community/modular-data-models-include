@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:complexType name="attribute-primary-audience">
+        <xsd:complexContent>
+            <xsd:extension base="attribute-base">
+                <xsd:sequence>
+                    <xsd:element name="primary-audience" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo>
+                                <label>Primary Audience</label>
+                            </xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:enumeration value="Academia"/>
+                                <xsd:enumeration value="Aerospace"/>
+                                <xsd:enumeration value="Automotive Industry"/>
+                                <xsd:enumeration value="Biotechnology Sector"/>
+                                <xsd:enumeration value="Building/construction industry"/>
+                                <xsd:enumeration value="Chemical Industry"/>
+                                <xsd:enumeration value="Education"/>
+                                <xsd:enumeration value="Electronics Industry"/>
+                                <xsd:enumeration value="Energy Sector"/>
+                                <xsd:enumeration value="Healthcare Sector"/>
+                                <xsd:enumeration value="Law Enforcement"/>
+                                <xsd:enumeration value="Manufacturing Industries"/>
+                                <xsd:enumeration value="Materials Development Community"/>
+                                <xsd:enumeration value="Materials Science Research Community"/>
+                                <xsd:enumeration value="Metals and Mining Industry"/>
+                                <xsd:enumeration value="Public Outreach"/>
+                                <xsd:enumeration value="Regulatory Bodies"/>
+                                <xsd:enumeration value="Research"/>
+                                <xsd:enumeration value="Scientific Societies"/>
+                                <xsd:enumeration value="Semiconductor Industry"/>
+                                <xsd:enumeration value="Standards Organizations"/>
+                                <xsd:enumeration value="State or municipal government"/>
+                                <xsd:enumeration value="Transportation"/>
+                                <xsd:enumeration value="US Government Agency(ies)"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

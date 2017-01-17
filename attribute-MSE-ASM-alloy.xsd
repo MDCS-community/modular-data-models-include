@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:complexType name="attribute-ASM-alloy">
+        <xsd:complexContent>
+            <xsd:extension base="attribute-base">
+                <xsd:sequence>
+                    <xsd:element name="metal" maxOccurs="unbounded">
+                        <xsd:complexType>
+                            <xsd:choice>
+                                <xsd:element name="ferrous">
+                                    <xsd:complexType>
+                                        <xsd:choice>
+                                            <xsd:element name="cast-iron">
+                                                <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element name="austenitic-with-graphite"/>
+                                                  <xsd:element name="ductile"/>
+                                                  <xsd:element name="gray"/>
+                                                  <xsd:element name="malleable"/>
+                                                  <xsd:element name="white-cast-iron"/>
+                                                  <xsd:element name="unclassified-cast-iron"/>
+                                                  </xsd:choice>
+                                                </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="iron-alloy">
+                                                <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element name="magentically-soft-iron-alloy"/>
+                                                  <xsd:element name="permanent-magnet-iron-alloy"/>
+                                                  <xsd:element name="unclassified-iron-alloy"/>
+                                                  </xsd:choice>
+                                                </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="steel">
+                                                <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element name="alloy-steel">
+                                                  <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element name="chromium"/>
+                                                  <xsd:element name="chromium-molybdenum"/>
+                                                  <xsd:element name="chromium-vanadium"/>
+                                                  <xsd:element name="low-alloy-steel"/>
+                                                  <xsd:element name="manganese"/>
+                                                  <xsd:element
+                                                  name="molybdenum-or-molybdenum-sulfide"/>
+                                                  <xsd:element name="nickel-chromium-molybdenum"/>
+                                                  <xsd:element name="nickel-molybdenum"/>
+                                                  <xsd:element name="nickel-steel"/>
+                                                  <xsd:element name="silicon"/>
+                                                  <xsd:element name="silicon-chromium"/>
+                                                  <xsd:element name="silicon-manganese"/>
+                                                  <xsd:element name="unclassified"/>
+                                                  </xsd:choice>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="carbon-steel">
+                                                  <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element name="high-manganese"/>
+                                                  <xsd:element name="nonresulfurized"/>
+                                                  <xsd:element
+                                                  name="rephosphorized-and-resulfurized"/>
+                                                  <xsd:element name="resulfurized"/>
+                                                  <xsd:element name="unclassified"/>
+                                                  </xsd:choice>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="cast-stainless-steel">
+                                                  <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element name="austenitic"/>
+                                                  <xsd:element name="ferritic"/>
+                                                  <xsd:element name="martensitic"/>
+                                                  <xsd:element name="unclassified"/>
+                                                  </xsd:choice>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="galvanized"/>
+                                                  <xsd:element name="high-strength-steel">
+                                                  <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element name="low-alloy-hsla"/>
+                                                  <xsd:element name="maraging"/>
+                                                  <xsd:element name="structural"/>
+                                                  <xsd:element name="ultrahigh-strength"/>
+                                                  <xsd:element name="unclassified"/>
+                                                  </xsd:choice>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="stainless-steel">
+                                                  <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element name="austenitic"/>
+                                                  <xsd:element name="ferritic"/>
+                                                  <xsd:element name="martensitic"/>
+                                                  <xsd:element name="precipitation-hardening"/>
+                                                  <xsd:element name="unclassified"/>
+                                                  </xsd:choice>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="steel-casting">
+                                                  <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element name="austenitic-manganese"/>
+                                                  <xsd:element name="high-carbon"/>
+                                                  <xsd:element name="low-alloy"/>
+                                                  <xsd:element name="low-carbon"/>
+                                                  <xsd:element name="medium-carbon"/>
+                                                  <xsd:element name="nickel-base"/>
+                                                  <xsd:element name="unclassified"/>
+                                                  </xsd:choice>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="tool-steel">
+                                                  <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element
+                                                  name="air-hardening-medium-alloy-cold-work"/>
+                                                  <xsd:element name="cold-work-tool-steel"/>
+                                                  <xsd:element
+                                                  name="high-carbon-high-chromium-cold-work"/>
+                                                  <xsd:element name="hot-work"/>
+                                                  <xsd:element name="low-alloy-special-purpose"/>
+                                                  <xsd:element name="mold-steel"/>
+                                                  <xsd:element name="molybdenum-high-speed"/>
+                                                  <xsd:element name="oil-hardening-cold-work"/>
+                                                  <xsd:element name="shock-resisting"/>
+                                                  <xsd:element name="tungsten-high-speed"/>
+                                                  <xsd:element name="water-hardening"/>
+                                                  <xsd:element name="unclassified"/>
+                                                  </xsd:choice>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="unclassified-steel"/>
+                                                  </xsd:choice>
+                                                </xsd:complexType>
+                                            </xsd:element>
+                                        </xsd:choice>
+                                    </xsd:complexType>
+                                </xsd:element>
+                                <xsd:element name="nonferrous">
+                                    <xsd:complexType>
+                                        <xsd:choice>
+                                            <xsd:element name="aluminum">
+                                                <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element name="aluminum-unalloyed-ingot"/>
+                                                  <xsd:element name="cast-aluminum">
+                                                  <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element name="series-1xx.x-pure-aluminum"/>
+                                                  <xsd:element name="series-2xx.x-aluminum-copper"/>
+                                                  <xsd:element
+                                                  name="series-3xx.x-aluminum-silicon-plus-copper-or-magnesium"/>
+                                                  <xsd:element name="series-4xx.x-aluminum-silicon"/>
+                                                  <xsd:element
+                                                  name="series-5xx.x-aluminum-magnesium"/>
+                                                  <xsd:element name="series-7xx.x-aluminum-zinc"/>
+                                                  <xsd:element name="series-8xx.x-aluminum-tin"/>
+                                                  <xsd:element
+                                                  name="series-9xx.x-aluminum-plus-other-elements"/>
+                                                  <xsd:element name="unclassified-cast-aluminum"/>
+                                                  </xsd:choice>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="wrought-aluminum">
+                                                  <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element
+                                                  name="series-1xxx-wrought-pure-aluminum"/>
+                                                  <xsd:element name="series-2xxx-aluminum-copper"/>
+                                                  <xsd:element name="series-3xxx-aluminum-manganese"/>
+                                                  <xsd:element name="series-4xxx-aluminum-silicon"/>
+                                                  <xsd:element name="series-5xxx-aluminum-magnesium"/>
+                                                  <xsd:element
+                                                  name="series-6xxx-aluminum-magnesium-silicon"/>
+                                                  <xsd:element name="series-7xxx-aluminum-zinc"/>
+                                                  <xsd:element
+                                                  name="series-8xxx-aluminum-plus-other-elements-and-clad-aluminum"/>
+                                                  <xsd:element name="unclassified-wrought-aluminum"
+                                                  />
+                                                  </xsd:choice>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:choice>
+                                                </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="cobalt">
+                                                <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element
+                                                  name="cobalt-chromium-nickel-tungsten"/>
+                                                  <xsd:element name="cobalt-chromium-tungsten"/>
+                                                  <xsd:element name="unclassified-cobalt"/>
+                                                  </xsd:choice>
+                                                </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="copper">
+                                                <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element name="cast-copper">
+                                                  <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element name="brass"/>
+                                                  <xsd:element name="bronze"/>
+                                                  <xsd:element name="copper-nickel"/>
+                                                  <xsd:element name="copper"/>
+                                                  <xsd:element name="high-copper-alloy"/>
+                                                  <xsd:element name="leaded-copper"/>
+                                                  <xsd:element name="nickel-silver"/>
+                                                  <xsd:element name="unclassified-cast-copper"/>
+                                                  </xsd:choice>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="wrought-Copper">
+                                                  <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element name="beryllium-copper-alloy"/>
+                                                  <xsd:element name="brass"/>
+                                                  <xsd:element name="bronze"/>
+                                                  <xsd:element name="copper-nickel"/>
+                                                  <xsd:element name="copper"/>
+                                                  <xsd:element name="high-copper-alloy"/>
+                                                  <xsd:element name="nickel-silver"/>
+                                                  <xsd:element name="unclassified-wrought-copper"/>
+                                                  </xsd:choice>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:choice>
+                                                </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="gold"/>
+                                            <xsd:element name="lead">
+                                                <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element
+                                                  name="commercially-pure-or-low-alloyed-lead"/>
+                                                  <xsd:element name="lead-antimony"/>
+                                                  <xsd:element name="lead-tin"/>
+                                                  <xsd:element name="unclassified-lead"/>
+                                                  </xsd:choice>
+                                                </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="magnesium">
+                                                <xsd:complexType>
+                                                  <xsd:choice>
+                                                  <xsd:element name="cast-magnesium-aluminum"/>
+                                                  <xsd:element
+                                                  name="cast-magnesium-aluminum-manganese"/>
+                                                  <xsd:element name="cast-magnesium-aluminum-zinc"/>
+                                                  <xsd:element name="cast-magnesium-rare-earth"/>
+                                                  <xsd:element name="cast-magnesium-zinc"/>
+                                                  <xsd:element name="commercially-pure-magnesium"/>
+                                                  <xsd:element name="unclassified-magnesium"/>
+                                                  <xsd:element
+                                                  name="wrought-magnesium-aluminum-zinc"/>
+                                                  <xsd:element name="wrought-magnesium-lithium"/>
+                                                  <xsd:element name="wrought-magnesium-zinc"/>
+                                                  </xsd:choice>
+                                                </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="manganese"> </xsd:element>
+                                            <xsd:element name="nickel"/>
+                                            <xsd:element name="palladium"> </xsd:element>
+                                            <xsd:element name="refractory"/>
+                                            <xsd:element name="silicon"> </xsd:element>
+                                            <xsd:element name="silver"> </xsd:element>
+                                            <xsd:element name="tin"/>
+                                            <xsd:element name="titanium"/>
+                                            <xsd:element name="unclassified"/>
+                                            <xsd:element name="zinc"/>
+                                            <xsd:element name="zirconium"/>
+                                        </xsd:choice>
+                                    </xsd:complexType>
+                                </xsd:element>
+                            </xsd:choice>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

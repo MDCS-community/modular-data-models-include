@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:complexType name="attribute-material-science-software-scale">
+        <xsd:complexContent>
+            <xsd:extension base="attribute-base">
+                <xsd:sequence>
+                    <xsd:element name="material-science-software-scale" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo>
+                                <label>Software Scale</label>
+                            </xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:enumeration value="None given"/>
+                                <xsd:enumeration value="Electronic"/>
+                                <xsd:enumeration value="Atomic scale (Nanoscale)"/>
+                                <xsd:enumeration value="Microscale"/>
+                                <xsd:enumeration value="Mesoscale"/>
+                                <xsd:enumeration value="Macroscale"/>
+                                <xsd:enumeration value="Structural"/>
+                                <xsd:enumeration value="Multiscale"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

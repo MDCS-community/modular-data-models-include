@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:complexType name="attribute-structural-morphology-general">
+        <xsd:complexContent>
+            <xsd:extension base="attribute-base">
+                <xsd:sequence>
+                    <xsd:element name="structural-morphology-general" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo>
+                                <label>Structural Morphology</label>
+                            </xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:enumeration value="crystalline">
+                                    <xsd:annotation>
+                                        <xsd:documentation> having a certain crystal structure,
+                                            i.e., characterized by both the short-range and
+                                            long-range periodic order in the atomic structure;
+                                            having a structure of identical units (consisting of one
+                                            or more atoms) which are regularly arranged with respect
+                                            to each other in space. </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="amorphous">
+                                    <xsd:annotation>
+                                        <xsd:documentation> a structure without regular or periodic
+                                            order; having a structure characterized by only a
+                                            short-range order but without a long-range order in
+                                            atomic structure. </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="fluid">
+                                    <xsd:annotation>
+                                        <xsd:documentation> a material in a liquid or gaseous state.
+                                        </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="quasi-periodic">
+                                    <xsd:annotation>
+                                        <xsd:documentation> a structure that is ordered but not
+                                            periodic in its units; a structure characterized by
+                                            rotational symmetry but not translational symmetry
+                                        </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="bulk">
+                                    <xsd:annotation>
+                                        <xsd:documentation> referring to structure representative of
+                                            a material away from surfaces and large enough to be
+                                            volume invariant </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="2D">
+                                    <xsd:annotation>
+                                        <xsd:documentation> having the structure of a sheet, usually
+                                            being one structural unit in size in one spatial
+                                            dimension. </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="1D">
+                                    <xsd:annotation>
+                                        <xsd:documentation> having a linear structure, usually being
+                                            one structural unit in size in two spatial dimensions.
+                                        </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="film">
+                                    <xsd:annotation>
+                                        <xsd:documentation> structured into a thin layer.
+                                        </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="nanotube">
+                                    <xsd:annotation>
+                                        <xsd:documentation> having the structure of a tube on the
+                                            nanomaterial scale. </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="fiber">
+                                    <xsd:annotation>
+                                        <xsd:documentation> having a filament shape, i.e. one that
+                                            is long in relation to its thickness
+                                        </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="composite">
+                                    <xsd:annotation>
+                                        <xsd:documentation> being comprised of pieces of different
+                                            structural types. </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="interfacial">
+                                    <xsd:annotation>
+                                        <xsd:documentation> featuring two different materials or
+                                            structures segregated along a well-defined surface.
+                                        </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="interphase">
+                                    <xsd:annotation>
+                                        <xsd:documentation> the region between two distinct phases.
+                                        </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="line defect">
+                                    <xsd:annotation>
+                                        <xsd:documentation> dislocations; having lattice
+                                            imperfections in a crystal structure; having a crystal
+                                            structure in which lattice components are displaced from
+                                            the nominally periodic positions. </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="point defect">
+                                    <xsd:annotation>
+                                        <xsd:documentation> vacancies; having a crystal structure
+                                            with unoccupied lattice sites. </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="non-specific">
+                                    <xsd:annotation>
+                                        <xsd:documentation> materials related to (or studied in)
+                                            this resource are not restricted to a specific category
+                                            of structure or morphology. </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

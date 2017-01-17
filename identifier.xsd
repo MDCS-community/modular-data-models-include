@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:complexType name="identifier">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>
+                        <label>Identifier Value</label>
+                        <placeholder>E.g. http://dx.doi.org/123/abc; http://orcid.org/0000-0000-0000-0000</placeholder>
+                    </xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="type" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>
+                        <label>Identifier Type</label>
+                        <placeholder>E.g. DOI, Handle, ORCID</placeholder>
+                    </xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

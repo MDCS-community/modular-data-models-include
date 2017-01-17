@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="sample.xsd"/>
+    <xsd:include schemaLocation="digital-artifact.xsd"/>
+    <xsd:include schemaLocation="attribute-wafer.xsd"/>
+    <xsd:include schemaLocation="attribute-deposition-target-material-simple.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+    <xsd:element name="sample" type="combinatorial-sample"/>
+    <xsd:complexType name="combinatorial-sample">
+        <xsd:complexContent>
+            <xsd:extension base="sample">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="point">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element minOccurs="0" name="id" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="coordinates">
+                                    <xsd:complexType>
+                                        <xsd:sequence>
+                                            <xsd:element minOccurs="0" name="x"
+                                                type="physical-quantity-L--type"/>
+                                            <xsd:element minOccurs="0" name="y"
+                                                type="physical-quantity-L--type"/>
+                                        </xsd:sequence>
+                                    </xsd:complexType>
+                                </xsd:element>
+                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                    name="digital-artifact" type="digital-artifact"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

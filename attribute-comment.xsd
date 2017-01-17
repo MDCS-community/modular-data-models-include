@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:complexType name="attribute-comment">
+        <xsd:complexContent>
+            <xsd:extension base="attribute-base">
+                <xsd:sequence>
+                    <xsd:element name="comment" type="xsd:string" maxOccurs="unbounded"
+                        ns0:_mod_mdcs_="/registry/description" xmlns:ns0="http://mdcs.ns"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

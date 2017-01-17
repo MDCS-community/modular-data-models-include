@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:complexType name="access">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="rights">
+                <xsd:annotation>
+                    <xsd:appinfo>
+                        <label>Access Rights</label>
+                    </xsd:appinfo>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="public">
+                            <xsd:annotation>
+                                <xsd:documentation> unrestricted, anonymous access is allowed
+                                    without authentication. </xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:enumeration>
+                        <xsd:enumeration value="open-login">
+                            <xsd:annotation>
+                                <xsd:documentation> unrestricted access requires a login (or other
+                                    authentication mechanism). </xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:enumeration>
+                        <xsd:enumeration value="proprietary">
+                            <xsd:annotation>
+                                <xsd:documentation> requires authentication and users only have
+                                    access to datasets they have been given rights to. Generally,
+                                    there is no charge to use this resource. </xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:enumeration>
+                        <xsd:enumeration value="fee-required">
+                            <xsd:annotation>
+                                <xsd:documentation> requires user to pay a one-time or subscription
+                                    fee in order to access the resource. On-line resources typically
+                                    will require authentication. </xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:enumeration>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="terms" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>
+                        <label>Access Terms</label>
+                        <placeholder>E.g. CC BY-SA 4.0</placeholder>
+                    </xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+
+            <xsd:choice>
+                <xsd:element name="electronic">
+                    <xsd:annotation>
+                        <xsd:appinfo>
+                            <label>Electronic Access</label>
+                        </xsd:appinfo>
+                    </xsd:annotation>
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="URL" ns0:_mod_mdcs_="/curator/advanced-blob-hoster"
+                                type="xsd:anyURI" xmlns:ns0="http://mdcs.ns">
+                                <xsd:annotation>
+                                    <xsd:appinfo>
+                                        <label>Access Web Address</label>
+                                    </xsd:appinfo>
+                                </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="type">
+                                <xsd:annotation>
+                                    <xsd:appinfo>
+                                        <label>Access Type</label>
+                                    </xsd:appinfo>
+                                </xsd:annotation>
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:enumeration value="reference"/>
+                                        <xsd:enumeration value="download"/>
+                                        <xsd:enumeration value="API"/>
+                                        <xsd:enumeration value="landing page"/>
+                                        <xsd:enumeration value="rights"/>
+                                        <xsd:enumeration value="license"/>
+                                        <xsd:enumeration value="disclaimer"/>
+                                        <xsd:enumeration value="documentation"/>
+                                        <xsd:enumeration value="sales"/>
+                                        <xsd:enumeration value="support"/>
+                                        <xsd:enumeration value="forum"/>
+                                        <xsd:enumeration value="source repository"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="physical">
+                    <xsd:annotation>
+                        <xsd:appinfo>
+                            <label>Physical Access</label>
+                        </xsd:appinfo>
+                    </xsd:annotation>
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element minOccurs="0" name="name" type="xsd:string">
+                                <xsd:annotation>
+                                    <xsd:appinfo>
+                                        <label>Location Name</label>
+                                        <placeholder>Thing Corp.</placeholder>
+                                    </xsd:appinfo>
+                                </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="address" type="xsd:string">
+                                <xsd:annotation>
+                                    <xsd:appinfo>
+                                        <label>Street Address</label>
+                                        <placeholder>123 Main St.; Gaithersburg MD 20899; USA</placeholder>
+                                    </xsd:appinfo>
+                                </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="phone" type="xsd:string">
+                                <xsd:annotation>
+                                    <xsd:appinfo>
+                                        <label>Phone Number</label>
+                                        <placeholder>+1 301 555 1234</placeholder>
+                                    </xsd:appinfo>
+                                </xsd:annotation>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="other">
+                    <xsd:annotation>
+                        <xsd:appinfo>
+                            <label>Other Access</label>
+                        </xsd:appinfo>
+                    </xsd:annotation>
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="description" ns0:_mod_mdcs_="/registry/description"
+                                type="xsd:string" xmlns:ns0="http://mdcs.ns"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:choice>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

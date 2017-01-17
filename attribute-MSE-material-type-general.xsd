@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:complexType name="attribute-material-type-general">
+        <xsd:complexContent>
+            <xsd:extension base="attribute-base">
+                <xsd:sequence>
+                    <xsd:element name="material-type-general" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo>
+                                <label>Material Class</label>
+                            </xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:enumeration value="metal">
+                                    <xsd:annotation>
+                                        <xsd:documentation> an electropositive element or an alloy
+                                            based on these elements; a material characterized by a
+                                            partially filled energy band. </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="semiconductor">
+                                    <xsd:annotation>
+                                        <xsd:documentation> a material characterized by slightly
+                                            filled or slightly empty energy band; a material with a
+                                            relatively narrow band gap between 0 and ~2 eV.
+                                        </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="polymer">
+                                    <xsd:annotation>
+                                        <xsd:documentation> material composed of large molecules
+                                            built up by repetition of small, simple chemical units.
+                                        </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="biomaterial">
+                                    <xsd:annotation>
+                                        <xsd:documentation> material derived from living organisms
+                                            or otherwise produced via biological processes.
+                                        </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="organic">
+                                    <xsd:annotation>
+                                        <xsd:documentation> material comprised of Carbon-based
+                                            compounds. </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="inorganic">
+                                    <xsd:annotation>
+                                        <xsd:documentation> material comprised of compounds
+                                            exclusive of Carbon </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="oxide">
+                                    <xsd:annotation>
+                                        <xsd:documentation> material comprised of Oxygen-based
+                                            compounds </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="composite">
+                                    <xsd:annotation>
+                                        <xsd:documentation> material comprised of multiple
+                                            categories of materials </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="nanomaterials">
+                                    <xsd:annotation>
+                                        <xsd:documentation> material comprised of structural units
+                                            between 1 and 1000 nm in size. </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="superconductor">
+                                    <xsd:annotation>
+                                        <xsd:documentation> material capable of being an electrical
+                                            conductor with zero resistance. </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="ceramic">
+                                    <xsd:annotation>
+                                        <xsd:documentation> material capable of being an electrical
+                                            conductor with zero resistance. </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+
+                                <xsd:enumeration value="non-specific">
+                                    <xsd:annotation>
+                                        <xsd:documentation> materials related to (or studied in)
+                                            this resource are not specific to any category
+                                        </xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:enumeration>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

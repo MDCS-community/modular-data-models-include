@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:complexType name="attribute-status">
+        <xsd:complexContent>
+            <xsd:extension base="attribute-base">
+                <xsd:sequence>
+                    <xsd:element name="status">
+                        <xsd:annotation>
+                            <xsd:appinfo>
+                                <label>Status</label>
+                            </xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:enumeration value="active"/>
+                                <xsd:enumeration value="inactive"/>
+                                <xsd:enumeration value="deleted"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

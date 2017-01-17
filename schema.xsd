@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="resource.xsd"/>
+    <xsd:include schemaLocation="attribute-schema-type.xsd"/>
+    <xsd:complexType name="schema">
+        <xsd:complexContent>
+            <xsd:extension base="resource">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="previous-version" type="schema"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="dependency" type="schema"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:complexType name="attribute-AM-build-process">
+        <xsd:complexContent>
+            <xsd:extension base="attribute-base">
+                <xsd:sequence>
+                    <xsd:element name="BuildProcess">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="date" type="xsd:date">
+                                    <xsd:annotation>
+                                        <xsd:appinfo>
+                                            <label>Date</label>
+                                            <placeholder>YYYY-MM-DD</placeholder>
+                                        </xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:choice>
+                                    <xsd:element name="DMLS">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element name="InstrumentName" type="xsd:string"/>
+                                                <xsd:element name="LaserDescription">
+                                                  <xsd:complexType>
+                                                  <xsd:sequence>
+                                                  <xsd:element name="LaserType" type="xsd:string"/>
+                                                  <xsd:element name="LaserPower" type="xsd:double"/>
+                                                  <xsd:element name="LaserPowerUnit">
+                                                  <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                  <xsd:enumeration value="W"/>
+                                                  </xsd:restriction>
+                                                  </xsd:simpleType>
+                                                  </xsd:element>
+                                                  <xsd:element name="ScanningSpeedValue"
+                                                  type="xsd:double"/>
+                                                  <xsd:element name="ScanningSpeedUnits">
+                                                  <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                  <xsd:enumeration value="mm/s"/>
+                                                  </xsd:restriction>
+                                                  </xsd:simpleType>
+                                                  </xsd:element>
+                                                  </xsd:sequence>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element name="HatchSpacing" type="xsd:double"/>
+                                                <xsd:element name="HatchSpacingUnit">
+                                                  <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                  <xsd:enumeration value="millimeter"/>
+                                                  <xsd:enumeration value="micrometer"/>
+                                                  <xsd:enumeration value="picometer"/>
+                                                  <xsd:enumeration value="meter"/>
+                                                  </xsd:restriction>
+                                                  </xsd:simpleType>
+                                                </xsd:element>
+                                                <xsd:element name="ProcessEnvironment">
+                                                  <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                  <xsd:enumeration value="air"/>
+                                                  <xsd:enumeration value="nitrogen"/>
+                                                  <xsd:enumeration value="argon"/>
+                                                  <xsd:enumeration value="inert/vacuum"/>
+                                                  <xsd:enumeration value=""/>
+                                                  </xsd:restriction>
+                                                  </xsd:simpleType>
+                                                </xsd:element>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element name="LENS">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element name="InstrumentName" type="xsd:string"/>
+                                                <xsd:element name="LaserDescription">
+                                                  <xsd:complexType>
+                                                  <xsd:sequence>
+                                                  <xsd:element name="LaserType" type="xsd:string"/>
+                                                  <xsd:element name="LaserPower" type="xsd:double"/>
+                                                  <xsd:element name="LaserPowerUnit">
+                                                  <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                  <xsd:enumeration value="W"/>
+                                                  </xsd:restriction>
+                                                  </xsd:simpleType>
+                                                  </xsd:element>
+                                                  <xsd:element name="ScanningSpeedValue"
+                                                  type="xsd:double"/>
+                                                  <xsd:element name="ScanningSpeedUnits">
+                                                  <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                  <xsd:enumeration value="mm/s"/>
+                                                  </xsd:restriction>
+                                                  </xsd:simpleType>
+                                                  </xsd:element>
+                                                  </xsd:sequence>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element name="ProcessEnvironment">
+                                                  <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                  <xsd:enumeration value="air"/>
+                                                  <xsd:enumeration value="nitrogen"/>
+                                                  <xsd:enumeration value="argon"/>
+                                                  <xsd:enumeration value="inert/vacuum"/>
+                                                  <xsd:enumeration value=""/>
+                                                  </xsd:restriction>
+                                                  </xsd:simpleType>
+                                                </xsd:element>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                </xsd:choice>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

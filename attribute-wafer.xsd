@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+    <xsd:complexType name="attribute-wafer">
+        <xsd:complexContent>
+            <xsd:extension base="attribute-base">
+                <xsd:sequence>
+                    <xsd:element name="wafer">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="geometry">
+                                    <xsd:complexType>
+                                        <xsd:choice>
+                                            <xsd:element name="circle">
+                                                <xsd:complexType>
+                                                  <xsd:sequence>
+                                                  <xsd:element minOccurs="0" name="diameter"
+                                                  type="physical-quantity-L--type"/>
+                                                  <xsd:element minOccurs="0"
+                                                  name="fiducial-position" type="xsd:string"/>
+                                                  </xsd:sequence>
+                                                </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="square">
+                                                <xsd:complexType>
+                                                  <xsd:sequence>
+                                                  <xsd:element minOccurs="0" name="width"
+                                                  type="physical-quantity-L--type"/>
+                                                  <xsd:element minOccurs="0"
+                                                  name="fiducial-position" type="xsd:string"/>
+                                                  </xsd:sequence>
+                                                </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="rectangle">
+                                                <xsd:complexType>
+                                                  <xsd:sequence>
+                                                  <xsd:element minOccurs="0" name="width"
+                                                  type="physical-quantity-L--type"/>
+                                                  <xsd:element minOccurs="0" name="length"
+                                                  type="physical-quantity-L--type"/>
+                                                  <xsd:element minOccurs="0"
+                                                  name="fiducial-position" type="xsd:string"/>
+                                                  </xsd:sequence>
+                                                </xsd:complexType>
+                                            </xsd:element>
+                                        </xsd:choice>
+                                    </xsd:complexType>
+                                </xsd:element>
+                                <xsd:element name="material" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

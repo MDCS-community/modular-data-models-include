@@ -18,6 +18,8 @@
                 </xsd:annotation>
             </xsd:element>
             <xsd:element minOccurs="0" name="element" type="chemical-element-type"/>
+            <xsd:element minOccurs="0" name="mass"/>
+            <xsd:element minOccurs="0" name="charge"/>
             <xsd:element name="position" type="physical-quantity-L--type" minOccurs="0"/>
             <xsd:element minOccurs="0" maxOccurs="unbounded" name="property">
                 <xsd:complexType>

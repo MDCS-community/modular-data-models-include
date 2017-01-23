@@ -11,7 +11,6 @@
     <xsd:include schemaLocation="attribute-MSE-material-type-general.xsd"/>
     <xsd:include schemaLocation="attribute-MSE-property-class-general.xsd"/>
     <xsd:include schemaLocation="attribute-MSE-structural-morphology-general.xsd"/>
-    <xsd:include schemaLocation="attribute-related.xsd"/>
     <xsd:include schemaLocation="attribute-other.xsd"/>
     <xsd:include schemaLocation="thing.xsd"/>
     <xsd:include schemaLocation="identifier.xsd"/>

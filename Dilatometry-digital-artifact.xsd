@@ -3,12 +3,11 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="digital-artifact.xsd"/>
+    <xsd:include schemaLocation="attribute-dilatometry.xsd"/>
     <xsd:element name="digital-artifact" type="dilatometry"/>
     <xsd:complexType name="dilatometry">
         <xsd:complexContent>
-            <xsd:extension base="digital-artifact">
-                <xsd:sequence/>
-            </xsd:extension>
+            <xsd:extension base="digital-artifact"> </xsd:extension>
         </xsd:complexContent>
     </xsd:complexType>
 </xsd:schema>

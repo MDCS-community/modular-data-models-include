@@ -35,10 +35,10 @@
                         <xsd:enumeration value="Submitted"/>
                         <xsd:enumeration value="Updated"/>
                         <xsd:enumeration value="Valid"/>
-                        <xsd:enumeration value="Build"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
+            <xsd:element minOccurs="0" name="comment" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

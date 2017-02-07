@@ -2,6 +2,7 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
     <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:include schemaLocation="attribute-comment.xsd"/>
     <xsd:include schemaLocation="attribute-resource-type-datacite.xsd"/>
     <xsd:include schemaLocation="attribute-primary-audience.xsd"/>
     <xsd:include schemaLocation="attribute-version.xsd"/>

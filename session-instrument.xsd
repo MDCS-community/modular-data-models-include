@@ -7,10 +7,25 @@
     <xsd:include schemaLocation="digital-artifact.xsd"/>
     <xsd:complexType name="session-instrument">
         <xsd:sequence>
-            <xsd:element minOccurs="0" name="instrument" type="instrument"/>
-            <xsd:element minOccurs="0" name="sample" type="sample"/>
+            <xsd:element minOccurs="0" name="instrument" type="instrument">
+                <xsd:annotation>
+                    <xsd:appinfo>
+                        <label>Instrument</label>
+                    </xsd:appinfo>
+                </xsd:annotation></xsd:element>
+            <xsd:element minOccurs="0" name="sample" type="sample">
+                <xsd:annotation>
+                    <xsd:appinfo>
+                        <label>Sample</label>
+                    </xsd:appinfo>
+                </xsd:annotation></xsd:element>
             <xsd:element maxOccurs="unbounded" minOccurs="0" name="digital-artifact"
-                type="digital-artifact"/>
+                type="digital-artifact">
+                <xsd:annotation>
+                    <xsd:appinfo>
+                        <label>Digital Artifact</label>
+                    </xsd:appinfo>
+                </xsd:annotation></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

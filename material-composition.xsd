@@ -9,6 +9,14 @@
             <xsd:element maxOccurs="unbounded" minOccurs="0" name="constituent">
                 <xsd:complexType>
                     <xsd:sequence>
+                        <xsd:element minOccurs="0" name="type">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="measured"/>
+                                    <xsd:enumeration value="unmeasured"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
                         <xsd:element minOccurs="1" name="element" type="chemical-element-type"/>
                         <xsd:element minOccurs="0" name="quantity" type="physical-quantity---type"/>
                         <xsd:element minOccurs="0" name="purity" type="xsd:double"/>

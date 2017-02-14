@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="resource.xsd"/>
+    <xsd:include schemaLocation="HTE-sample.xsd"/>
+    <xsd:element name="project" type="combinatorial-project"/>
+    <xsd:complexType name="combinatorial-project">
+        <xsd:complexContent>
+            <xsd:extension base="resource">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="sample"
+                        type="combinatorial-sample"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

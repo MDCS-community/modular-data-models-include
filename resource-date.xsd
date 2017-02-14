@@ -31,6 +31,7 @@
                         <xsd:enumeration value="Deprecated"/>
                         <xsd:enumeration value="Destroyed"/>
                         <xsd:enumeration value="Issued"/>
+                        <xsd:enumeration value="Received"/>
                         <xsd:enumeration value="Registered"/>
                         <xsd:enumeration value="Submitted"/>
                         <xsd:enumeration value="Updated"/>

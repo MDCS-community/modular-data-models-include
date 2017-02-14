@@ -3,7 +3,7 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="person.xsd"/>
-    <xsd:complexType name="affiliate">
+    <xsd:complexType name="associated-person">
         <xsd:complexContent>
             <xsd:extension base="person">
                 <xsd:sequence>

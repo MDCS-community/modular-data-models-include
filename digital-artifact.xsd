@@ -3,9 +3,14 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="resource.xsd"/>
+    <xsd:include schemaLocation="identifier.xsd"/>
     <xsd:complexType name="digital-artifact">
         <xsd:complexContent>
-            <xsd:extension base="resource"/>
+            <xsd:extension base="resource">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="data-type" type="identifier"/>
+                </xsd:sequence>
+            </xsd:extension>
         </xsd:complexContent>
     </xsd:complexType>
 </xsd:schema>

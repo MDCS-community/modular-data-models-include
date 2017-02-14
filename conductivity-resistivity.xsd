@@ -17,6 +17,7 @@
                     <xsd:element maxOccurs="unbounded" minOccurs="0" name="data">
                         <xsd:complexType>
                             <xsd:sequence>
+                                <xsd:element minOccurs="0" name="comment" type="xsd:string"/>
                                 <xsd:element minOccurs="0" name="current" type="physical-quantity-I--type"/>
                                 <xsd:element minOccurs="0" name="voltage" type="physical-quantity-MLL-TTTI-type"/>
                                 <xsd:element minOccurs="0" name="resistivity" type="physical-quantity-MLLL-TTTII-type"/>

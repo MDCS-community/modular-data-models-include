@@ -14,11 +14,9 @@
                     <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"> </xsd:element>
                     <xsd:element minOccurs="0" name="xray-source" type="xray-source-type"/>
                     <xsd:element maxOccurs="unbounded" minOccurs="0" name="data">
-                        <xsd:annotation>
-                            <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>
-                        </xsd:annotation>
                         <xsd:complexType>
                             <xsd:sequence>
+                                <xsd:element minOccurs="0" name="comment" type="xsd:string"/>
                                 <xsd:element minOccurs="0" name="binding-energy"
                                     type="physical-quantity-MLL-TT-type"/>
                                 <xsd:element minOccurs="0" name="kinetic-energy"

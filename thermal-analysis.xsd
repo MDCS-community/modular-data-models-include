@@ -29,11 +29,9 @@
                         </xsd:simpleType>
                     </xsd:element>
                     <xsd:element minOccurs="0" name="data" maxOccurs="unbounded">
-                        <xsd:annotation>
-                            <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>
-                        </xsd:annotation>
                         <xsd:complexType>
                             <xsd:sequence>
+                                <xsd:element minOccurs="0" name="comment" type="xsd:string"/>
                                 <xsd:element minOccurs="0" name="type">
                                     <xsd:simpleType>
                                         <xsd:restriction base="xsd:string">

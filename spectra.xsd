@@ -11,11 +11,11 @@
         <xsd:complexContent>
             <xsd:extension base="instrument-base">
                 <xsd:sequence>
-                    <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"> </xsd:element>
+                    <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"/>
                     <xsd:element minOccurs="0" name="data" maxOccurs="unbounded">
                         <xsd:complexType>
                             <xsd:sequence>
-                                <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="comment" type="xsd:string"/>
                                 <xsd:element minOccurs="0" name="energy"
                                     type="physical-quantity-MLL-TT-type"/>
                                 <xsd:element minOccurs="0" name="wavelength"

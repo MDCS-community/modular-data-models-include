@@ -19,6 +19,8 @@
                                                 type="physical-quantity-L--type"/>
                                             <xsd:element minOccurs="0" name="y"
                                                 type="physical-quantity-L--type"/>
+                                            <xsd:element minOccurs="0" name="z"
+                                                type="physical-quantity-L--type"/>
                                         </xsd:sequence>
                                     </xsd:complexType>
                                 </xsd:element>

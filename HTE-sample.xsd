@@ -7,58 +7,38 @@
     <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
     <xsd:include schemaLocation="material-composition.xsd"/>
     <xsd:include schemaLocation="parameter.xsd"/>
+    <xsd:include schemaLocation="HTE-point.xsd"/>
     <xsd:element name="sample" type="combinatorial-sample"/>
     <xsd:complexType name="combinatorial-sample">
         <xsd:complexContent>
             <xsd:extension base="sample">
                 <xsd:sequence>
-                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="point">
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="point"
+                        type="point-expanded">
                         <xsd:annotation>
                             <xsd:appinfo>
                                 <label>Point/Location on Sample</label>
                             </xsd:appinfo>
                         </xsd:annotation>
-                        <xsd:complexType>
-                            <xsd:sequence>
-                                <xsd:element minOccurs="0" name="id" type="xsd:string">
-                                    <xsd:annotation>
-                                        <xsd:appinfo>
-                                            <label>Point Identifer</label>
-                                            <placeholder>NREL44:9</placeholder>
-                                        </xsd:appinfo>
-                                    </xsd:annotation>
-                                </xsd:element>
-                                <xsd:element minOccurs="0" name="coordinates">
-                                    <xsd:annotation>
-                                        <xsd:appinfo>
-                                            <label>Point Coordinates</label>
-                                        </xsd:appinfo>
-                                    </xsd:annotation>
-                                    <xsd:complexType>
-                                        <xsd:sequence>
-                                            <xsd:element minOccurs="0" name="x"
-                                                type="physical-quantity-L--type"/>
-                                            <xsd:element minOccurs="0" name="y"
-                                                type="physical-quantity-L--type"/>
-                                            <xsd:element minOccurs="0" name="z"
-                                                type="physical-quantity-L--type"/>
-                                        </xsd:sequence>
-                                    </xsd:complexType>
-                                </xsd:element>
-                                <xsd:element minOccurs="0" name="composition"
-                                    type="material-composition"/>
-                                <xsd:element maxOccurs="unbounded" minOccurs="0" name="property"
-                                    type="parameter-type"/>
-                                <xsd:element maxOccurs="unbounded" minOccurs="0"
-                                    name="digital-artifact" type="digital-artifact">
-                                    <xsd:annotation>
-                                        <xsd:appinfo>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="point-expanded">
+        <xsd:complexContent>
+            <xsd:extension base="point">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="composition" type="material-composition"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="property"
+                        type="parameter-type"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="digital-artifact"
+                        type="digital-artifact">
+                        <xsd:annotation>
+                            <xsd:appinfo>
                                             <label>Point Digital Artifact (e.g. dataset, file)</label>
                                         </xsd:appinfo>
-                                    </xsd:annotation>
-                                </xsd:element>
-                            </xsd:sequence>
-                        </xsd:complexType>
+                        </xsd:annotation>
                     </xsd:element>
                 </xsd:sequence>
             </xsd:extension>

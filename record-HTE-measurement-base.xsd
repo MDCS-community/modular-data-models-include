@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
-
-    <xsd:include schemaLocation="physical-quantity.xsd"/>
-    <xsd:include schemaLocation="thing.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+    <xsd:include schemaLocation="instrument-base.xsd"/>
+    <xsd:include schemaLocation="HTE-point.xsd"/>
     <xsd:complexType name="library-measurement-base-type">
-        <xsd:sequence>
-            <xsd:element minOccurs="0" name="sample" type="thing"/>
-            <xsd:element minOccurs="0" name="point-id" type="xsd:string"/>
-            <xsd:element minOccurs="0" name="coordinates">
-                <xsd:complexType>
-                    <xsd:sequence>
-                        <xsd:element minOccurs="0" name="x" type="physical-quantity-type"/>
-                        <xsd:element minOccurs="0" name="y" type="physical-quantity-type"/>
-                    </xsd:sequence>
-                </xsd:complexType>
-            </xsd:element>
-            <xsd:element minOccurs="0" name="comment" type="xsd:string"/>
-        </xsd:sequence>
+        <xsd:complexContent>
+            <xsd:extension base="instrument-base">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="point" type="point"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
     </xsd:complexType>
 </xsd:schema>

@@ -3,6 +3,7 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="thing.xsd"/>
+    <xsd:include schemaLocation="associated-organization.xsd"/>
     <xsd:complexType name="person">
         <xsd:complexContent>
             <xsd:extension base="thing">
@@ -31,12 +32,11 @@
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
-                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="affiliation"
-                        type="xsd:string">
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="associated-organization"
+                        type="associated-organization">
                         <xsd:annotation>
                             <xsd:appinfo>
-                                <label>Person's Affaliation</label>
-                                <placeholder>Thing Corp</placeholder>
+                                <label>Associated Organization</label>
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>

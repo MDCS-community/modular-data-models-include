@@ -12,7 +12,7 @@
                         type="digital-artifact">
                         <xsd:annotation>
                             <xsd:appinfo>
-                                    <label>Digital Artifact</label>
+                                    <label>Digital Artifact (e.g. dataset, image)</label>
                                 </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>

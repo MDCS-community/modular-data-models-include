@@ -32,11 +32,11 @@
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
-                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="associated-organization"
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="organization"
                         type="associated-organization">
                         <xsd:annotation>
                             <xsd:appinfo>
-                                <label>Associated Organization</label>
+                                <label>Organization</label>
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>

@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
-
-    <xsd:include schemaLocation="record-HTE-measurement-base.xsd"/>
     <xsd:include schemaLocation="xray-photoelectron-spectroscopy.xsd"/>
+    <xsd:include schemaLocation="HTE-point.xsd"/>
     <xsd:element name="library-xray-photoelectron-spectroscopy-measurement"
-        type="library-xray-photoelectron-spectroscopy-measurement-type"/>
+        type="library-xray-photoelectron-spectroscopy-measurement-type"> </xsd:element>
     <xsd:complexType name="library-xray-photoelectron-spectroscopy-measurement-type">
         <xsd:complexContent>
-            <xsd:extension base="library-measurement-base-type">
+            <xsd:extension base="xray-photoelectron-spectroscopy-type">
                 <xsd:sequence>
-                    <xsd:element minOccurs="0" name="measurement"
-                        type="xray-photoelectron-spectroscopy-type"/>
+                    <xsd:element name="point" type="point"/>
                 </xsd:sequence>
             </xsd:extension>
         </xsd:complexContent>

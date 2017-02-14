@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="instrument-base.xsd"/>
+    <xsd:include schemaLocation="xray-source.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TT.xsd"/>
+    <xsd:include schemaLocation="material-composition.xsd"/>
+    <xsd:complexType name="xray-photoelectron-spectroscopy-type">
+        <xsd:complexContent>
+            <xsd:extension base="instrument-base">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"> </xsd:element>
+                    <xsd:element minOccurs="0" name="xray-source" type="xray-source-type"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="data">
+                        <xsd:annotation>
+                            <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element minOccurs="0" name="binding-energy"
+                                    type="physical-quantity-MLL-TT-type"/>
+                                <xsd:element minOccurs="0" name="kinetic-energy"
+                                    type="physical-quantity-MLL-TT-type"/>
+                                <xsd:element minOccurs="0" name="counts"
+                                    type="physical-quantity---type"/>
+                                <xsd:element minOccurs="0" name="intensity"
+                                    type="physical-quantity---type"/>
+                                <xsd:element minOccurs="0" name="composition"
+                                    type="material-composition"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

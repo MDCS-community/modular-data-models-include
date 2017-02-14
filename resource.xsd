@@ -44,21 +44,32 @@
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
-                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="associated-organization"
-                        type="associated-organization">
+                    <xsd:element name="associated">
                         <xsd:annotation>
                             <xsd:appinfo>
-                                <label>Associated Organization</label>
+                                <label>Associated Persons/Organizations</label>
                             </xsd:appinfo>
                         </xsd:annotation>
-                    </xsd:element>
-                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="associated-person"
-                        type="associated-person">
-                        <xsd:annotation>
-                            <xsd:appinfo>
-                                <label>Associated Person</label>
-                            </xsd:appinfo>
-                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element maxOccurs="unbounded" minOccurs="0" name="organization"
+                                    type="associated-organization">
+                                    <xsd:annotation>
+                                        <xsd:appinfo>
+                                            <label>Associated Organization</label>
+                                        </xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element maxOccurs="unbounded" minOccurs="0" name="person"
+                                    type="associated-person">
+                                    <xsd:annotation>
+                                        <xsd:appinfo>
+                                            <label>Associated Person</label>
+                                        </xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
                     </xsd:element>
                     <xsd:element maxOccurs="unbounded" minOccurs="0" name="attribute"
                         type="attribute-base">

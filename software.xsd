@@ -3,8 +3,6 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="resource.xsd"/>
-    <xsd:include schemaLocation="attribute-MSE-software-scales.xsd"/>
-    <xsd:include schemaLocation="attribute-MSE-software-types.xsd"/>
     <xsd:include schemaLocation="attribute-software-OS-support.xsd"/>
     <xsd:complexType name="software">
         <xsd:complexContent>

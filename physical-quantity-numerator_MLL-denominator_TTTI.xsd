@@ -3,7 +3,7 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="physical-quantity.xsd"/>
-    <xsd:complexType name="physical-quantity-LLM-TTTI-type">
+    <xsd:complexType name="physical-quantity-MLL-TTTI-type">
         <xsd:annotation>
             <xsd:documentation>Electric potential</xsd:documentation>
         </xsd:annotation>

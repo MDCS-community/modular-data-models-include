@@ -3,9 +3,10 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="physical-quantity.xsd"/>
+    <xsd:include schemaLocation="thing.xsd"/>
     <xsd:complexType name="library-measurement-base-type">
         <xsd:sequence>
-            <xsd:element minOccurs="0" name="sample-registry-record" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="sample" type="thing"/>
             <xsd:element minOccurs="0" name="point-id" type="xsd:string"/>
             <xsd:element minOccurs="0" name="coordinates">
                 <xsd:complexType>

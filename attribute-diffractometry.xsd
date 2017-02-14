@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:include schemaLocation="xray-source.xsd"/>
+    <xsd:complexType name="attribute-diffractometry">
+        <xsd:complexContent>
+            <xsd:extension base="attribute-base">
+                <xsd:sequence>
+                    <xsd:element name="diffractometry">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element minOccurs="0" name="xray-source"
+                                    type="xray-source-type"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

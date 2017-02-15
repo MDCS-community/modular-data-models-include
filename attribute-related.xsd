@@ -17,7 +17,9 @@
                         <xsd:complexType>
                             <xsd:sequence>
                                 <xsd:element name="relationship" type="xsd:string" minOccurs="0"/>
-                                <xsd:element maxOccurs="unbounded" name="resource" type="thing"/>
+                                <xsd:element name="resource-type" type="xsd:string" minOccurs="0"/>
+                                <xsd:element maxOccurs="unbounded" name="resource-content"
+                                    type="thing"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>

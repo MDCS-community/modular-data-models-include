@@ -4,6 +4,7 @@
 
     <xsd:include schemaLocation="resource.xsd"/>
     <xsd:include schemaLocation="digital-artifact.xsd"/>
+    <xsd:include schemaLocation="attribute-composition.xsd"/>
     <xsd:complexType name="sample">
         <xsd:complexContent>
             <xsd:extension base="resource">

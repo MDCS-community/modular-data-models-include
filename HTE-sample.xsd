@@ -8,6 +8,7 @@
     <xsd:include schemaLocation="material-composition.xsd"/>
     <xsd:include schemaLocation="parameter.xsd"/>
     <xsd:include schemaLocation="HTE-point.xsd"/>
+    <xsd:include schemaLocation="attribute-substrate.xsd"/>
     <xsd:element name="sample" type="combinatorial-sample"/>
     <xsd:complexType name="combinatorial-sample">
         <xsd:complexContent>

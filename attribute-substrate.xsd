@@ -4,20 +4,23 @@
 
     <xsd:include schemaLocation="attribute-base.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
-    <xsd:complexType name="attribute-wafer">
+    <xsd:include schemaLocation="material-composition.xsd"/>
+    <xsd:complexType name="attribute-substrate">
         <xsd:complexContent>
             <xsd:extension base="attribute-base">
                 <xsd:sequence>
-                    <xsd:element name="wafer">
+                    <xsd:element name="substrate">
                         <xsd:complexType>
                             <xsd:sequence>
-                                <xsd:element name="geometry">
+                                <xsd:element name="geometry" minOccurs="0">
                                     <xsd:complexType>
                                         <xsd:choice>
                                             <xsd:element name="circle">
                                                 <xsd:complexType>
                                                   <xsd:sequence>
                                                   <xsd:element minOccurs="0" name="diameter"
+                                                  type="physical-quantity-L--type"/>
+                                                  <xsd:element minOccurs="0" name="thickness"
                                                   type="physical-quantity-L--type"/>
                                                   <xsd:element minOccurs="0"
                                                   name="fiducial-position" type="xsd:string"/>
@@ -28,6 +31,8 @@
                                                 <xsd:complexType>
                                                   <xsd:sequence>
                                                   <xsd:element minOccurs="0" name="width"
+                                                  type="physical-quantity-L--type"/>
+                                                  <xsd:element minOccurs="0" name="thickness"
                                                   type="physical-quantity-L--type"/>
                                                   <xsd:element minOccurs="0"
                                                   name="fiducial-position" type="xsd:string"/>
@@ -41,6 +46,8 @@
                                                   type="physical-quantity-L--type"/>
                                                   <xsd:element minOccurs="0" name="length"
                                                   type="physical-quantity-L--type"/>
+                                                  <xsd:element minOccurs="0" name="thickness"
+                                                  type="physical-quantity-L--type"/>
                                                   <xsd:element minOccurs="0"
                                                   name="fiducial-position" type="xsd:string"/>
                                                   </xsd:sequence>
@@ -49,7 +56,18 @@
                                         </xsd:choice>
                                     </xsd:complexType>
                                 </xsd:element>
-                                <xsd:element name="material" type="xsd:string"/>
+                                <xsd:element name="material" minOccurs="0">
+                                    <xsd:complexType>
+                                        <xsd:sequence>
+                                            <xsd:element name="composition" minOccurs="0"
+                                                type="material-composition"/>
+                                            <xsd:element name="name" minOccurs="0" type="xsd:string"
+                                            />
+                                        </xsd:sequence>
+                                    </xsd:complexType>
+                                </xsd:element>
+                                <xsd:element name="vendor" minOccurs="0" type="xsd:string">
+                                </xsd:element>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>

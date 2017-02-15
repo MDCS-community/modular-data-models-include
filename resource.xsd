@@ -52,7 +52,7 @@
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
-                    <xsd:element name="associated">
+                    <xsd:element name="associated" minOccurs="0">
                         <xsd:annotation>
                             <xsd:appinfo>
                                 <label>Associated Persons/Organizations</label>

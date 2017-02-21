@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
-    <xsd:include schemaLocation="xray-diffraction.xsd"/>
+    <xsd:include schemaLocation="dispersive-x-ray-spectroscopy.xsd"/>
     <xsd:include schemaLocation="HTE-point.xsd"/>
-    <xsd:element name="library-xray-diffraction-measurement"
-        type="library-xray-diffraction-measurement-type"> </xsd:element>
-    <xsd:complexType name="library-xray-diffraction-measurement-type">
+    <xsd:element name="library-dispersive-x-ray-spectroscopy-measurement"
+        type="library-dispersive-x-ray-spectroscopy-measurement-type"> </xsd:element>
+    <xsd:complexType name="library-dispersive-x-ray-spectroscopy-measurement-type">
         <xsd:complexContent>
-            <xsd:extension base="xray-diffraction-type">
+            <xsd:extension base="dispersive-x-ray-spectroscopy-type">
                 <xsd:sequence>
                     <xsd:element name="point" type="point"/>
                 </xsd:sequence>

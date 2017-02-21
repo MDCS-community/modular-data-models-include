@@ -3,29 +3,30 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="instrument-base.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-numerator_1-denominator_.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-numerator_-denominator_L.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
-    <xsd:include schemaLocation="remote-file.xsd"/>
     <xsd:include schemaLocation="xray-source.xsd"/>
-    <xsd:complexType name="xray-diffraction-type">
+    <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TT.xsd"/>
+    <xsd:include schemaLocation="material-composition.xsd"/>
+    <xsd:complexType name="xray-photoelectron-spectroscopy-type">
         <xsd:complexContent>
             <xsd:extension base="instrument-base">
                 <xsd:sequence>
                     <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"> </xsd:element>
                     <xsd:element minOccurs="0" name="xray-source" type="xray-source-type"/>
-                    <xsd:element minOccurs="0" name="data" maxOccurs="unbounded">
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="data">
                         <xsd:complexType>
                             <xsd:sequence>
                                 <xsd:element minOccurs="0" name="comment" type="xsd:string"/>
-                                <xsd:element minOccurs="0" name="angle-2-theta"
-                                    type="physical-quantity-1--type"/>
-                                <xsd:element minOccurs="0" name="scattering-vector"
-                                    type="physical-quantity--L-type"/>
-                                <xsd:element name="intensity" type="physical-quantity---type"
-                                    minOccurs="0"/>
+                                <xsd:element minOccurs="0" name="binding-energy"
+                                    type="physical-quantity-MLL-TT-type"/>
+                                <xsd:element minOccurs="0" name="kinetic-energy"
+                                    type="physical-quantity-MLL-TT-type"/>
                                 <xsd:element minOccurs="0" name="counts"
                                     type="physical-quantity---type"/>
+                                <xsd:element minOccurs="0" name="intensity"
+                                    type="physical-quantity---type"/>
+                                <xsd:element minOccurs="0" name="composition"
+                                    type="material-composition"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>

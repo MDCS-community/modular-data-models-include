@@ -19,26 +19,27 @@
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
-                        <xsd:enumeration value="Accepted"/>
-                        <xsd:enumeration value="Archived"/>
-                        <xsd:enumeration value="Available"/>
-                        <xsd:enumeration value="Collected"/>
-                        <xsd:enumeration value="Copyrighted"/>
-                        <xsd:enumeration value="Created"/>
-                        <xsd:enumeration value="Curated"/>
-                        <xsd:enumeration value="Deactivated"/>
-                        <xsd:enumeration value="Deleted"/>
-                        <xsd:enumeration value="Deprecated"/>
-                        <xsd:enumeration value="Destroyed"/>
-                        <xsd:enumeration value="Issued"/>
-                        <xsd:enumeration value="Registered"/>
-                        <xsd:enumeration value="Submitted"/>
-                        <xsd:enumeration value="Updated"/>
-                        <xsd:enumeration value="Valid"/>
-                        <xsd:enumeration value="Build"/>
+                        <xsd:enumeration value="accepted"/>
+                        <xsd:enumeration value="archived"/>
+                        <xsd:enumeration value="available"/>
+                        <xsd:enumeration value="collected"/>
+                        <xsd:enumeration value="copyrighted"/>
+                        <xsd:enumeration value="created"/>
+                        <xsd:enumeration value="curated"/>
+                        <xsd:enumeration value="deactivated"/>
+                        <xsd:enumeration value="deleted"/>
+                        <xsd:enumeration value="deprecated"/>
+                        <xsd:enumeration value="destroyed"/>
+                        <xsd:enumeration value="issued"/>
+                        <xsd:enumeration value="received"/>
+                        <xsd:enumeration value="registered"/>
+                        <xsd:enumeration value="submitted"/>
+                        <xsd:enumeration value="updated"/>
+                        <xsd:enumeration value="valid"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
+            <xsd:element minOccurs="0" name="comment" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

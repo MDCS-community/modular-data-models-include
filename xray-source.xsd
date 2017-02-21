@@ -16,6 +16,24 @@
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
+            <xsd:element name="rotating-anode">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" name="anode-material"
+                            type="chemical-element-type"/>
+                        <xsd:element minOccurs="0" name="spectra" type="xray-siegbahn-type"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="liquid-metal-jet">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" name="anode-material"
+                            type="chemical-element-type"/>
+                        <xsd:element minOccurs="0" name="spectra" type="xray-siegbahn-type"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
             <xsd:element name="synchrotron">
                 <xsd:complexType>
                     <xsd:sequence>

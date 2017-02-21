@@ -2,13 +2,13 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
 
-    <xsd:include schemaLocation="resource.xsd"/>
-    <xsd:include schemaLocation="identifier.xsd"/>
-    <xsd:complexType name="digital-artifact">
+    <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:include schemaLocation="material-composition.xsd"/>
+    <xsd:complexType name="attribute-composition">
         <xsd:complexContent>
-            <xsd:extension base="resource">
+            <xsd:extension base="attribute-base">
                 <xsd:sequence>
-                    <xsd:element minOccurs="0" name="data-type" type="identifier"/>
+                    <xsd:element name="composition" type="material-composition"/>
                 </xsd:sequence>
             </xsd:extension>
         </xsd:complexContent>

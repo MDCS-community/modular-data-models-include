@@ -3,7 +3,7 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="attribute-base.xsd"/>
-    <xsd:include schemaLocation="resource.xsd"/>
+    <xsd:include schemaLocation="thing.xsd"/>
     <xsd:complexType name="attribute-related">
         <xsd:complexContent>
             <xsd:extension base="attribute-base">
@@ -16,8 +16,10 @@
                         </xsd:annotation>
                         <xsd:complexType>
                             <xsd:sequence>
-                                <xsd:element name="relationship" type="xsd:string"/>
-                                <xsd:element maxOccurs="unbounded" name="resource" type="resource"/>
+                                <xsd:element name="relationship" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="resource-type" type="xsd:string" minOccurs="0"/>
+                                <xsd:element maxOccurs="unbounded" name="resource-content"
+                                    type="thing"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>

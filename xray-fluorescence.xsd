@@ -9,6 +9,8 @@
     <xsd:include schemaLocation="remote-file.xsd"/>
     <xsd:include schemaLocation="xray-source.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TT.xsd"/>
+    <xsd:include schemaLocation="material-composition.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
     <xsd:complexType name="xray-fluorescence-type">
         <xsd:complexContent>
             <xsd:extension base="instrument-base">
@@ -16,17 +18,19 @@
                     <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"> </xsd:element>
                     <xsd:element minOccurs="0" name="xray-source" type="xray-source-type"/>
                     <xsd:element minOccurs="0" name="data" maxOccurs="unbounded">
-                        <xsd:annotation>
-                            <xsd:appinfo><mdcs>blob</mdcs></xsd:appinfo>
-                        </xsd:annotation>
                         <xsd:complexType>
                             <xsd:sequence>
+                                <xsd:element minOccurs="0" name="comment" type="xsd:string"/>
                                 <xsd:element minOccurs="0" name="energy"
                                     type="physical-quantity-MLL-TT-type"/>
                                 <xsd:element name="counts" type="physical-quantity---type"
                                     minOccurs="0"/>
                                 <xsd:element name="intensity" type="physical-quantity---type"
                                     minOccurs="0"/>
+                                <xsd:element minOccurs="0" name="composition"
+                                    type="material-composition"/>
+                                <xsd:element minOccurs="0" name="film-thickness"
+                                    type="physical-quantity-L--type"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>

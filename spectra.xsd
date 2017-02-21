@@ -5,17 +5,53 @@
     <xsd:include schemaLocation="instrument-base.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_-denominator_L.xsd"/>
     <xsd:complexType name="spectra-type">
         <xsd:complexContent>
             <xsd:extension base="instrument-base">
                 <xsd:sequence>
-                    <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"> </xsd:element>
-                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="data">
+                    <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="data" maxOccurs="unbounded">
                         <xsd:complexType>
                             <xsd:sequence>
+                                <xsd:element minOccurs="0" name="comment" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="energy"
+                                    type="physical-quantity-MLL-TT-type"/>
                                 <xsd:element minOccurs="0" name="wavelength"
                                     type="physical-quantity-L--type"/>
-                                <xsd:element minOccurs="0" name="intensity"
+                                <xsd:element minOccurs="0" name="wavenumber"
+                                    type="physical-quantity--L-type"/>
+                                <xsd:element minOccurs="0" name="lamp-intensity"
+                                    type="physical-quantity---type"/>
+                                <xsd:element minOccurs="0" name="transmittance-intensity"
+                                    type="physical-quantity---type"/>
+                                <xsd:element minOccurs="0" name="reflectance-intensity"
+                                    type="physical-quantity---type"/>
+                                <xsd:element minOccurs="0" name="transmittance"
+                                    type="physical-quantity---type">
+                                    <xsd:annotation>
+                                        <xsd:documentation>normalized to 1</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element minOccurs="0" name="reflectance"
+                                    type="physical-quantity---type">
+                                    <xsd:annotation>
+                                        <xsd:documentation>normalized to 1</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element minOccurs="0" name="absorptance"
+                                    type="physical-quantity---type">
+                                    <xsd:annotation>
+                                        <xsd:documentation>normalized to 1</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element minOccurs="0" name="absorbance" type="physical-quantity---type"/>
+                                <xsd:element minOccurs="0" name="absorption-coefficient"
+                                    type="physical-quantity---type"/>
+                                <xsd:element minOccurs="0" name="refractive-index"
+                                    type="physical-quantity---type"/>
+                                <xsd:element minOccurs="0" name="extinction-coefficient"
                                     type="physical-quantity---type"/>
                             </xsd:sequence>
                         </xsd:complexType>

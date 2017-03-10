@@ -15,7 +15,7 @@
     <xsd:include schemaLocation="attribute-resource-type-datacite.xsd"/>
     <xsd:include schemaLocation="attribute-status.xsd"/>
     <xsd:include schemaLocation="attribute-version.xsd"/>
-    <xsd:include schemaLocation="attribute-related.xsd"/>
+    <xsd:include schemaLocation="associated-resource.xsd"/>
     <xsd:complexType name="resource">
         <xsd:complexContent>
             <xsd:extension base="thing">
@@ -55,7 +55,7 @@
                     <xsd:element name="associated" minOccurs="0">
                         <xsd:annotation>
                             <xsd:appinfo>
-                                <label>Associated Persons/Organizations</label>
+                                <label>Associated Persons, Organizations, and Resources</label>
                             </xsd:appinfo>
                         </xsd:annotation>
                         <xsd:complexType>
@@ -73,6 +73,14 @@
                                     <xsd:annotation>
                                         <xsd:appinfo>
                                             <label>Associated Person</label>
+                                        </xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element maxOccurs="unbounded" minOccurs="0" name="resource"
+                                    type="associated-resource">
+                                    <xsd:annotation>
+                                        <xsd:appinfo>
+                                            <label>Associated Resource</label>
                                         </xsd:appinfo>
                                     </xsd:annotation>
                                 </xsd:element>

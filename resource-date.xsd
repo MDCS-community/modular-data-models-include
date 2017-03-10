@@ -20,6 +20,7 @@
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
                         <xsd:enumeration value="accepted"/>
+                        <xsd:enumeration value="acquired"/>
                         <xsd:enumeration value="archived"/>
                         <xsd:enumeration value="available"/>
                         <xsd:enumeration value="collected"/>

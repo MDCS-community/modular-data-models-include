@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
-    <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
-    <xsd:include schemaLocation="chemical-element.xsd"/>
+    <xsd:include schemaLocation="uncertainty.xsd"/>
     <xsd:complexType name="material-composition">
         <xsd:sequence>
             <xsd:element maxOccurs="unbounded" minOccurs="0" name="constituent">
@@ -16,10 +15,14 @@
                                 </xsd:restriction>
                             </xsd:simpleType>
                         </xsd:element>
-                        <xsd:element minOccurs="0" name="element" type="chemical-element-type"/>
                         <xsd:element minOccurs="0" name="chemical-formula" type="xsd:string"/>
-                        <xsd:element minOccurs="0" name="quantity" type="physical-quantity---type"/>
-                        <xsd:element minOccurs="0" name="purity" type="xsd:double"/>
+                        <xsd:element minOccurs="0" name="quantity-min" type="xsd:float"/>
+                        <xsd:element minOccurs="0" name="quantity" type="xsd:float"/>
+                        <xsd:element minOccurs="0" name="quantity-max" type="xsd:float"/>
+                        <xsd:element minOccurs="0" name="quantity-uncertainty"
+                            type="uncertainty-type"/>
+                        <xsd:element minOccurs="0" name="quantity-unit" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="purity" type="xsd:float"/>
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>

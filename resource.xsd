@@ -15,7 +15,6 @@
     <xsd:include schemaLocation="attribute-resource-type-datacite.xsd"/>
     <xsd:include schemaLocation="attribute-status.xsd"/>
     <xsd:include schemaLocation="attribute-version.xsd"/>
-    <xsd:include schemaLocation="attribute-related.xsd"/>
     <xsd:complexType name="resource">
         <xsd:complexContent>
             <xsd:extension base="thing">
@@ -75,6 +74,17 @@
                                             <label>Associated Person</label>
                                         </xsd:appinfo>
                                     </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element maxOccurs="unbounded" minOccurs="0" name="resource">
+                                    <xsd:complexType>
+                                        <xsd:sequence>
+                                            <xsd:element minOccurs="0" name="relationship"
+                                                type="xsd:string"/>
+                                            <xsd:element minOccurs="0" name="type" type="xsd:string"/>
+                                            <xsd:element minOccurs="0" name="content"
+                                                type="resource"/>
+                                        </xsd:sequence>
+                                    </xsd:complexType>
                                 </xsd:element>
                             </xsd:sequence>
                         </xsd:complexType>

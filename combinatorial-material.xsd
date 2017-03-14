@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="HTE-point.xsd"/>
+    <xsd:include schemaLocation="material-composition.xsd"/>
+    <xsd:include schemaLocation="parameter.xsd"/>
+    <xsd:include schemaLocation="digital-artifact.xsd"/>
+    <xsd:include schemaLocation="thing.xsd"/>
+    <xsd:complexType name="combinatorial-material">
+        <xsd:complexContent>
+            <xsd:extension base="point">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="library" type="thing"/>
+                    <xsd:element minOccurs="0" name="composition" type="material-composition"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="property"
+                        type="parameter-type"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="digital-artifact"
+                        type="digital-artifact">
+                        <xsd:annotation>
+                            <xsd:appinfo>
+                                            <label>Point Digital Artifact (e.g. dataset, file)</label>
+                                        </xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

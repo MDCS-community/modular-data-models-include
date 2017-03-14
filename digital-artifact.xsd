@@ -8,7 +8,8 @@
         <xsd:complexContent>
             <xsd:extension base="resource">
                 <xsd:sequence>
-                    <xsd:element minOccurs="0" name="data-type" type="identifier"/>
+                    <xsd:element minOccurs="0" name="data-type" type="identifier"
+                        maxOccurs="unbounded"/>
                 </xsd:sequence>
             </xsd:extension>
         </xsd:complexContent>

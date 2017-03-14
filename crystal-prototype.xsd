@@ -3,7 +3,7 @@
     elementFormDefault="unqualified">
     <xsd:include schemaLocation="crystal-space-group.xsd"/>
     <xsd:include schemaLocation="atomic-system.xsd"/>
-    <xsd:complexType name="crystal-protype-type">
+    <xsd:complexType name="crystal-prototype-type">
         <xsd:sequence>
             <xsd:element minOccurs="0" name="key" type="xsd:string"/>
             <xsd:element minOccurs="0" name="id" type="xsd:string"/>

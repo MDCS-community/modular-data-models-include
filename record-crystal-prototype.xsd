@@ -3,5 +3,5 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="crystal-prototype.xsd"/>
-    <xsd:element name="crystal-prototype" type="crystal-protype-type"/>
+    <xsd:element name="crystal-prototype" type="crystal-prototype-type"/>
 </xsd:schema>

@@ -14,7 +14,10 @@
                 <xsd:sequence>
                     <xsd:element minOccurs="0" name="library" type="thing"/>
                     <xsd:element minOccurs="0" name="composition" type="material-composition"/>
-                    <xsd:element minOccurs="0" name="crystal-structure" type="crystal-prototype-type"/>
+                    <xsd:element minOccurs="0" name="crystal-structure"
+                        type="crystal-prototype-type"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="parameter"
+                        type="parameter-type"/>
                     <xsd:element maxOccurs="unbounded" minOccurs="0" name="property"
                         type="parameter-type"/>
                     <xsd:element maxOccurs="unbounded" minOccurs="0" name="digital-artifact"

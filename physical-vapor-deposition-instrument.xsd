@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="chemical-element.xsd"/>
+    <xsd:include schemaLocation="substrate.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_0-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_M-denominator_LTT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_1-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TTT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_LL-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_T-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_-denominator_T.xsd"/>
+    <xsd:complexType name="physical-vapor-deposition-instrument">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="type" maxOccurs="unbounded">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="cathodic arc"/>
+                        <xsd:enumeration value="evaporative"/>
+                        <xsd:enumeration value="electron beam"/>
+                        <xsd:enumeration value="pulsed laser"/>
+                        <xsd:enumeration value="sputter"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="component">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" name="name" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="manufacturer" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="model" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="substrate">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" name="geometry">
+                            <xsd:complexType>
+                                <xsd:choice>
+                                    <xsd:element name="circle">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element minOccurs="0" name="diameter"
+                                                  type="physical-quantity-L--type"/>
+                                                <xsd:element minOccurs="0" name="thickness"
+                                                  type="physical-quantity-L--type"/>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element name="square">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element minOccurs="0" name="width"
+                                                  type="physical-quantity-L--type"/>
+                                                <xsd:element minOccurs="0" name="thickness"
+                                                  type="physical-quantity-L--type"/>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element name="rectangle">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element minOccurs="0" name="width"
+                                                  type="physical-quantity-L--type"/>
+                                                <xsd:element minOccurs="0" name="length"
+                                                  type="physical-quantity-L--type"/>
+                                                <xsd:element minOccurs="0" name="thickness"
+                                                  type="physical-quantity-L--type"/>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                </xsd:choice>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="mounting" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="element-allowed"
+                type="chemical-element-type"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="element-forbidden"
+                type="chemical-element-type"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="transfer-method">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="glove box"/>
+                        <xsd:enumeration value="load lock"/>
+                        <xsd:enumeration value="transfer chamber/transfer pod"/>
+                        <xsd:enumeration value="none"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="target">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" name="count" type="xsd:int"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="geometry">
+                            <xsd:complexType>
+                                <xsd:choice>
+                                    <xsd:element name="circle">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element minOccurs="0" name="diameter"
+                                                  type="physical-quantity-L--type"/>
+                                                <xsd:element minOccurs="0" name="thickness"
+                                                  type="physical-quantity-L--type"/>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element name="square">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element minOccurs="0" name="width"
+                                                  type="physical-quantity-L--type"/>
+                                                <xsd:element minOccurs="0" name="thickness"
+                                                  type="physical-quantity-L--type"/>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element name="rectangle">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element minOccurs="0" name="width"
+                                                  type="physical-quantity-L--type"/>
+                                                <xsd:element minOccurs="0" name="length"
+                                                  type="physical-quantity-L--type"/>
+                                                <xsd:element minOccurs="0" name="thickness"
+                                                  type="physical-quantity-L--type"/>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                </xsd:choice>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="heating">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" name="type">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="resistive"/>
+                                    <xsd:enumeration value="resistive SiC"/>
+                                    <xsd:enumeration value="resistive metal"/>
+                                    <xsd:enumeration value="laser"/>
+                                    <xsd:enumeration value="lamp"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="temperature-min"
+                            type="physical-quantity-0--type"/>
+                        <xsd:element minOccurs="0" name="temperature-max"
+                            type="physical-quantity-0--type"/>
+                        <xsd:element minOccurs="0" name="temperature-gradient">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="yes"/>
+                                    <xsd:enumeration value="no"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="geometry">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" name="substrate-orientation">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="deposit up"/>
+                                    <xsd:enumeration value="deposit down"/>
+                                    <xsd:enumeration value="deposit horizontal"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="substrate-normal-target-angle"
+                            type="physical-quantity-1--type"> </xsd:element>
+                        <xsd:element minOccurs="0" name="substrate-target-distance-min"
+                            type="physical-quantity-L--type"/>
+                        <xsd:element minOccurs="0" name="substrate-target-distance-max"
+                            type="physical-quantity-L--type"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="shutter-location">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="source"/>
+                                    <xsd:enumeration value="substrate"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="gas">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" name="count" type="xsd:int"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="chemical-formula"
+                            type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="control-type" maxOccurs="unbounded">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="bleed valve"/>
+                                    <xsd:enumeration value="mass flow controller"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="cracking">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="yes"/>
+                                    <xsd:enumeration value="no"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="cryoshroud">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="yes"/>
+                                    <xsd:enumeration value="no"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="purifier">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="yes"/>
+                                    <xsd:enumeration value="no"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="base-pressure-min"
+                            type="physical-quantity-M-LTT-type"/>
+                        <xsd:element minOccurs="0" name="base-pressure-max"
+                            type="physical-quantity-M-LTT-type"/>
+                        <xsd:element minOccurs="0" name="working-pressure-min"
+                            type="physical-quantity-M-LTT-type"/>
+                        <xsd:element minOccurs="0" name="working-pressure-max"
+                            type="physical-quantity-M-LTT-type"/>
+                        <xsd:element minOccurs="0" name="flow-type">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="backfill"/>
+                                    <xsd:enumeration value="laminar"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="reactive">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="yes"/>
+                                    <xsd:enumeration value="no"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="shadow-mask">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="yes"/>
+                        <xsd:enumeration value="no"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="in-situ-charactarization">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="atomic absorption spectroscopy (AAS)"/>
+                        <xsd:enumeration value="atomic emission spectroscopy (AES)"/>
+                        <xsd:enumeration value="pyrometer"/>
+                        <xsd:enumeration value="quartz crystal microbalance (QCM)"/>
+                        <xsd:enumeration value="residual gas analyser (RGA)"/>
+                        <xsd:enumeration value="reflection high energy electron diffraction (RHEED)"
+                        />
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:choice maxOccurs="unbounded" minOccurs="0">
+                <xsd:element name="cathodic-arc">
+                    <xsd:complexType>
+                        <xsd:sequence/>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="evaporative">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element minOccurs="0" name="cracking">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:enumeration value="yes"/>
+                                        <xsd:enumeration value="no"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="electron-beam">
+                    <xsd:complexType>
+                        <xsd:sequence/>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="pulsed-laser">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="laser-spot-area-min" minOccurs="0"
+                                type="physical-quantity-LL--type"/>
+                            <xsd:element minOccurs="0" name="laser-pulse-energy-min"
+                                type="physical-quantity-MLL-TT-type"/>
+                            <xsd:element minOccurs="0" name="laser-pulse-energy-max"
+                                type="physical-quantity-MLL-TT-type"/>
+                            <xsd:element minOccurs="0" name="laser-pulse-duration-min"
+                                type="physical-quantity-T--type"/>
+                            <xsd:element minOccurs="0" name="laser-pulse-duration-max"
+                                type="physical-quantity-T--type"/>
+                            <xsd:element minOccurs="0" name="laser-wavelength"
+                                type="physical-quantity-L--type"/>
+                            <xsd:element minOccurs="0" name="laser-pulse-repetition-frequency-min"
+                                type="physical-quantity--T-type"/>
+                            <xsd:element minOccurs="0" name="laser-pulse-repetition-frequency-max"
+                                type="physical-quantity--T-type"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="sputter">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element minOccurs="0" name="source-count" type="xsd:int"/>
+                            <xsd:element minOccurs="0" name="magnet">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:enumeration value="yes"/>
+                                        <xsd:enumeration value="no"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="magnet-configuration"
+                                maxOccurs="unbounded">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:enumeration value="balanced"/>
+                                        <xsd:enumeration value="unbalanced"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="power-supply" maxOccurs="unbounded">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:enumeration value="DC"/>
+                                        <xsd:enumeration value="pulsed DC"/>
+                                        <xsd:enumeration value="RF"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="power-supply-power-max"
+                                type="physical-quantity-MLL-TTT-type"/>
+                            <xsd:element minOccurs="0" name="source-tilt">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:enumeration value="yes"/>
+                                        <xsd:enumeration value="no"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="source-tilt-angle-min"
+                                type="physical-quantity-1--type"> </xsd:element>
+                            <xsd:element minOccurs="0" name="source-tilt-angle-max"
+                                type="physical-quantity-1--type"> </xsd:element>
+                            <xsd:element minOccurs="0" name="substrate-bias">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:enumeration value="yes"/>
+                                        <xsd:enumeration value="no"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="substrate-bias-power-max"
+                                type="physical-quantity-MLL-TTT-type"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:choice>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

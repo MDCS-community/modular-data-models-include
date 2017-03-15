@@ -5,6 +5,7 @@
     <xsd:include schemaLocation="chemical-element.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TT.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
     <xsd:complexType name="xray-source-type">
         <xsd:choice>
             <xsd:element name="tube">
@@ -41,6 +42,8 @@
                             type="physical-quantity-L--type"/>
                         <xsd:element minOccurs="0" name="photon-energy"
                             type="physical-quantity-MLL-TT-type"/>
+                        <xsd:element minOccurs="0" name="polarization"
+                            type="physical-quantity---type"/>
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>

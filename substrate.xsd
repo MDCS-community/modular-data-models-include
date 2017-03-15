@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+    <xsd:include schemaLocation="material-composition.xsd"/>
+    <xsd:complexType name="substrate">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="geometry">
+                <xsd:complexType>
+                    <xsd:choice>
+                        <xsd:element name="circle">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element minOccurs="0" name="diameter"
+                                        type="physical-quantity-L--type"/>
+                                    <xsd:element minOccurs="0" name="thickness"
+                                        type="physical-quantity-L--type"/>
+                                    <xsd:element minOccurs="0" name="fiducial-position"
+                                        type="xsd:string"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="square">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element minOccurs="0" name="width"
+                                        type="physical-quantity-L--type"/>
+                                    <xsd:element minOccurs="0" name="thickness"
+                                        type="physical-quantity-L--type"/>
+                                    <xsd:element minOccurs="0" name="fiducial-position"
+                                        type="xsd:string"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="rectangle">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element minOccurs="0" name="width"
+                                        type="physical-quantity-L--type"/>
+                                    <xsd:element minOccurs="0" name="length"
+                                        type="physical-quantity-L--type"/>
+                                    <xsd:element minOccurs="0" name="thickness"
+                                        type="physical-quantity-L--type"/>
+                                    <xsd:element minOccurs="0" name="fiducial-position"
+                                        type="xsd:string"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:choice>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="material">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" name="composition" type="material-composition"/>
+                        <xsd:element minOccurs="0" name="name" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="vendor" type="xsd:string"> </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

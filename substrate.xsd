@@ -4,6 +4,8 @@
 
     <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
     <xsd:include schemaLocation="material-composition.xsd"/>
+    <xsd:include schemaLocation="material.xsd"/>
+    <xsd:include schemaLocation="miller-index-direction.xsd"/>
     <xsd:complexType name="substrate">
         <xsd:sequence>
             <xsd:element minOccurs="0" name="geometry">
@@ -50,15 +52,9 @@
                     </xsd:choice>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element minOccurs="0" name="material">
-                <xsd:complexType>
-                    <xsd:sequence>
-                        <xsd:element minOccurs="0" name="composition" type="material-composition"/>
-                        <xsd:element minOccurs="0" name="name" type="xsd:string"/>
-                    </xsd:sequence>
-                </xsd:complexType>
-            </xsd:element>
-            <xsd:element minOccurs="0" name="vendor" type="xsd:string"> </xsd:element>
+            <xsd:element minOccurs="0" name="material" type="material"> </xsd:element>
+            <xsd:element minOccurs="0" name="orientation" type="miller-index-direction-type"/>
+            <xsd:element name="coating" type="xsd:string" maxOccurs="unbounded" minOccurs="0"/>
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

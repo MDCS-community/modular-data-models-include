@@ -14,6 +14,39 @@
                 <xsd:sequence>
                     <xsd:element minOccurs="0" name="measurement-method" type="xsd:string"> </xsd:element>
                     <xsd:element minOccurs="0" name="xray-source" type="xray-source-type"/>
+                    <xsd:element minOccurs="0" name="scattering-geometry">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element minOccurs="0" name="theta-min"
+                                    type="physical-quantity-1--type"/>
+                                <xsd:element minOccurs="0" name="theta-max"
+                                    type="physical-quantity-1--type"/>
+                                <xsd:element minOccurs="0" name="chi-min"
+                                    type="physical-quantity-1--type"/>
+                                <xsd:element minOccurs="0" name="chi-max"
+                                    type="physical-quantity-1--type"/>
+                                <xsd:element minOccurs="0" name="phi-min"
+                                    type="physical-quantity-1--type"/>
+                                <xsd:element minOccurs="0" name="phi-max"
+                                    type="physical-quantity-1--type"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="detector">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element minOccurs="0" name="type">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:string">
+                                            <xsd:enumeration value="point"/>
+                                            <xsd:enumeration value="line"/>
+                                            <xsd:enumeration value="area"/>
+                                        </xsd:restriction>
+                                    </xsd:simpleType>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
                     <xsd:element minOccurs="0" name="data" maxOccurs="unbounded">
                         <xsd:complexType>
                             <xsd:sequence>

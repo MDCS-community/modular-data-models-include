@@ -2,6 +2,6 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
 
-    <xsd:include schemaLocation="crystal-prototype.xsd"/>
-    <xsd:element name="crystal-prototype" type="crystal-prototype-type"/>
+    <xsd:include schemaLocation="combinatorial-material.xsd"/>
+    <xsd:element name="material" type="combinatorial-material"/>
 </xsd:schema>

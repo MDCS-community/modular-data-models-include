@@ -3,12 +3,13 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="attribute-base.xsd"/>
-    <xsd:include schemaLocation="substrate.xsd"/>
-    <xsd:complexType name="attribute-substrate">
+    <xsd:include schemaLocation="physical-vapor-deposition-instrument.xsd"/>
+    <xsd:complexType name="attribute-physical-vapor-deposition-instrument">
         <xsd:complexContent>
             <xsd:extension base="attribute-base">
                 <xsd:sequence>
-                    <xsd:element name="substrate" type="substrate"> </xsd:element>
+                    <xsd:element name="physical-vapor-deposition-instrument"
+                        type="physical-vapor-deposition-instrument"/>
                 </xsd:sequence>
             </xsd:extension>
         </xsd:complexContent>

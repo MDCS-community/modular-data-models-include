@@ -3,14 +3,14 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="resource.xsd"/>
-    <xsd:include schemaLocation="HTE-sample.xsd"/>
+    <xsd:include schemaLocation="HTE-library.xsd"/>
     <xsd:element name="project" type="combinatorial-project"/>
     <xsd:complexType name="combinatorial-project">
         <xsd:complexContent>
             <xsd:extension base="resource">
                 <xsd:sequence>
-                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="sample"
-                        type="combinatorial-sample"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="library"
+                        type="combinatorial-library"/>
                 </xsd:sequence>
             </xsd:extension>
         </xsd:complexContent>

@@ -39,7 +39,7 @@
                                 <xsd:element minOccurs="0" name="id" type="xsd:string"/>
                                 <xsd:element minOccurs="0" name="description" type="xsd:string"/>
                                 <xsd:element minOccurs="0" name="crystal-prototype"
-                                    type="crystal-protype-type"/>
+                                    type="crystal-prototype-type"/>
                                 <xsd:element minOccurs="0" name="number-of-atoms" type="xsd:int"/>
                                 <xsd:element maxOccurs="unbounded" minOccurs="0" name="parameter"
                                     type="parameter-type"/>

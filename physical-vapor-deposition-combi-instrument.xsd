@@ -2,14 +2,12 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
 
-    <xsd:include schemaLocation="resource.xsd"/>
-    <xsd:include schemaLocation="identifier.xsd"/>
-    <xsd:complexType name="digital-artifact">
+    <xsd:include schemaLocation="physical-vapor-deposition-instrument.xsd"/>
+    <xsd:complexType name="physical-vapor-deposition-combi-instrument">
         <xsd:complexContent>
-            <xsd:extension base="resource">
+            <xsd:extension base="physical-vapor-deposition-instrument">
                 <xsd:sequence>
-                    <xsd:element minOccurs="0" name="data-type" type="identifier"
-                        maxOccurs="unbounded"/>
+                    <xsd:element minOccurs="0" name="combinatorial-method" type="xsd:string"/>
                 </xsd:sequence>
             </xsd:extension>
         </xsd:complexContent>

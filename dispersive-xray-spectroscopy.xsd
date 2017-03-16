@@ -8,7 +8,7 @@
     <xsd:include schemaLocation="physical-quantity-numerator_I-denominator_.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TTTI.xsd"/>
     <xsd:include schemaLocation="material-composition.xsd"/>
-    <xsd:complexType name="dispersive-x-ray-spectroscopy-type">
+    <xsd:complexType name="dispersive-xray-spectroscopy-type">
         <xsd:complexContent>
             <xsd:extension base="instrument-base">
                 <xsd:sequence>

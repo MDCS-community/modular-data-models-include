@@ -16,9 +16,9 @@
                         <xsd:simpleType>
                             <xsd:restriction base="xsd:string">
                                 <xsd:enumeration
-                                    value="energy-dispersive X-ray spectroscopy (EDS, EDX, EDXS, XEDS)"/>
+                                    value="energy-dispersive x-ray spectroscopy (EDS, EDX, EDXS, XEDS)"/>
                                 <xsd:enumeration
-                                    value="wavelength-dispersive X-ray spectroscopy (WDXS, WDS)"/>
+                                    value="wavelength-dispersive x-ray spectroscopy (WDXS, WDS)"/>
                             </xsd:restriction>
                         </xsd:simpleType>
                     </xsd:element>

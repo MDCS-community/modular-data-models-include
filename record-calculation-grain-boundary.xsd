@@ -12,14 +12,17 @@
     <xsd:include schemaLocation="parameter.xsd"/>
     <xsd:include schemaLocation="person.xsd"/>
     <xsd:include schemaLocation="data-dependency.xsd"/>
+    <xsd:include schemaLocation="material.xsd"/>
     <xsd:element name="calculation-grain-boundary">
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element minOccurs="0" name="key" type="xsd:string"/>
                 <xsd:element minOccurs="0" name="id" type="xsd:string"/>
                 <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="keyword" type="xsd:string"/>
                 <xsd:element maxOccurs="unbounded" minOccurs="0" name="contributor" type="person"/>
                 <xsd:element minOccurs="0" name="specialized-metadata" type="xsd:anyType"/>
+                <xsd:element minOccurs="0" name="material" type="material"/>
                 <xsd:element minOccurs="0" name="potential"
                     type="interatomic-potential-compact-id-type"/>
                 <xsd:element maxOccurs="unbounded" minOccurs="0" name="parameter"

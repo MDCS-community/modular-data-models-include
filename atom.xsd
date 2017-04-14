@@ -5,6 +5,8 @@
     <xsd:include schemaLocation="chemical-element.xsd"/>
     <xsd:include schemaLocation="physical-quantity.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_M-denominator_.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_TI-denominator_.xsd"/>
     <xsd:complexType name="atom">
         <xsd:sequence>
             <xsd:element minOccurs="0" name="component" type="xsd:int">
@@ -18,8 +20,8 @@
                 </xsd:annotation>
             </xsd:element>
             <xsd:element minOccurs="0" name="element" type="chemical-element-type"/>
-            <xsd:element minOccurs="0" name="mass"/>
-            <xsd:element minOccurs="0" name="charge"/>
+            <xsd:element minOccurs="0" name="mass" type="physical-quantity-M--type"/>
+            <xsd:element minOccurs="0" name="charge" type="physical-quantity-TI--type"/>
             <xsd:element name="position" type="physical-quantity-L--type" minOccurs="0"/>
             <xsd:element minOccurs="0" maxOccurs="unbounded" name="property">
                 <xsd:complexType>

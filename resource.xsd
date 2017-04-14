@@ -95,6 +95,14 @@
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="comment"
+                        type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:appinfo>
+                                <label>Comment</label>
+                            </xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
                 </xsd:sequence>
             </xsd:extension>
         </xsd:complexContent>

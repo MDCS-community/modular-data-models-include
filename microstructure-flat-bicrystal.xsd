@@ -3,7 +3,6 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="atomic-structure.xsd"/>
-    <xsd:include schemaLocation="miller-index-direction.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_1-denominator_.xsd"/>
     <xsd:include schemaLocation="crystal-prototype.xsd"/>
@@ -11,6 +10,9 @@
     <xsd:include schemaLocation="parameter.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_LL-denominator_.xsd"/>
     <xsd:include schemaLocation="grain-boundary-fundamental-zone.xsd"/>
+    <xsd:include schemaLocation="strain-matrix.xsd"/>
+    <xsd:include schemaLocation="rotation-matrix.xsd"/>
+    <xsd:include schemaLocation="grain-orientation.xsd"/>
     <xsd:complexType name="microstructure-flat-bicrystal-type">
         <xsd:complexContent>
             <xsd:extension base="atomic-structure-type">
@@ -48,55 +50,14 @@
                                 <xsd:element minOccurs="0" name="number-of-atoms" type="xsd:int"/>
                                 <xsd:element maxOccurs="unbounded" minOccurs="0" name="parameter"
                                     type="parameter-type"/>
-                                <xsd:element minOccurs="0" name="orientation">
-                                    <xsd:complexType>
-                                        <xsd:sequence>
-                                            <xsd:element minOccurs="0" name="x"
-                                                type="miller-index-direction-type"/>
-                                            <xsd:element minOccurs="0" name="y"
-                                                type="miller-index-direction-type"/>
-                                            <xsd:element minOccurs="0" name="z"
-                                                type="miller-index-direction-type"/>
-                                        </xsd:sequence>
-                                    </xsd:complexType>
-                                </xsd:element>
-                                <xsd:element minOccurs="0" name="rotation-matrix">
-                                    <xsd:complexType>
-                                        <xsd:sequence>
-                                            <xsd:element name="value" type="xsd:float"/>
-                                            <xsd:element name="ij">
-                                                <xsd:simpleType>
-                                                  <xsd:restriction>
-                                                  <xsd:simpleType>
-                                                  <xsd:list itemType="xsd:integer"/>
-                                                  </xsd:simpleType>
-                                                  <xsd:length value="2"/>
-                                                  </xsd:restriction>
-                                                </xsd:simpleType>
-                                            </xsd:element>
-                                        </xsd:sequence>
-                                    </xsd:complexType>
-                                </xsd:element>
+                                <xsd:element minOccurs="0" name="orientation"
+                                    type="grain-orientation"> </xsd:element>
+                                <xsd:element minOccurs="0" name="rotation-matrix"
+                                    type="rotation-matrix"> </xsd:element>
                                 <xsd:element minOccurs="0" name="center-of-mass-position"
                                     type="physical-quantity-L--type"/>
-                                <xsd:element minOccurs="0" name="strain-matrix">
-                                    <xsd:complexType>
-                                        <xsd:sequence>
-                                            <xsd:element name="strain"
-                                                type="physical-quantity---type"/>
-                                            <xsd:element name="ij">
-                                                <xsd:simpleType>
-                                                  <xsd:restriction>
-                                                  <xsd:simpleType>
-                                                  <xsd:list itemType="xsd:integer"/>
-                                                  </xsd:simpleType>
-                                                  <xsd:length value="2"/>
-                                                  </xsd:restriction>
-                                                </xsd:simpleType>
-                                            </xsd:element>
-                                        </xsd:sequence>
-                                    </xsd:complexType>
-                                </xsd:element>
+                                <xsd:element minOccurs="0" name="strain-matrix" type="strain-matrix"
+                                    > </xsd:element>
                                 <xsd:element minOccurs="0" name="translation"
                                     type="physical-quantity-L--type">
                                     <xsd:annotation>

@@ -4,6 +4,7 @@
     <xsd:include schemaLocation="remote-file.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
     <xsd:include schemaLocation="atom.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_1-denominator_.xsd"/>
     <xsd:complexType name="atomic-structure-type">
         <xsd:sequence>
             <xsd:element minOccurs="0" name="key" type="xsd:string"/>
@@ -16,6 +17,9 @@
                         <xsd:element minOccurs="0" name="x" type="physical-quantity-L--type"/>
                         <xsd:element minOccurs="0" name="y" type="physical-quantity-L--type"/>
                         <xsd:element minOccurs="0" name="z" type="physical-quantity-L--type"/>
+                        <xsd:element minOccurs="0" name="alpha" type="physical-quantity-1--type"/>
+                        <xsd:element minOccurs="0" name="beta" type="physical-quantity-1--type"/>
+                        <xsd:element minOccurs="0" name="gamma" type="physical-quantity-1--type"/>
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+    <xsd:include schemaLocation="miller-index-direction.xsd"/>
+    <xsd:complexType name="grain-orientation">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="x" type="miller-index-direction-type"/>
+            <xsd:element minOccurs="0" name="y" type="miller-index-direction-type"/>
+            <xsd:element minOccurs="0" name="z" type="miller-index-direction-type"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

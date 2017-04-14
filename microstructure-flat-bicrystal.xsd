@@ -4,7 +4,6 @@
 
     <xsd:include schemaLocation="atomic-structure.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
-    <xsd:include schemaLocation="physical-quantity-numerator_1-denominator_.xsd"/>
     <xsd:include schemaLocation="crystal-prototype.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
     <xsd:include schemaLocation="parameter.xsd"/>
@@ -13,6 +12,7 @@
     <xsd:include schemaLocation="strain-matrix.xsd"/>
     <xsd:include schemaLocation="rotation-matrix.xsd"/>
     <xsd:include schemaLocation="grain-orientation.xsd"/>
+    <xsd:include schemaLocation="grain-misorientation.xsd"/>
     <xsd:complexType name="microstructure-flat-bicrystal-type">
         <xsd:complexContent>
             <xsd:extension base="atomic-structure-type">
@@ -69,8 +69,8 @@
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element minOccurs="0" name="disorientation"
-                        type="physical-quantity-1--type"/>
+                    <xsd:element minOccurs="0" name="disorientation" type="grain-misorientation"/>
+                    <xsd:element minOccurs="0" name="misorientation" type="grain-misorientation"/>
                     <xsd:element minOccurs="0" name="sigma-value" type="xsd:int"/>
                 </xsd:sequence>
             </xsd:extension>

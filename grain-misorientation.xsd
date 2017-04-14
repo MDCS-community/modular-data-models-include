@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+    <xsd:include schemaLocation="miller-index-direction.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_1-denominator_.xsd"/>
+    <xsd:complexType name="grain-misorientation">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="axis" type="miller-index-direction-type"/>
+            <xsd:element minOccurs="0" name="angle" type="physical-quantity-1--type"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

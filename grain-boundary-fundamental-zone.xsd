@@ -2,25 +2,10 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
     <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
+    <xsd:include schemaLocation="rotation-matrix.xsd"/>
     <xsd:complexType name="grain-boundary-fundamental-zone">
         <xsd:sequence>
-            <xsd:element name="misorientation-matrix">
-                <xsd:complexType>
-                    <xsd:sequence>
-                        <xsd:element name="value" type="xsd:float"/>
-                        <xsd:element name="ij">
-                            <xsd:simpleType>
-                                <xsd:restriction>
-                                    <xsd:simpleType>
-                                        <xsd:list itemType="xsd:integer"/>
-                                    </xsd:simpleType>
-                                    <xsd:length value="2"/>
-                                </xsd:restriction>
-                            </xsd:simpleType>
-                        </xsd:element>
-                    </xsd:sequence>
-                </xsd:complexType>
-            </xsd:element>
+            <xsd:element name="misorientation-matrix" type="rotation-matrix"> </xsd:element>
             <xsd:element name="boundry-normal" type="physical-quantity-L--type"/>
         </xsd:sequence>
     </xsd:complexType>

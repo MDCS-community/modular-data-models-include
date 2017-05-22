@@ -6,7 +6,6 @@
     <xsd:include schemaLocation="physical-quantity-numerator_1-denominator_.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_-denominator_L.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_-denominator_.xsd"/>
-    <xsd:include schemaLocation="remote-file.xsd"/>
     <xsd:include schemaLocation="xray-source.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TT.xsd"/>
     <xsd:include schemaLocation="material-composition.xsd"/>

@@ -2,10 +2,10 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
 
-    <xsd:include schemaLocation="thing.xsd"/>
+    <xsd:include schemaLocation="resource.xsd"/>
     <xsd:complexType name="associated-resource">
         <xsd:complexContent>
-            <xsd:extension base="thing">
+            <xsd:extension base="resource">
                 <xsd:sequence>
                     <xsd:element minOccurs="0" name="relationship" type="xsd:string">
                         <xsd:annotation>

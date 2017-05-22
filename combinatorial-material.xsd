@@ -6,13 +6,13 @@
     <xsd:include schemaLocation="material-composition.xsd"/>
     <xsd:include schemaLocation="parameter.xsd"/>
     <xsd:include schemaLocation="digital-artifact.xsd"/>
-    <xsd:include schemaLocation="thing-use.xsd"/>
     <xsd:include schemaLocation="crystal-prototype.xsd"/>
+    <xsd:include schemaLocation="sample.xsd"/>
     <xsd:complexType name="combinatorial-material">
         <xsd:complexContent>
             <xsd:extension base="point">
                 <xsd:sequence>
-                    <xsd:element minOccurs="0" name="library" type="thing-use"/>
+                    <xsd:element minOccurs="0" name="library" type="sample"/>
                     <xsd:element minOccurs="0" name="composition" type="material-composition"/>
                     <xsd:element minOccurs="0" name="crystal-structure"
                         type="crystal-prototype-type"/>

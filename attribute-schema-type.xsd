@@ -6,7 +6,7 @@
         <xsd:complexContent>
             <xsd:extension base="attribute-base">
                 <xsd:sequence>
-                    <xsd:element name="schema-type">
+                    <xsd:element name="schema-type" maxOccurs="unbounded">
                         <xsd:annotation>
                             <xsd:appinfo>
                                 <label>Schema Type</label>

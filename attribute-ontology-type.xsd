@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+    <xsd:include schemaLocation="attribute-base.xsd"/>
+    <xsd:complexType name="ontology-type">
+        <xsd:complexContent>
+            <xsd:extension base="attribute-base">
+                <xsd:sequence>
+                    <xsd:element name="ontology-type">
+                        <xsd:annotation>
+                            <xsd:appinfo>
+                                <label>Ontology Type</label>
+                            </xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:enumeration value="Common Logic"/>
+                                <xsd:enumeration value="CycL"/>
+                                <xsd:enumeration value="DAML+OIL"/>
+                                <xsd:enumeration value="DOGMA (Developing Ontology-Grounded Methods and Applications)"/>
+                                <xsd:enumeration value="F-Logic (Frame Logic)"/>
+                                <xsd:enumeration value="Gellish"/>
+                                <xsd:enumeration value="KIF (Knowledge Interchange Format)"/>
+                                <xsd:enumeration value="KL-ONE"/>
+                                <xsd:enumeration value="KM"/>
+                                <xsd:enumeration value="LOOM (ontology)"/>
+                                <xsd:enumeration value="OCML (Operational Conceptual Modelling Language)"/>
+                                <xsd:enumeration value="OIL (Ontology Inference Layer"/>
+                                <xsd:enumeration value="OKBC (Open Knowledge Base Connectivity)"/>
+                                <xsd:enumeration value="OWL (Web Ontology Language)"/>
+                                <xsd:enumeration value="PLIB (Parts LIBrary)"/>
+                                <xsd:enumeration value="RACER"/>
+                                <xsd:enumeration value="RDF (Resource Description Framework)"/>
+                                <xsd:enumeration value="RDF Schema (RDFS)"/>
+                                <xsd:enumeration value="SHOE"/>
+                                <xsd:enumeration value="Turtle"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

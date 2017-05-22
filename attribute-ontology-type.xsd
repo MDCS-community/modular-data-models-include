@@ -6,7 +6,7 @@
         <xsd:complexContent>
             <xsd:extension base="attribute-base">
                 <xsd:sequence>
-                    <xsd:element name="ontology-type">
+                    <xsd:element name="ontology-type" maxOccurs="unbounded">
                         <xsd:annotation>
                             <xsd:appinfo>
                                 <label>Ontology Type</label>
@@ -17,15 +17,17 @@
                                 <xsd:enumeration value="Common Logic"/>
                                 <xsd:enumeration value="CycL"/>
                                 <xsd:enumeration value="DAML+OIL"/>
-                                <xsd:enumeration value="DOGMA (Developing Ontology-Grounded Methods and Applications)"/>
+                                <xsd:enumeration
+                                    value="DOGMA (Developing Ontology-Grounded Methods and Applications)"/>
                                 <xsd:enumeration value="F-Logic (Frame Logic)"/>
                                 <xsd:enumeration value="Gellish"/>
                                 <xsd:enumeration value="KIF (Knowledge Interchange Format)"/>
                                 <xsd:enumeration value="KL-ONE"/>
                                 <xsd:enumeration value="KM"/>
                                 <xsd:enumeration value="LOOM (ontology)"/>
-                                <xsd:enumeration value="OCML (Operational Conceptual Modelling Language)"/>
-                                <xsd:enumeration value="OIL (Ontology Inference Layer"/>
+                                <xsd:enumeration
+                                    value="OCML (Operational Conceptual Modelling Language)"/>
+                                <xsd:enumeration value="OIL (Ontology Inference Layer)"/>
                                 <xsd:enumeration value="OKBC (Open Knowledge Base Connectivity)"/>
                                 <xsd:enumeration value="OWL (Web Ontology Language)"/>
                                 <xsd:enumeration value="PLIB (Parts LIBrary)"/>

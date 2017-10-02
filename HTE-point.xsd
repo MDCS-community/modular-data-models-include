@@ -6,7 +6,7 @@
     <xsd:include schemaLocation="identifier.xsd"/>
     <xsd:complexType name="point">
         <xsd:sequence>
-            <xsd:element minOccurs="0" name="identifier" type="identifier"/>
+            <xsd:element minOccurs="0" name="identifier" type="identifier" maxOccurs="unbounded"/>
             <xsd:element minOccurs="0" name="coordinates">
                 <xsd:complexType>
                     <xsd:sequence>

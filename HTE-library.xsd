@@ -4,17 +4,17 @@
 
     <xsd:include schemaLocation="sample.xsd"/>
     <xsd:include schemaLocation="attribute-substrate.xsd"/>
-    <xsd:include schemaLocation="combinatorial-material.xsd"/>
+    <xsd:include schemaLocation="combinatorial-sample.xsd"/>
     <xsd:element name="library" type="combinatorial-library"/>
     <xsd:complexType name="combinatorial-library">
         <xsd:complexContent>
             <xsd:extension base="sample">
                 <xsd:sequence>
-                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="point"
-                        type="combinatorial-material">
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="sample"
+                        type="combinatorial-sample">
                         <xsd:annotation>
                             <xsd:appinfo>
-                                <label>Point/Location on Sample</label>
+                                <label>Sample</label>
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>

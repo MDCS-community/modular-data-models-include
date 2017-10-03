@@ -9,6 +9,8 @@
             <xsd:extension base="resource">
                 <xsd:sequence>
                     <xsd:element minOccurs="0" name="data-type" type="thing" maxOccurs="unbounded"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="data" type="xsd:anyType"
+                    />
                 </xsd:sequence>
             </xsd:extension>
         </xsd:complexContent>

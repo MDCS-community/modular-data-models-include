@@ -4,9 +4,11 @@
 
     <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
     <xsd:include schemaLocation="identifier.xsd"/>
+    <xsd:include schemaLocation="thing.xsd"/>
     <xsd:complexType name="point">
         <xsd:sequence>
             <xsd:element minOccurs="0" name="identifier" type="identifier" maxOccurs="unbounded"/>
+            <xsd:element minOccurs="0" name="map" type="thing"/>
             <xsd:element minOccurs="0" name="coordinates">
                 <xsd:complexType>
                     <xsd:sequence>

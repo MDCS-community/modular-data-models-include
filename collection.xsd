@@ -8,10 +8,22 @@
         <xsd:complexContent>
             <xsd:extension base="resource">
                 <xsd:sequence>
-                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="collection"
-                        type="collection"/>
                     <xsd:element maxOccurs="unbounded" minOccurs="0" name="digital-artifact"
-                        type="digital-artifact"/>
+                        type="digital-artifact">
+                        <xsd:annotation>
+                            <xsd:appinfo>
+                                <label>Digital Artifact (e.g. dataset, image)</label>
+                            </xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="collection"
+                        type="collection">
+                        <xsd:annotation>
+                            <xsd:appinfo>
+                                <label>Collection</label>
+                            </xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
                 </xsd:sequence>
             </xsd:extension>
         </xsd:complexContent>

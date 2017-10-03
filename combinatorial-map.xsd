@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="resource.xsd"/>
+    <xsd:include schemaLocation="HTE-point.xsd"/>
+    <xsd:complexType name="combinatorial-map">
+        <xsd:complexContent>
+            <xsd:extension base="resource">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="geometry">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:enumeration value="circle"/>
+                                <xsd:enumeration value="square"/>
+                                <xsd:enumeration value="rectangle"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="fiducial-position" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="point" type="point"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

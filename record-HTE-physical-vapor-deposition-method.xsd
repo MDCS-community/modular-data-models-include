@@ -148,6 +148,8 @@
                                                 type="material"/>
                                             <xsd:element minOccurs="0" name="mass-flow-rate"
                                                 type="physical-quantity-M-T-type"/>
+                                            <xsd:element minOccurs="0" name="pressure"
+                                                type="physical-quantity-M-LTT-type"/>
                                             <xsd:element minOccurs="0" name="cracker">
                                                 <xsd:simpleType>
                                                   <xsd:restriction base="xsd:string">
@@ -288,6 +290,9 @@
                                                   <xsd:element minOccurs="0"
                                                   name="pulse-count-per-cycle"
                                                   type="xsd:positiveInteger"/>
+                                                  <xsd:element minOccurs="0"
+                                                  name="substrate-rotation-angle"
+                                                  type="physical-quantity-1--type"> </xsd:element>
                                                   </xsd:sequence>
                                                   </xsd:complexType>
                                                 </xsd:element>

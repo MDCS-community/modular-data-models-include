@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="unqualified">
+
+    <xsd:include schemaLocation="resource.xsd"/>
+    <xsd:complexType name="data-type">
+        <xsd:complexContent>
+            <xsd:extension base="resource"/>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

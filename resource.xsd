@@ -8,7 +8,6 @@
     <xsd:include schemaLocation="associated-person.xsd"/>
     <xsd:include schemaLocation="resource-date.xsd"/>
     <xsd:include schemaLocation="associated-organization.xsd"/>
-    <xsd:include schemaLocation="attribute-comment.xsd"/>
     <xsd:include schemaLocation="attribute-other.xsd"/>
     <xsd:include schemaLocation="attribute-primary-audience.xsd"/>
     <xsd:include schemaLocation="attribute-raw-xml.xsd"/>

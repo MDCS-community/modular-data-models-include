@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
-
-    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
     <xsd:include schemaLocation="identifier.xsd"/>
-    <xsd:include schemaLocation="thing.xsd"/>
+    <xsd:include schemaLocation="associated-thing.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
     <xsd:complexType name="point">
         <xsd:sequence>
             <xsd:element minOccurs="0" name="identifier" type="identifier" maxOccurs="unbounded"/>
-            <xsd:element minOccurs="0" name="map" type="thing"/>
+            <xsd:element minOccurs="0" name="map" type="associated-thing"/>
             <xsd:element minOccurs="0" name="coordinates">
                 <xsd:complexType>
                     <xsd:sequence>

@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
     elementFormDefault="unqualified">
-
+    <xsd:include schemaLocation="associated-thing.xsd"/>
     <xsd:include schemaLocation="HTE-point.xsd"/>
     <xsd:include schemaLocation="material-composition.xsd"/>
     <xsd:include schemaLocation="parameter.xsd"/>
     <xsd:include schemaLocation="digital-artifact.xsd"/>
     <xsd:include schemaLocation="crystal-prototype.xsd"/>
-    <xsd:include schemaLocation="sample.xsd"/>
     <xsd:complexType name="combinatorial-sample">
         <xsd:complexContent>
             <xsd:extension base="point">
                 <xsd:sequence>
-                    <xsd:element minOccurs="0" name="library" type="sample"/>
+                    <xsd:element minOccurs="0" name="library" type="associated-thing"/>
                     <xsd:element minOccurs="0" name="composition" type="material-composition"/>
                     <xsd:element minOccurs="0" name="crystal-structure"
                         type="crystal-prototype-type"/>

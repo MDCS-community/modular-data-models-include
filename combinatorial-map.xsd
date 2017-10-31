@@ -4,6 +4,7 @@
 
     <xsd:include schemaLocation="resource.xsd"/>
     <xsd:include schemaLocation="HTE-point.xsd"/>
+    <xsd:include schemaLocation="physical-quantity-numerator_L-denominator_.xsd"/>
     <xsd:complexType name="combinatorial-map">
         <xsd:complexContent>
             <xsd:extension base="resource">
@@ -17,6 +18,9 @@
                             </xsd:restriction>
                         </xsd:simpleType>
                     </xsd:element>
+                    <xsd:element minOccurs="0" name="diameter" type="physical-quantity-L--type"/>
+                    <xsd:element minOccurs="0" name="width" type="physical-quantity-L--type"/>
+                    <xsd:element minOccurs="0" name="length" type="physical-quantity-L--type"/>
                     <xsd:element minOccurs="0" name="fiducial-position" type="xsd:string"/>
                     <xsd:element maxOccurs="unbounded" minOccurs="0" name="point" type="point"/>
                 </xsd:sequence>

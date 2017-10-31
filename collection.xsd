@@ -3,21 +3,24 @@
     elementFormDefault="unqualified">
 
     <xsd:include schemaLocation="resource.xsd"/>
-    <xsd:complexType name="associated-resource">
+    <xsd:include schemaLocation="digital-artifact.xsd"/>
+    <xsd:complexType name="collection">
         <xsd:complexContent>
             <xsd:extension base="resource">
                 <xsd:sequence>
-                    <xsd:element minOccurs="0" name="relationship" type="xsd:string">
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="digital-artifact"
+                        type="digital-artifact">
                         <xsd:annotation>
                             <xsd:appinfo>
-                                <label>Relationship</label>
+                                <label>Digital Artifact (e.g. dataset, image)</label>
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
-                    <xsd:element minOccurs="0" name="type" type="xsd:string">
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="collection"
+                        type="collection">
                         <xsd:annotation>
                             <xsd:appinfo>
-                                <label>Type</label>
+                                <label>Collection</label>
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>

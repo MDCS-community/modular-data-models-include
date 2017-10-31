@@ -6,7 +6,7 @@
         <xsd:complexContent>
             <xsd:extension base="attribute-base">
                 <xsd:sequence>
-                    <xsd:element name="schema-type">
+                    <xsd:element name="schema-type" maxOccurs="unbounded">
                         <xsd:annotation>
                             <xsd:appinfo>
                                 <label>Schema Type</label>
@@ -25,7 +25,6 @@
                                 <xsd:enumeration value="CLiX"/>
                                 <xsd:enumeration value="DDML"/>
                                 <xsd:enumeration value="DSD"/>
-                                <xsd:enumeration value="DTD"/>
                                 <xsd:enumeration value="NRL"/>
                                 <xsd:enumeration value="NVDL"/>
                                 <xsd:enumeration value="CAM"/>

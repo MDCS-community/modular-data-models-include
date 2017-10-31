@@ -75,18 +75,19 @@
                                 </xsd:annotation>
                                 <xsd:simpleType>
                                     <xsd:restriction base="xsd:string">
-                                        <xsd:enumeration value="reference"/>
-                                        <xsd:enumeration value="download"/>
                                         <xsd:enumeration value="API"/>
-                                        <xsd:enumeration value="landing page"/>
-                                        <xsd:enumeration value="rights"/>
-                                        <xsd:enumeration value="license"/>
                                         <xsd:enumeration value="disclaimer"/>
                                         <xsd:enumeration value="documentation"/>
-                                        <xsd:enumeration value="sales"/>
-                                        <xsd:enumeration value="support"/>
+                                        <xsd:enumeration value="download"/>
                                         <xsd:enumeration value="forum"/>
+                                        <xsd:enumeration value="landing page"/>
+                                        <xsd:enumeration value="license"/>
+                                        <xsd:enumeration value="reference"/>
+                                        <xsd:enumeration value="rights"/>
+                                        <xsd:enumeration value="sales"/>
                                         <xsd:enumeration value="source repository"/>
+                                        <xsd:enumeration value="support"/>
+                                        <xsd:enumeration value="visualization"/>
                                     </xsd:restriction>
                                 </xsd:simpleType>
                             </xsd:element>

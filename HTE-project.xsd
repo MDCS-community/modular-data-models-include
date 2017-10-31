@@ -4,11 +4,14 @@
 
     <xsd:include schemaLocation="resource.xsd"/>
     <xsd:include schemaLocation="HTE-library.xsd"/>
+    <xsd:include schemaLocation="digital-artifact.xsd"/>
     <xsd:element name="project" type="combinatorial-project"/>
     <xsd:complexType name="combinatorial-project">
         <xsd:complexContent>
             <xsd:extension base="resource">
                 <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="digital-artifact"
+                        type="digital-artifact"/>
                     <xsd:element maxOccurs="unbounded" minOccurs="0" name="library"
                         type="combinatorial-library"/>
                 </xsd:sequence>

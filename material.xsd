@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
-    elementFormDefault="unqualified">
-
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified">
     <xsd:include schemaLocation="thing.xsd"/>
     <xsd:include schemaLocation="material-composition.xsd"/>
     <xsd:complexType name="material">
         <xsd:complexContent>
             <xsd:extension base="thing">
                 <xsd:sequence>
-                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="keyword"
-                        type="xsd:string">
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="keyword" type="xsd:string">
                         <xsd:annotation>
                             <xsd:appinfo>
                                 <label>Keyword</label>
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
-                    <xsd:element name="description" type="xsd:string" xmlns:ns0="http://mdcs.ns"
-                        ns0:_mod_mdcs_="/registry/description" maxOccurs="unbounded" minOccurs="0">
+                    <xsd:element name="description" type="xsd:string" xmlns:ns0="http://mdcs.ns" ns0:_mod_mdcs_="/registry/description" maxOccurs="unbounded" minOccurs="0">
                         <xsd:annotation>
                             <xsd:appinfo>
                                 <label>Description</label>
+                            </xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="type" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:appinfo>
+                                <label>Type</label>
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>

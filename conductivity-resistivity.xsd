@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
-    elementFormDefault="unqualified">
-
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified">
     <xsd:include schemaLocation="instrument-base.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_I-denominator_.xsd"/>
     <xsd:include schemaLocation="physical-quantity-numerator_MLL-denominator_TTTI.xsd"/>
@@ -18,18 +16,12 @@
                         <xsd:complexType>
                             <xsd:sequence>
                                 <xsd:element minOccurs="0" name="comment" type="xsd:string"/>
-                                <xsd:element minOccurs="0" name="current"
-                                    type="physical-quantity-I--type"/>
-                                <xsd:element minOccurs="0" name="voltage"
-                                    type="physical-quantity-MLL-TTTI-type"/>
-                                <xsd:element minOccurs="0" name="resistivity"
-                                    type="physical-quantity-MLLL-TTTII-type"/>
-                                <xsd:element minOccurs="0" name="conductivity"
-                                    type="physical-quantity-TTTII-MLLL-type"/>
-                                <xsd:element minOccurs="0" name="sheet-resistance"
-                                    type="physical-quantity-MLL-TTTII-type"/>
-                                <xsd:element minOccurs="0" name="sheet-conductivity"
-                                    type="physical-quantity-TTTII-MLL-type"/>
+                                <xsd:element minOccurs="0" name="current" type="physical-quantity-I--type"/>
+                                <xsd:element minOccurs="0" name="voltage" type="physical-quantity-MLL-TTTI-type"/>
+                                <xsd:element minOccurs="0" name="resistivity" type="physical-quantity-MLLL-TTTII-type"/>
+                                <xsd:element minOccurs="0" name="conductivity" type="physical-quantity-TTTII-MLLL-type"/>
+                                <xsd:element minOccurs="0" name="sheet-resistance" type="physical-quantity-MLL-TTTII-type"/>
+                                <xsd:element minOccurs="0" name="sheet-conductivity" type="physical-quantity-TTTII-MLL-type"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>

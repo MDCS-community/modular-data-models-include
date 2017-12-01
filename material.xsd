@@ -20,13 +20,6 @@
                             </xsd:appinfo>
                         </xsd:annotation>
                     </xsd:element>
-                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="type" type="xsd:string">
-                        <xsd:annotation>
-                            <xsd:appinfo>
-                                <label>Type</label>
-                            </xsd:appinfo>
-                        </xsd:annotation>
-                    </xsd:element>
                     <xsd:element minOccurs="0" name="composition" type="material-composition"/>
                     <xsd:element minOccurs="0" name="vendor" type="xsd:string"> </xsd:element>
                 </xsd:sequence>
